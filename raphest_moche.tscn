@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://n5o36pvyscu3"]
+
+[node name="raphest moche" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 856.0
+offset_bottom = 436.0
+text = "le plus ahdsaifhdwosufzvqcw0udzvc0qw"
