@@ -1,11 +1,31 @@
-[gd_scene load_steps=9 format=3 uid="uid://csj5y6yc6be5m"]
+[gd_scene load_steps=14 format=3 uid="uid://csj5y6yc6be5m"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_47jnt"]
 [ext_resource type="Texture2D" uid="uid://rifnxcycwe3q" path="res://Samurai (2).png" id="2_0ahnp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w3x8u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_imbpe"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(2, 3, 38, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjjnm"]
 atlas = ExtResource("2_0ahnp")
 region = Rect2(2, 1, 38, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tf6t"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(43, 152, 38, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiibf"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(207, 92, 38, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0g0w"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(43, 2, 38, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgy0e"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(2, 3, 38, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xigx1"]
 atlas = ExtResource("2_0ahnp")
@@ -23,7 +43,32 @@ region = Rect2(125, 3, 37, 26)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w3x8u")
+"texture": SubResource("AtlasTexture_imbpe")
+}],
+"loop": true,
+"name": &"arret ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjjnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tf6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiibf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0g0w")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgy0e")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xigx1")
@@ -47,11 +92,11 @@ script = ExtResource("1_47jnt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(170.5, 85)
+position = Vector2(32, -8)
 scale = Vector2(9.97368, 7.07143)
 sprite_frames = SubResource("SpriteFrames_gdctf")
-animation = &"run"
+animation = &"arret "
+autoplay = "arret "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(140, 104)
 shape = SubResource("RectangleShape2D_yikg6")

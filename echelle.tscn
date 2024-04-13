@@ -7,17 +7,16 @@
 size = Vector2(128, 336)
 
 [node name="echelle" type="Area2D"]
-position = Vector2(88, -48)
 script = ExtResource("1_4rlc0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 1
-position = Vector2(288, 164)
-scale = Vector2(7, 10.25)
+position = Vector2(24, -34)
+scale = Vector2(7, 12.375)
 texture = ExtResource("1_c5411")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(264, 168)
 shape = SubResource("RectangleShape2D_lkmn0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
