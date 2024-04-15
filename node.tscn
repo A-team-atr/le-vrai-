@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck8dow4ynrnlj"]
+[gd_scene load_steps=10 format=3 uid="uid://ck8dow4ynrnlj"]
 
 [ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://Japanese Wall Set.png" id="1_3w8tq"]
 [ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://istockphoto-509782643-612x612.jpg" id="1_64tjq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c6648jxaupslv" path="res://port.jpeg" id="4_cwrjg"]
 [ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://character_body_2d.tscn" id="5_bla5v"]
 [ext_resource type="PackedScene" uid="uid://8qp2u0li8peq" path="res://echelle.tscn" id="6_hwsca"]
+[ext_resource type="PackedScene" uid="uid://bgfhrxmcgdmql" path="res://lit.tscn" id="7_f6x3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2tkr5"]
 texture = ExtResource("1_3w8tq")
@@ -446,3 +447,6 @@ process_priority = 1
 z_index = -1
 texture_filter = 1
 position = Vector2(1000, 408)
+
+[node name="lit" parent="." instance=ExtResource("7_f6x3h")]
+position = Vector2(216, 256)

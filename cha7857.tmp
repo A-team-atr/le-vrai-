@@ -136,10 +136,8 @@ texture_filter = 1
 position = Vector2(32, -8)
 scale = Vector2(9.97368, 7.07143)
 sprite_frames = SubResource("SpriteFrames_gdctf")
-animation = &"run"
+animation = &"dormir"
 autoplay = "arret "
-frame = 1
-frame_progress = 0.734672
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yikg6")

@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://j5n33qo5kpi5"]
+
+[ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://dormir.png" id="1_yr642"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtkbd"]
+atlas = ExtResource("1_yr642")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka2ah"]
+atlas = ExtResource("1_yr642")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgkr5"]
+atlas = ExtResource("1_yr642")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oqdo"]
+atlas = ExtResource("1_yr642")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpxxa"]
+atlas = ExtResource("1_yr642")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyx7i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtkbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka2ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgkr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oqdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpxxa")
+}],
+"loop": true,
+"name": &"dormir",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(8, -24)
+scale = Vector2(7.25, 4.75)
+sprite_frames = SubResource("SpriteFrames_xyx7i")
+animation = &"dormir"
+frame_progress = 0.725441
