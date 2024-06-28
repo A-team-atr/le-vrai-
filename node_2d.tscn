@@ -1,0 +1,93 @@
+[gd_scene load_steps=17 format=3 uid="uid://deil3vnf1embx"]
+
+[ext_resource type="Texture2D" uid="uid://3mge7mvwh2y1" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer8/1.png" id="1_7xman"]
+[ext_resource type="Texture2D" uid="uid://hujm6bl4i55r" path="res://New Piskel (1).png" id="2_o0wbm"]
+[ext_resource type="Texture2D" uid="uid://dufeu7e8ir65j" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer8/2.png" id="3_pytpb"]
+[ext_resource type="Texture2D" uid="uid://lk25gycciiit" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer8/3.png" id="4_2bb5u"]
+[ext_resource type="Texture2D" uid="uid://bndl05r8iogwv" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer6/2.png" id="5_uonon"]
+[ext_resource type="Texture2D" uid="uid://bqspif23h8wvp" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_1/3.png" id="6_lmrxs"]
+[ext_resource type="Texture2D" uid="uid://dyes7n0bspcn2" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_2/3.png" id="7_6qqrl"]
+[ext_resource type="Texture2D" uid="uid://dw8sk0ixmdrov" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_4/2.png" id="8_hyfw0"]
+[ext_resource type="Texture2D" uid="uid://4110oe3s5gel" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_4/3.png" id="9_ymemg"]
+[ext_resource type="Texture2D" uid="uid://6gicguf0yodl" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_4/4.png" id="10_yroxv"]
+[ext_resource type="Texture2D" uid="uid://crebj71u4lwu4" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_5/3.png" id="11_f13xe"]
+[ext_resource type="Texture2D" uid="uid://ved5xebca5fp" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_5/4.png" id="12_72wl2"]
+[ext_resource type="Texture2D" uid="uid://cmcak5w6nvrly" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_8/2.png" id="13_20v62"]
+[ext_resource type="Texture2D" uid="uid://b1nclsmvg8nym" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_8/3.png" id="14_wddjn"]
+[ext_resource type="Texture2D" uid="uid://d1hw77mt81ldg" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_8/4.png" id="15_o0k55"]
+[ext_resource type="Texture2D" uid="uid://bsqhn82rk1w7n" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_8/1.png" id="16_sgxfw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(401, 167)
+texture = ExtResource("1_7xman")
+
+[node name="1" type="Sprite2D" parent="1"]
+position = Vector2(576, -1)
+texture = ExtResource("1_7xman")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+position = Vector2(718, 199)
+texture = ExtResource("2_o0wbm")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(391, 170)
+texture = ExtResource("3_pytpb")
+
+[node name="2" type="Sprite2D" parent="2"]
+position = Vector2(577, 3)
+texture = ExtResource("3_pytpb")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(791, 197)
+texture = ExtResource("4_2bb5u")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(120, 263)
+texture = ExtResource("5_uonon")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(387, 575)
+texture = ExtResource("6_lmrxs")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(618, 454)
+scale = Vector2(0.790825, -0.184404)
+texture = ExtResource("7_6qqrl")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(1158, 476)
+texture = ExtResource("8_hyfw0")
+
+[node name="8" type="Sprite2D" parent="."]
+position = Vector2(1144, 465)
+texture = ExtResource("9_ymemg")
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(1139, 467)
+texture = ExtResource("10_yroxv")
+
+[node name="10" type="Sprite2D" parent="."]
+position = Vector2(-832, 262)
+texture = ExtResource("11_f13xe")
+
+[node name="11" type="Sprite2D" parent="."]
+position = Vector2(-800, 334)
+texture = ExtResource("12_72wl2")
+
+[node name="12" type="Sprite2D" parent="."]
+position = Vector2(-1213, -299)
+texture = ExtResource("13_20v62")
+
+[node name="13" type="Sprite2D" parent="."]
+position = Vector2(-1187, -160)
+texture = ExtResource("14_wddjn")
+
+[node name="14" type="Sprite2D" parent="."]
+position = Vector2(-1187, -200)
+texture = ExtResource("15_o0k55")
+
+[node name="15" type="Sprite2D" parent="."]
+position = Vector2(-1258, -265)
+texture = ExtResource("16_sgxfw")
