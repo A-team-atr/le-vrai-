@@ -134,12 +134,10 @@ script = ExtResource("1_47jnt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(32, -8)
-scale = Vector2(9.97368, 7.07143)
+scale = Vector2(7.481, 5.304)
 sprite_frames = SubResource("SpriteFrames_gdctf")
-animation = &"run"
+animation = &"arret "
 autoplay = "arret "
-frame = 1
-frame_progress = 0.734672
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yikg6")
