@@ -1,12 +1,24 @@
-[gd_scene load_steps=20 format=3 uid="uid://csj5y6yc6be5m"]
+[gd_scene load_steps=25 format=3 uid="uid://csj5y6yc6be5m"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_47jnt"]
 [ext_resource type="Texture2D" uid="uid://rifnxcycwe3q" path="res://Samurai (2).png" id="2_0ahnp"]
 [ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://dormir.png" id="3_1q0qm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_imbpe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nduts"]
 atlas = ExtResource("2_0ahnp")
-region = Rect2(2, 3, 38, 26)
+region = Rect2(1, 1, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbrf0"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(1, 31, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2lah"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(1, 61, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4veo"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(1, 91, 41, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_slmi5"]
 atlas = ExtResource("3_1q0qm")
@@ -44,27 +56,44 @@ region = Rect2(207, 92, 38, 27)
 atlas = ExtResource("2_0ahnp")
 region = Rect2(43, 2, 38, 27)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jgy0e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu2eg"]
 atlas = ExtResource("2_0ahnp")
-region = Rect2(2, 3, 38, 26)
+region = Rect2(41, 0, 41, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xigx1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv388"]
 atlas = ExtResource("2_0ahnp")
-region = Rect2(44, 1, 36, 27)
+region = Rect2(41, 30, 41, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmnyb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vi6n"]
 atlas = ExtResource("2_0ahnp")
-region = Rect2(84, 2, 36, 26)
+region = Rect2(41, 60, 41, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7rnqd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hig2j"]
 atlas = ExtResource("2_0ahnp")
-region = Rect2(125, 3, 37, 26)
+region = Rect2(41, 90, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6qx2"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(41, 120, 41, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dgwn"]
+atlas = ExtResource("2_0ahnp")
+region = Rect2(41, 150, 41, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gdctf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_imbpe")
+"texture": SubResource("AtlasTexture_nduts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbrf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2lah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4veo")
 }],
 "loop": true,
 "name": &"arret ",
@@ -103,41 +132,48 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w0g0w")
 }],
-"loop": false,
+"loop": true,
 "name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jgy0e")
+"texture": SubResource("AtlasTexture_cu2eg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xigx1")
+"texture": SubResource("AtlasTexture_rv388")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bmnyb")
+"texture": SubResource("AtlasTexture_5vi6n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7rnqd")
+"texture": SubResource("AtlasTexture_hig2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6qx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dgwn")
 }],
 "loop": true,
 "name": &"run",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yikg6"]
-size = Vector2(120, 128)
+size = Vector2(83.5, 92.375)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_47jnt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(32, -8)
-scale = Vector2(7.481, 5.304)
+position = Vector2(28, -8)
+scale = Vector2(6.63524, 5.304)
 sprite_frames = SubResource("SpriteFrames_gdctf")
-animation = &"arret "
+animation = &"jump"
 autoplay = "arret "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 10.8125)
 shape = SubResource("RectangleShape2D_yikg6")

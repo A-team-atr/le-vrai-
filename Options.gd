@@ -27,7 +27,21 @@ func _process(delta):
 	text3.text = "LUMINOSITE: " + str(var3)
 	text4.text = "MUSIC VOLUME: " + str(var4)
 
+func save():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(var1)
+	file.store_var(var2)
+	file.store_var(var3)
+	file.store_var(var4)
 
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		var1 = file.get_var(var1)
+		var2 = file.get_var(var2)
+		var3 = file.get_var(var3)
+		var4 = file.get_var(var4)
+		
 func _on_minus_1_pressed():
 	var1 -= 1
 	save()
@@ -54,22 +68,6 @@ func _on_minus_4_pressed():
 func _on_plus_4_pressed():
 	var4 += 1
 	save()
-
-
-func save():
-	var file = FileAccess.open(save_path, FileAccess.WRITE)
-	file.store_var(var1)
-	file.store_var(var2)
-	file.store_var(var3)
-	file.store_var(var4)
-
-func load_data():
-	if FileAccess.file_exists(save_path):
-		var file = FileAccess.open(save_path, FileAccess.READ)
-		var1 = file.get_var(var1)
-		var2 = file.get_var(var2)
-		var3 = file.get_var(var3)
-		var4 = file.get_var(var4)
 
 
 func _on_return_menu_pressed():

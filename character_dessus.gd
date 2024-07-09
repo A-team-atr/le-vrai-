@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var walk_speed = 200.0
+@onready var walk_speed = 300.0
 @onready var anim = get_node("AnimatedSprite2D")
 
 func _physics_process(delta):

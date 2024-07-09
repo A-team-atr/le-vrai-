@@ -61,17 +61,14 @@ script = ExtResource("2_vi7e5")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1152, 0)
-metadata/_edit_lock_ = true
 
 [node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(576, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("2_nfvk2")
-metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0, 0)
-metadata/_edit_lock_ = true
 
 [node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 z_index = -7
@@ -91,7 +88,6 @@ texture = ExtResource("9_7x6v0")
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.001, 0)
 motion_mirroring = Vector2(1152, 0)
-metadata/_edit_lock_ = true
 
 [node name="GlacialMountains" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2(192, 198)
@@ -376,7 +372,7 @@ offset_top = 344.0
 offset_right = 851.0
 offset_bottom = 483.0
 text = "Quitter le jeu"
-metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_2cyg6")

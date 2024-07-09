@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dqig0fl03nuhb" path="res://échelle.png" id="1_c5411"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkmn0"]
-size = Vector2(128, 336)
+size = Vector2(76, 405)
 
 [node name="echelle" type="Area2D"]
 script = ExtResource("1_4rlc0")
@@ -17,6 +17,7 @@ scale = Vector2(7, 12.375)
 texture = ExtResource("1_c5411")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -49.5)
 shape = SubResource("RectangleShape2D_lkmn0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

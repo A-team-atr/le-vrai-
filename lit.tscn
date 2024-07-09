@@ -4,19 +4,21 @@
 [ext_resource type="Script" path="res://lit.gd" id="1_nec1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnyo6"]
-size = Vector2(320, 96)
+size = Vector2(222.936, 60.5651)
 
 [node name="lit" type="Area2D"]
+scale = Vector2(0.95, 0.95)
 script = ExtResource("1_nec1q")
 
 [node name="lit" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-4.00001, -93.5)
-scale = Vector2(10.75, 9.15625)
+position = Vector2(2.10527, -55.7895)
+scale = Vector2(8.26974, 7.70312)
 texture = ExtResource("1_7evx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -24)
+position = Vector2(1.90735e-06, 1.05263)
+scale = Vector2(0.95, 0.95)
 shape = SubResource("RectangleShape2D_qnyo6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
