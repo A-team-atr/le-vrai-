@@ -7,6 +7,7 @@
 radius = 56.0089
 
 [node name="cuisine" type="Area2D"]
+z_index = -2
 script = ExtResource("1_ihu8j")
 
 [node name="casserole" type="Sprite2D" parent="."]

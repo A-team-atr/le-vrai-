@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsc1qr31qoylw"]
+
+[ext_resource type="PackedScene" uid="uid://dbb5iogtreylv" path="res://character_dessus.tscn" id="1_nkvxv"]
+[ext_resource type="Texture2D" uid="uid://by3ux56j6piq8" path="res://illustration-open-door-slide-japan-260nw-2220057817.png" id="2_3wmld"]
+
+[node name="monde1" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_nkvxv")]
+position = Vector2(616, 253)
+
+[node name="Illustration-open-door-slide-japan-260Nw-2220057817" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(613, 168)
+scale = Vector2(0.498268, 0.497082)
+texture = ExtResource("2_3wmld")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
