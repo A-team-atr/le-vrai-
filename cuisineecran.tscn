@@ -87,7 +87,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_erebp")
 
 [node name="NewPiskel(5)" type="Sprite2D" parent="."]
-position = Vector2(85, 81)
+position = Vector2(88, 80)
 scale = Vector2(3, 3)
 texture = ExtResource("3_adb5g")
 
