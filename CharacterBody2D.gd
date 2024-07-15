@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 450.0
+const SPEED = 0.0
 const JUMP_VELOCITY = -470.0
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var SoundEchelle = $echelle
@@ -17,7 +17,7 @@ func _physics_process(delta):
 	
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta * 1.08
+		velocity.y += gravity * delta * 2.08
 	if echelle_active == true: #echelle 
 		gravity = 0 
 		if Input.is_action_pressed("monter"):
