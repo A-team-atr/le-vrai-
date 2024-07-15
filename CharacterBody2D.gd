@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 450.0
-const JUMP_VELOCITY = -470.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -600.0
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var SoundEchelle = $echelle
 @onready var SoundVide = $vide
