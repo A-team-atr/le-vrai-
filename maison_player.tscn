@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqkb0h46yqb7d"]
+
+[ext_resource type="Script" path="res://MaisonPlayer.gd" id="1_h8klf"]
+[ext_resource type="Texture2D" uid="uid://by3ux56j6piq8" path="res://illustration-open-door-slide-japan-260nw-2220057817.png" id="2_ecl5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkl1"]
+size = Vector2(268.25, 160)
+
+[node name="MaisonPlayer" type="Area2D"]
+script = ExtResource("1_h8klf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_uqkl1")
+
+[node name="Illustration-open-door-slide-japan-260Nw-2220057817" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ecl5g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

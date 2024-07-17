@@ -1,9 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://csj5y6yc6be5m"]
+[gd_scene load_steps=25 format=3 uid="uid://csj5y6yc6be5m"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_47jnt"]
 [ext_resource type="Texture2D" uid="uid://rifnxcycwe3q" path="res://Samurai (2).png" id="2_0ahnp"]
 [ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://dormir.png" id="3_1q0qm"]
-[ext_resource type="AudioStream" uid="uid://vxea5cso2f2u" path="res://ladder-82581.mp3" id="4_61del"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xysab"]
 atlas = ExtResource("2_0ahnp")
@@ -178,11 +177,3 @@ autoplay = "arret "
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 6.3125)
 shape = SubResource("RectangleShape2D_yikg6")
-
-[node name="echelle" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_61del")
-volume_db = 2.644
-pitch_scale = 1.28
-autoplay = true
-
-[node name="vide" type="AudioStreamPlayer" parent="."]

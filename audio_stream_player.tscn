@@ -4,7 +4,7 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_6byh2")
-volume_db = -19.496
+volume_db = -23.021
 pitch_scale = 0.6
 autoplay = true
 mix_target = 1

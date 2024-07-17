@@ -11,4 +11,4 @@ func _on_play_pressed():
 
 
 func _on_quit_pressed():
-	TransitionScene.quit()
+	get_tree().quit()

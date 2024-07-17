@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bgahl5e361g3x"]
+[gd_scene load_steps=39 format=3 uid="uid://bgahl5e361g3x"]
 
 [ext_resource type="Script" path="res://cuisineecran.gd" id="1_3h472"]
 [ext_resource type="Texture2D" uid="uid://cscy8b6u0brc8" path="res://PixelArtFaisMain/New Piskel (3).png" id="1_fq3oj"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bhrfcljq7gb8g" path="res://PixelArtFaisMain/New Piskel (10).png" id="8_14wwl"]
 [ext_resource type="Texture2D" uid="uid://dldi3ikk2sfur" path="res://PixelArtFaisMain/New Piskel (11).png" id="9_k0p56"]
 [ext_resource type="Texture2D" uid="uid://cboy33rggy04s" path="res://PixelArtFaisMain/New Piskel (12).png" id="11_qudgh"]
+[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://istockphoto-509782643-612x612.jpg" id="12_14qji"]
+[ext_resource type="Texture2D" uid="uid://dq3k2yq0jed0l" path="res://PixelArtFaisMain/New Piskel (13).png" id="13_v6skr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1r83t"]
 atlas = ExtResource("9_k0p56")
@@ -74,6 +76,131 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1npu2"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hul0t"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1l76"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhpok"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe712"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgrld"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_024cg"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjwqm"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chkuu"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0re3u"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sdbc"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vkdy"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws2jq"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lp6g"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4sm2"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m30r"]
+atlas = ExtResource("13_v6skr")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oka5x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1npu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hul0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1l76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhpok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe712")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgrld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_024cg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjwqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chkuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0re3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sdbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vkdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws2jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lp6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4sm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m30r")
+}],
+"loop": true,
+"name": &"cooking",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="cuisineecran" type="Node2D"]
 script = ExtResource("1_3h472")
 
@@ -113,11 +240,11 @@ scale = Vector2(3, 3)
 texture = ExtResource("7_p6sxa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1353, 725)
+position = Vector2(1302, 723)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_e26ov")
+animation = &"cooking"
 autoplay = "default"
-frame_progress = 0.380545
 
 [node name="cuisiner" type="Button" parent="."]
 offset_left = 522.0
@@ -132,4 +259,27 @@ position = Vector2(467, 652)
 scale = Vector2(6, 6)
 texture = ExtResource("11_qudgh")
 
+[node name="Istockphoto-509782643-612x612" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(1749, -447)
+scale = Vector2(10, 10.02)
+texture = ExtResource("12_14qji")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1300, 745)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_oka5x")
+animation = &"cooking"
+autoplay = "default"
+frame_progress = 0.864996
+
+[node name="revenir" type="Button" parent="."]
+offset_left = 1438.0
+offset_top = 157.0
+offset_right = 1674.0
+offset_bottom = 255.0
+text = "Revenir"
+
 [connection signal="pressed" from="cuisiner" to="." method="_on_cuisiner_pressed"]
+[connection signal="pressed" from="revenir" to="." method="_on_revenir_pressed"]
