@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bptpgkacmyh5i"]
+[gd_scene load_steps=13 format=3 uid="uid://bptpgkacmyh5i"]
 
 [ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
 [ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://character_body_2d.tscn" id="2_veaox"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6p8bkne64jd2" path="res://cuisine.tscn" id="6_j04qm"]
 [ext_resource type="PackedScene" uid="uid://bg3sf1d7whsf0" path="res://sortie_1.tscn" id="7_6mry7"]
 [ext_resource type="Texture2D" uid="uid://cboy33rggy04s" path="res://PixelArtFaisMain/New Piskel (12).png" id="8_8dabu"]
+[ext_resource type="PackedScene" uid="uid://cra5mbn5wc8te" path="res://inventory/inv_ui.tscn" id="9_ns1ah"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qyj2n"]
 
@@ -566,3 +567,14 @@ position = Vector2(29, 803)
 position = Vector2(584, 918)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("8_8dabu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_ns1ah")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -709.0
+offset_right = -409.0
+offset_bottom = 300.0
+grow_horizontal = 0

@@ -4,6 +4,9 @@ const SPEED = 450.0
 const JUMP_VELOCITY = -470.0
 
 @onready var anim = get_node("AnimatedSprite2D")
+@onready var healthbar = $HealthBar
+
+@export var inv: Inv
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -11,7 +14,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var echelle_active = false 
 var lit = false 
 
-
+func _ready():
+	pass
+	
 func _physics_process(delta):
 	var direction = Input.get_axis("gauche", "droite")
 	
@@ -46,7 +51,7 @@ func _physics_process(delta):
 		anim.flip_h = true
 	elif direction == 1:
 		anim.flip_h = false
-	if direction == 1 or direction == -1:
+	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
 			anim.play("run")

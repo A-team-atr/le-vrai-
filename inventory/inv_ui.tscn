@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=3 uid="uid://cra5mbn5wc8te"]
+
+[ext_resource type="Script" path="res://inventory/Inv_UI.gd" id="1_1nh3y"]
+[ext_resource type="Texture2D" uid="uid://drg0mf2717q5n" path="res://PixelArtFaisMain/New Piskel (14).png" id="2_0nqsk"]
+[ext_resource type="PackedScene" uid="uid://cq606pphepvue" path="res://inventory/inv_ui_slot.tscn" id="3_yel1i"]
+
+[node name="Inv_UI" type="Control"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 710.0
+offset_bottom = 698.0
+script = ExtResource("1_1nh3y")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.686275)
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_right = 710.0
+offset_bottom = 697.0
+texture = ExtResource("2_0nqsk")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -248.0
+offset_right = 248.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot16" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot17" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot18" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot19" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot20" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot23" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot21" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot22" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot25" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
+
+[node name="inv_UI_slot24" parent="NinePatchRect/GridContainer" instance=ExtResource("3_yel1i")]
+layout_mode = 2
