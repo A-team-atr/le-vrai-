@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv2e7qgihgmm0" path="res://george.png" id="1_tvp8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk6a4"]
-size = Vector2(108, 105)
+size = Vector2(345, 231.25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dngjm"]
 atlas = ExtResource("1_tvp8r")
@@ -157,12 +157,12 @@ animations = [{
 script = ExtResource("1_t8hss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 5)
+position = Vector2(1.75, 1.8125)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_mk6a4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, 1.13687e-13)
-scale = Vector2(2, 1.562)
+position = Vector2(0, -8)
+scale = Vector2(6.4375, 3.94767)
 sprite_frames = SubResource("SpriteFrames_8rxh4")
 animation = &"idle"

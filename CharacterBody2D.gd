@@ -46,6 +46,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("saut") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		anim.play("jump")
+	
+	if velocity.y > 0:
+		anim.play("Fall")
+		
+	
 	# Get the input direction and handle the movement/deceleration.
 	if direction == -1:
 		anim.flip_h = true
