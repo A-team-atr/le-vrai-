@@ -247,16 +247,16 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_48tjt")
 }, {
-"duration": 0.9,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_w1b48")
 }, {
-"duration": 0.9,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_7ee3k")
 }, {
-"duration": 0.8,
+"duration": 0.9,
 "texture": SubResource("AtlasTexture_n02qx")
 }, {
-"duration": 0.7,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_ey7wm")
 }],
 "loop": true,
@@ -334,7 +334,7 @@ texture_filter = 1
 position = Vector2(-22, -16)
 scale = Vector2(2.7676, 3.2707)
 sprite_frames = SubResource("SpriteFrames_nnhaw")
-animation = &"walk"
+animation = &"jump"
 offset = Vector2(14.3685, -21.7055)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

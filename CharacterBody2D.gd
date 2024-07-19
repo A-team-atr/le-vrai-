@@ -73,3 +73,6 @@ func _physics_process(delta):
 			anim.play("arret")
 	
 	move_and_slide()
+	
+func collect(item):
+	inv.insert(item)
