@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 450.0
+const SPEED = 370.0
 const JUMP_VELOCITY = -470.0
+const SPEED_RUN = 650.0
 
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var healthbar = $HealthBar
@@ -27,10 +28,10 @@ func _physics_process(delta):
 	if echelle_active == true: #echelle 
 		gravity = 0 
 		if Input.is_action_pressed("monter"):
-			velocity.y = - 300
+			velocity.y = - 400
 
 		else:
-			velocity.y = 300 
+			velocity.y = 400
 		
 			
 	else:
@@ -56,10 +57,16 @@ func _physics_process(delta):
 		anim.flip_h = true
 	elif direction == 1:
 		anim.flip_h = false
+		
 	if direction:
-		velocity.x = direction * SPEED
-		if velocity.y == 0:
-			anim.play("run")
+		if Input.is_action_pressed("shift"):
+			velocity.x = direction * SPEED_RUN
+			if velocity.y == 0:
+				anim.play("run")
+		else: 
+			velocity.x = direction * SPEED
+			if velocity.y == 0:
+				anim.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if velocity.y == 0:

@@ -569,7 +569,6 @@ scale = Vector2(2.35, 3.08438)
 texture = ExtResource("8_8dabu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_ns1ah")]
 anchors_preset = 1
