@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://5lp067rbkb37" path="res://parallax_mountain_pack/layers/tree asset/tree asset/trees-Sheet.png" id="3_akch8"]
 [ext_resource type="Texture2D" uid="uid://cosb454qn55uk" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" id="3_frfy8"]
 [ext_resource type="Texture2D" uid="uid://ce8551ptlm0af" path="res://parallax_mountain_pack/Clouds/Clouds 1/4.png" id="4_2t8gt"]
-[ext_resource type="Texture2D" uid="uid://hujm6bl4i55r" path="res://New Piskel (1).png" id="4_alifd"]
+[ext_resource type="Texture2D" uid="uid://hujm6bl4i55r" path="res://images/New Piskel (1).png" id="4_alifd"]
 [ext_resource type="Texture2D" uid="uid://dhlk4dii3eray" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" id="5_4bpy8"]
 [ext_resource type="Texture2D" uid="uid://bndl05r8iogwv" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer6/2.png" id="6_biq1w"]
 [ext_resource type="Texture2D" uid="uid://uhe6xknln378" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_3/2.png" id="9_7x6v0"]
-[ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://New Piskel (2).png" id="10_2tblv"]
+[ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://images/New Piskel (2).png" id="10_2tblv"]
 [ext_resource type="Texture2D" uid="uid://daedw7ykbdblu" path="res://parallax_mountain_pack/Clouds/Clouds 5/5.png" id="10_svd4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8moj"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8qp2u0li8peq"]
 
 [ext_resource type="Script" path="res://echelle.gd" id="1_4rlc0"]
-[ext_resource type="Texture2D" uid="uid://dqig0fl03nuhb" path="res://échelle.png" id="1_c5411"]
+[ext_resource type="Texture2D" uid="uid://dqig0fl03nuhb" path="res://images/échelle.png" id="1_c5411"]
 [ext_resource type="AudioStream" uid="uid://vxea5cso2f2u" path="res://ladder-82581.mp3" id="3_so57q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkmn0"]

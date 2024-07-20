@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://bptpgkacmyh5i"]
 
-[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
+[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
 [ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://character_body_2d.tscn" id="2_veaox"]
 [ext_resource type="PackedScene" uid="uid://bgfhrxmcgdmql" path="res://lit.tscn" id="3_b88nn"]
 [ext_resource type="PackedScene" uid="uid://8qp2u0li8peq" path="res://echelle.tscn" id="4_86jx0"]
-[ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://Japanese Wall Set.png" id="5_4wjrq"]
+[ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://images/Japanese Wall Set.png" id="5_4wjrq"]
 [ext_resource type="PackedScene" uid="uid://6p8bkne64jd2" path="res://cuisine.tscn" id="6_j04qm"]
 [ext_resource type="PackedScene" uid="uid://bg3sf1d7whsf0" path="res://sortie_1.tscn" id="7_6mry7"]
 [ext_resource type="Texture2D" uid="uid://cboy33rggy04s" path="res://PixelArtFaisMain/New Piskel (12).png" id="8_8dabu"]

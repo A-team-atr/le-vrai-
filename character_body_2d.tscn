@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_47jnt"]
 [ext_resource type="Resource" uid="uid://wyk03550pa83" path="res://inventory/playerinv.tres" id="2_bnpr0"]
-[ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://dormir.png" id="3_1q0qm"]
+[ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://images/dormir.png" id="3_1q0qm"]
 [ext_resource type="Texture2D" uid="uid://bf4x2pkvnsddj" path="res://personnage/Samurai_Archer/Walk.png" id="3_ty8c3"]
 [ext_resource type="PackedScene" uid="uid://dq8djuu6s4auu" path="res://health_bar.tscn" id="4_5mak8"]
 [ext_resource type="Texture2D" uid="uid://dehkn4n3mstas" path="res://personnage/Samurai_Archer/Run.png" id="4_jpe61"]

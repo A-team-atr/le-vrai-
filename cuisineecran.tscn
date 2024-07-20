@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bhrfcljq7gb8g" path="res://PixelArtFaisMain/New Piskel (10).png" id="8_14wwl"]
 [ext_resource type="Texture2D" uid="uid://dldi3ikk2sfur" path="res://PixelArtFaisMain/New Piskel (11).png" id="9_k0p56"]
 [ext_resource type="Texture2D" uid="uid://cboy33rggy04s" path="res://PixelArtFaisMain/New Piskel (12).png" id="11_qudgh"]
-[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://istockphoto-509782643-612x612.jpg" id="12_14qji"]
+[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="12_14qji"]
 [ext_resource type="Texture2D" uid="uid://dq3k2yq0jed0l" path="res://PixelArtFaisMain/New Piskel (13).png" id="13_v6skr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1r83t"]

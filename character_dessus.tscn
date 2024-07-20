@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dbb5iogtreylv"]
 
 [ext_resource type="Script" path="res://character_dessus.gd" id="1_t8hss"]
-[ext_resource type="Texture2D" uid="uid://dv2e7qgihgmm0" path="res://george.png" id="1_tvp8r"]
+[ext_resource type="Texture2D" uid="uid://dv2e7qgihgmm0" path="res://personnage/george.png" id="1_tvp8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk6a4"]
 size = Vector2(261.225, 232.653)
