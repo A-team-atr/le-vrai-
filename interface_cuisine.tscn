@@ -1,0 +1,237 @@
+[gd_scene load_steps=31 format=3 uid="uid://bvp7gw5liatpe"]
+
+[ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="1_3ettn"]
+[ext_resource type="Script" path="res://interface_cuisine.gd" id="1_d3ts0"]
+[ext_resource type="Texture2D" uid="uid://dldi3ikk2sfur" path="res://PixelArtFaisMain/New Piskel (11).png" id="3_w3d43"]
+[ext_resource type="Texture2D" uid="uid://bhrfcljq7gb8g" path="res://PixelArtFaisMain/New Piskel (10).png" id="4_ydcoh"]
+[ext_resource type="Texture2D" uid="uid://dq3k2yq0jed0l" path="res://PixelArtFaisMain/New Piskel (13).png" id="5_jdrqh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tyhm"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o77lp"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1raoc"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yc7x"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxdyc"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaw0r"]
+atlas = ExtResource("3_w3d43")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdx8o"]
+atlas = ExtResource("4_ydcoh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oc3cm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tyhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o77lp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1raoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yc7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxdyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaw0r")
+}],
+"loop": true,
+"name": &"cooking",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdx8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maa3a"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqo6d"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24yjm"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfabt"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avmcs"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rfrv"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puson"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qqdt"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kx2n"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khnba"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uemys"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m555g"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av1hj"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyrs8"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l36mj"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4332"]
+atlas = ExtResource("5_jdrqh")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fi3wv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_maa3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqo6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24yjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfabt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avmcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rfrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puson")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qqdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kx2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khnba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uemys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m555g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av1hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyrs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l36mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4332")
+}],
+"loop": true,
+"name": &"cooking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="interface_cuisine" type="Node2D"]
+script = ExtResource("1_d3ts0")
+
+[node name="Istockphoto-509782643-612x612" type="Sprite2D" parent="."]
+position = Vector2(933, 513)
+scale = Vector2(5, 5)
+texture = ExtResource("1_3ettn")
+
+[node name="cuisiner" type="Button" parent="."]
+offset_left = 1359.0
+offset_top = 603.0
+offset_right = 2146.0
+offset_bottom = 965.0
+text = "cuisiner"
+
+[node name="revenir" type="Button" parent="."]
+offset_left = 346.0
+offset_top = 616.0
+offset_right = 760.0
+offset_bottom = 1008.0
+text = "revenir"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1144, 587)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_oc3cm")
+animation = &"cooking"
+autoplay = "default"
+frame_progress = 0.00442352
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1143, 609)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_fi3wv")
+autoplay = "default"
+
+[connection signal="button_down" from="cuisiner" to="." method="_on_cuisiner_button_down"]
+[connection signal="button_up" from="cuisiner" to="." method="_on_cuisiner_button_up"]
+[connection signal="pressed" from="revenir" to="." method="_on_revenir_pressed"]

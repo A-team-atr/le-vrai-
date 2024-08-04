@@ -1,15 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqkb0h46yqb7d"]
+[gd_scene load_steps=4 format=3 uid="uid://bqkb0h46yqb7d"]
 
 [ext_resource type="Script" path="res://MaisonPlayer.gd" id="1_h8klf"]
 [ext_resource type="Texture2D" uid="uid://b27dg63po686t" path="res://Backgrounds/maison-removebg-preview.png" id="2_t7m4t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkl1"]
 size = Vector2(591, 611)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rk423"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdb8t"]
-size = Vector2(581.156, 383.625)
 
 [node name="MaisonPlayer" type="Area2D"]
 script = ExtResource("1_h8klf")
@@ -19,32 +14,15 @@ position = Vector2(-41.5, 159.5)
 shape = SubResource("RectangleShape2D_uqkl1")
 
 [node name="Maison-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-16, 0)
 scale = Vector2(3.424, 2.96)
 texture = ExtResource("2_t7m4t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_rk423")
+position = Vector2(593, 330)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-496.422, 150)
-shape = SubResource("RectangleShape2D_gdb8t")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_rk423")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(346, 139)
-scale = Vector2(0.9, 1)
-shape = SubResource("RectangleShape2D_gdb8t")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_rk423")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(26, -187)
-scale = Vector2(2, 1)
-shape = SubResource("RectangleShape2D_gdb8t")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-1, -3, 0, -429, 0, -429, 34, -429, 51, -445, 75, -460, 92, -478, 109, -495, 109, -511, 92, -526, 73, -544, 53, -560, 35, -577, 15, -593, -3, -610, -21, -627, -40, -643, -59, -660, -76, -676, -97, -694, -117, -709, -135, -726, -155, -743, -171, -758, -193, -777, -231, -776, -250, -758, -270, -739, -290, -726, -306, -708, -328, -707, -916, -707, -937, -693, -954, -675, -973, -660, -993, -642, -1012, -627, -1029, -609, -1050, -592, -1067, -577, -1088, -559, -1184, -544, -1183, -512, -1163, -495, -1145, -477, -1126, -462, -1107, -445, -1125, -429, -1163, -411, -1201, -397, -1238, -379, -1258, -364, -1276, -297, -1372, -296, -1392, -281, -1410, -263, -1410, -230, -1430, -216, -1451, -199, -1451, -147, -1392, -50, -1392, -32, -1410, 1, -1409, 15, -1373, 15, -1372, 48, -1318, 48, -1315, 91, -1259, 91, -1123, 91, -1077, 91, -1029, 89, -975, 89, -975, 47, -801, 48, -801, 96, -751, 79, -751, -309, -507, -309, -506, 71, -462, 88, -403, 88, -348, 88, 53, 87, 111, 87, 140, 68, 169, 48, 181, 22, 206, 15, 207, 0, 2, 0, -1, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgfhrxmcgdmql"]
 
-[ext_resource type="Texture2D" uid="uid://4043tn57ns1l" path="res://images/lit.png" id="1_7evx4"]
 [ext_resource type="Script" path="res://lit.gd" id="1_nec1q"]
+[ext_resource type="Texture2D" uid="uid://i5n0523fe7nc" path="res://PixelArtFaisMain/lit le vrai.png" id="2_g01kn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnyo6"]
-size = Vector2(222.936, 60.5651)
+size = Vector2(261.496, 81.9945)
 
 [node name="lit" type="Area2D"]
 scale = Vector2(0.95, 0.95)
@@ -12,12 +12,12 @@ script = ExtResource("1_nec1q")
 
 [node name="lit" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(2.10527, -55.7895)
+position = Vector2(2.38419e-07, 1.05264)
 scale = Vector2(8.26974, 7.70312)
-texture = ExtResource("1_7evx4")
+texture = ExtResource("2_g01kn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.90735e-06, 1.05263)
+position = Vector2(-1.00387e-06, -6.31579)
 scale = Vector2(0.95, 0.95)
 shape = SubResource("RectangleShape2D_qnyo6")
 

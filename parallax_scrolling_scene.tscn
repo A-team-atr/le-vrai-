@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://js187adyneae"]
+[gd_scene load_steps=20 format=3 uid="uid://js187adyneae"]
 
 [ext_resource type="Script" path="res://parallax_scrolling_scene.gd" id="1_q8shy"]
 [ext_resource type="Texture2D" uid="uid://dm4w4684pri6n" path="res://parallax_mountain_pack/Clouds/1.png" id="2_nfvk2"]
@@ -39,6 +39,8 @@ animations = [{
 "name": &"new_animation",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6aana"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2cyg6"]
 
@@ -371,6 +373,21 @@ offset_left = 357.0
 offset_top = 344.0
 offset_right = 851.0
 offset_bottom = 483.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.00392157)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
 text = "Quitter le jeu"
 metadata/_edit_use_anchors_ = true
 

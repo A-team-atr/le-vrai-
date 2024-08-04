@@ -1,6 +1,6 @@
-class_name DialogicGameHandler
-extends Node
 
+extends Node
+class_name DialogicGameHandler
 ## Class that is used as the Dialogic autoload.
 
 ## Autoload script that allows you to interact with all of Dialogic's systems:[br]

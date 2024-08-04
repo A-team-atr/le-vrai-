@@ -334,10 +334,11 @@ texture_filter = 1
 position = Vector2(-22, -16)
 scale = Vector2(2.7676, 3.2707)
 sprite_frames = SubResource("SpriteFrames_nnhaw")
-animation = &"jump"
+animation = &"arret"
 offset = Vector2(14.3685, -21.7055)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_yikg6")
 

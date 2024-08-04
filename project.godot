@@ -24,7 +24,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"joudcharacter": "res://joudcharacter.dch"
+"Resources/unit_test_character": "res://dialogic-main/Tests/Resources/unit_test_character.dch",
+"joudcharacter": "res://joudcharacter.dch",
+"unit_test_character": "res://addons/dialogic-main/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={}
 glossary/default_case_sensitive=true
