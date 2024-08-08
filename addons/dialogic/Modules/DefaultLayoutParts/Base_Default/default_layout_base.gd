@@ -4,7 +4,6 @@ extends DialogicLayoutBase
 ## The default layout base scene.
 
 @export var canvas_layer: int = 1
-@export var follow_viewport: bool = false
 
 @export_subgroup("Global")
 @export var global_bg_color: Color = Color(0, 0, 0, 0.9)
@@ -16,6 +15,5 @@ extends DialogicLayoutBase
 func _apply_export_overrides() -> void:
 	# apply layer
 	set(&'layer', canvas_layer)
-	set(&'follow_viewport_enabled', follow_viewport)
 
 

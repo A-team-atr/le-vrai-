@@ -13,15 +13,13 @@ extends Control
 ## If true the next indicator will be shown even if dialogic will autocontinue.
 @export var show_on_autoadvance := false
 
-enum Animations {BOUNCE, BLINK, NONE}
-
 ## What animation should the indicator do.
-@export var animation := Animations.BOUNCE
+@export_enum('bounce', 'blink', 'none') var animation := 0
 
-var texture_rect: TextureRect
+var texture_rect : TextureRect
 
 ## Set the image to use as the indicator.
-@export var texture: Texture2D = preload("res://addons/dialogic/Example Assets/next-indicator/next-indicator.png") as Texture2D:
+@export var texture : Texture2D = preload("res://addons/dialogic/Example Assets/next-indicator/next-indicator.png") as Texture2D:
 	set(_texture):
 		texture = _texture
 		if texture_rect:
@@ -37,7 +35,7 @@ var texture_rect: TextureRect
 
 var tween: Tween
 
-func _ready() -> void:
+func _ready():
 	add_to_group('dialogic_next_indicator')
 
 	# Creating TextureRect if missing
@@ -57,33 +55,32 @@ func _ready() -> void:
 	visibility_changed.connect(_on_visibility_changed)
 
 
-func _on_visibility_changed() -> void:
+func _on_visibility_changed():
 	if visible:
 		play_animation(animation, 1.0)
 
 
-func play_animation(current_animation: int, time:float) -> void:
+func play_animation(animation: int, time:float) -> void:
 	# clean up previous tween to prevent slipping
 	if tween:
 		tween.stop()
 
-	match current_animation:
-		Animations.BOUNCE:
-			tween = (create_tween() as Tween)
-			var distance := 4
-			tween.set_parallel(false)
-			tween.set_trans(Tween.TRANS_SINE)
-			tween.set_ease(Tween.EASE_IN_OUT)
-			tween.set_loops()
+	if animation == 0:
+		tween = (create_tween() as Tween)
+		var distance := 4
+		tween.set_parallel(false)
+		tween.set_trans(Tween.TRANS_SINE)
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.set_loops()
 
-			tween.tween_property(self, 'position', Vector2(0,distance), time*0.3).as_relative()
-			tween.tween_property(self, 'position', - Vector2(0,distance), time*0.3).as_relative()
-		Animations.BLINK:
-			tween = (create_tween() as Tween)
-			tween.set_parallel(false)
-			tween.set_trans(Tween.TRANS_SINE)
-			tween.set_ease(Tween.EASE_IN_OUT)
-			tween.set_loops()
+		tween.tween_property(self, 'position', Vector2(0,distance), time*0.3).as_relative()
+		tween.tween_property(self, 'position', - Vector2(0,distance), time*0.3).as_relative()
+	if animation == 1:
+		tween = (create_tween() as Tween)
+		tween.set_parallel(false)
+		tween.set_trans(Tween.TRANS_SINE)
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.set_loops()
 
-			tween.tween_property(self, 'modulate:a', 0, time*0.3)
-			tween.tween_property(self, 'modulate:a', 1, time*0.3)
+		tween.tween_property(self, 'modulate:a', 0, time*0.3)
+		tween.tween_property(self, 'modulate:a', 1, time*0.3)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_4bsyr"]
 [ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
-[ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://character_body_2d.tscn" id="2_veaox"]
+[ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://playercote.tscn" id="2_veaox"]
 [ext_resource type="PackedScene" uid="uid://bgfhrxmcgdmql" path="res://lit.tscn" id="3_b88nn"]
 [ext_resource type="PackedScene" uid="uid://8qp2u0li8peq" path="res://echelle.tscn" id="4_86jx0"]
 [ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://images/Japanese Wall Set.png" id="5_4wjrq"]
@@ -545,7 +545,7 @@ scale = Vector2(3.63399, 3.64103)
 texture = ExtResource("1_ajjfk")
 metadata/_edit_lock_ = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_veaox")]
+[node name="playercote" parent="." instance=ExtResource("2_veaox")]
 z_index = 5
 position = Vector2(541, 255)
 

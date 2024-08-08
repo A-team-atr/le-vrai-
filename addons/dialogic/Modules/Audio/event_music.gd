@@ -8,15 +8,15 @@ extends DialogicEvent
 ### Settings
 
 ## The file to play. If empty, the previous music will be faded out.
-var file_path := ""
+var file_path: String = ""
 ## The length of the fade. If 0 (by default) it's an instant change.
 var fade_length: float = 0
 ## The volume the music will be played at.
 var volume: float = 0
 ## The audio bus the music will be played at.
-var audio_bus := ""
+var audio_bus: String = ""
 ## If true, the audio will loop, otherwise only play once.
-var loop := true
+var loop: bool = true
 
 
 ################################################################################

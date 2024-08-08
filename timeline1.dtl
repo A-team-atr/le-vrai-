@@ -1,0 +1,13 @@
+sansnom: Où suis-je...
+Ma vengeance ?
+Je l'aurai...
+label go back
+[text_input text="Quel est ton nom ?" var="Folder.nomjoueur" placeholder="Ecris ton nom" allow_empty="true"]
+if {Folder.nomjoueur} == "":
+	[wait time="0.9"]
+	Alors, comment t'appelles-tu ?
+	- D'accord, si tu insistes...
+		jump go back
+	- Je n'ai pas envie de te le dire !
+join character1 1
+character1: Hey man !

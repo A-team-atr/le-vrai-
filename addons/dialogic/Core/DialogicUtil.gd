@@ -1,29 +1,26 @@
 @tool
 class_name DialogicUtil
 
-## Script that contains helper methods for both editor and game execution.
+## Script that container helper methods for both editor and game execution.
 ## Used whenever the same thing is needed in different parts of the plugin.
 
 #region EDITOR
 
-## This method should be used instead of EditorInterface.get_editor_scale(), because if you use that method
-## it will run perfectly fine from the editor, but crash when the game is exported.
+# This method should be used instead of EditorInterface.get_editor_scale(), because if you use that
+# it will run perfectly fine from the editor, but crash when the game is exported.
 static func get_editor_scale() -> float:
-	var dialogic_plugin = get_dialogic_plugin()
-	if dialogic_plugin:
-		return dialogic_plugin.get_editor_interface().get_editor_scale()
-	return 1.0  ## Return a default value or handle error accordingly
+	return get_dialogic_plugin().get_editor_interface().get_editor_scale()
 
-## This function attempts to find and return the DialogicPlugin node
+
+## Although this does in fact always return a EditorPlugin node,
+##  that class is apparently not present in export and referencing it here creates a crash.
 static func get_dialogic_plugin() -> Node:
 	for child in Engine.get_main_loop().get_root().get_children():
 		if child.get_class() == "EditorNode":
-			if child.has_node("DialogicPlugin"):
-				return child.get_node("DialogicPlugin")
+			return child.get_node('DialogicPlugin')
 	return null
 
 #endregion
-
 
 
 ## Returns the autoload when in-game.
@@ -37,7 +34,7 @@ static func autoload() -> DialogicGameHandler:
 
 #region FILE SYSTEM
 ################################################################################
-static func listdir(path: String, files_only:= true, _throw_error:= true, full_file_path:= false, include_imports := false) -> Array:
+static func listdir(path: String, files_only:= true, throw_error:= true, full_file_path:= false, include_imports := false) -> Array:
 	var files: Array = []
 	if path.is_empty(): path = "res://"
 	if DirAccess.dir_exists_absolute(path):
@@ -87,7 +84,7 @@ static func _update_autoload_subsystem_access() -> void:
 			new_subsystem_access_list += '\nvar {name} := preload("{script}").new():\n\tget: return get_subsystem("{name}")\n'.format(subsystem)
 
 	new_subsystem_access_list += "\n#endregion"
-	script.source_code = RegEx.create_from_string(r"#region SUBSYSTEMS\n#*\n((?!#endregion)(.*\n))*#endregion").sub(script.source_code, new_subsystem_access_list)
+	script.source_code = RegEx.create_from_string("#region SUBSYSTEMS\\n#*\\n((?!#endregion)(.*\\n))*#endregion").sub(script.source_code, new_subsystem_access_list)
 	ResourceSaver.save(script)
 	Engine.get_singleton("EditorInterface").get_resource_filesystem().reimport_files(["res://addons/dialogic/Core/DialogicGameHandler.gd"])
 
@@ -114,14 +111,24 @@ static func get_indexers(include_custom := true, force_reload := false) -> Array
 	return indexers
 
 
+enum AnimationType {ALL, IN, OUT, ACTION}
+static func get_portrait_animation_scripts(type:=AnimationType.ALL, include_custom:=true) -> Array:
+	var animations := DialogicResourceUtil.list_special_resources_of_type("PortraitAnimation")
 
-## Turns a [param file_path] from `some_file.png` to `Some File`.
-static func pretty_name(file_path: String) -> String:
-	var _name := file_path.get_file().trim_suffix("." + file_path.get_extension())
+	return animations.filter(
+		func(script):
+			if type == AnimationType.ALL: return true;
+			if type == AnimationType.IN: return '_in' in script;
+			if type == AnimationType.OUT: return '_out' in script;
+			if type == AnimationType.ACTION: return not ('_in' in script or '_out' in script))
+
+
+static func pretty_name(script:String) -> String:
+	var _name := script.get_file().trim_suffix("."+script.get_extension())
 	_name = _name.replace('_', ' ')
 	_name = _name.capitalize()
-
 	return _name
+
 
 #endregion
 
@@ -188,29 +195,6 @@ static func update_timer_process_callback(timer:Timer) -> void:
 #endregion
 
 
-#region MULTITWEEN
-################################################################################
-static func multitween(tweened_value:Variant, item:Node, property:String, part:String) -> void:
-	var parts: Dictionary = item.get_meta(property+'_parts', {})
-	parts[part] = tweened_value
-
-	if not item.has_meta(property+'_base_value') and not 'base' in parts:
-		item.set_meta(property+'_base_value', item.get(property))
-
-	var final_value: Variant = parts.get('base', item.get_meta(property+'_base_value', item.get(property)))
-
-	for key in parts:
-		if key == 'base':
-			continue
-		else:
-			final_value += parts[key]
-
-	item.set(property, final_value)
-	item.set_meta(property+'_parts', parts)
-
-#endregion
-
-
 #region TRANSLATIONS
 ################################################################################
 
@@ -243,7 +227,7 @@ static func list_variables(dict:Dictionary, path := "", type:=VarTypes.ANY) -> A
 	return array
 
 
-static func get_variable_value_type(value:Variant) -> VarTypes:
+static func get_variable_value_type(value:Variant) -> int:
 	match typeof(value):
 		TYPE_STRING:
 			return VarTypes.STRING
@@ -357,7 +341,7 @@ static func get_scene_export_defaults(node:Node) -> Dictionary:
 	if !Engine.get_main_loop().has_meta('dialogic_scene_export_defaults'):
 		Engine.get_main_loop().set_meta('dialogic_scene_export_defaults', {})
 	var defaults := {}
-	var property_info: Array[Dictionary] = node.script.get_script_property_list()
+	var property_info :Array[Dictionary] = node.script.get_script_property_list()
 	for i in property_info:
 		if i['usage'] & PROPERTY_USAGE_EDITOR:
 			defaults[i['name']] = node.get(i['name'])
@@ -533,72 +517,3 @@ static func str_to_hash_set(source: String) -> Dictionary:
 	return dictionary
 
 #endregion
-
-
-static func get_character_suggestions(_search_text:String, current_value:DialogicCharacter = null, allow_none := true, allow_all:= false, editor_node:Node = null) -> Dictionary:
-	var suggestions := {}
-
-	var icon := load("res://addons/dialogic/Editor/Images/Resources/character.svg")
-
-	if allow_none and current_value:
-		suggestions['(No one)'] = {'value':'', 'editor_icon':["GuiRadioUnchecked", "EditorIcons"]}
-
-	if allow_all:
-		suggestions['ALL'] = {'value':'--All--', 'tooltip':'All currently joined characters leave', 'editor_icon':["GuiEllipsis", "EditorIcons"]}
-
-	# Get characters in the current timeline and place them at the top of suggestions.
-	if editor_node:
-		var recent_characters := []
-		var timeline_node := editor_node.get_parent().find_parent("Timeline") as DialogicEditor
-		for event_node in timeline_node.find_child("Timeline").get_children():
-			if event_node == editor_node:
-				break
-			if event_node.resource is DialogicCharacterEvent or event_node.resource is DialogicTextEvent:
-				recent_characters.append(event_node.resource.character)
-
-		recent_characters.reverse()
-		for character in recent_characters:
-			if character and not character.get_character_name() in suggestions:
-				suggestions[character.get_character_name()] = {'value': character.get_character_name(), 'tooltip': character.resource_path, 'icon': icon.duplicate()}
-
-	var character_directory := DialogicResourceUtil.get_character_directory()
-	for resource in character_directory.keys():
-		suggestions[resource] = {'value': resource, 'tooltip': character_directory[resource], 'icon': icon}
-
-	return suggestions
-
-
-static func get_portrait_suggestions(search_text:String, character:DialogicCharacter, allow_empty := false, empty_text := "Don't Change") -> Dictionary:
-	var icon := load("res://addons/dialogic/Editor/Images/Resources/portrait.svg")
-	var suggestions := {}
-
-	if allow_empty:
-		suggestions[empty_text] = {'value':'', 'editor_icon':["GuiRadioUnchecked", "EditorIcons"]}
-
-	if "{" in search_text:
-		suggestions[search_text] = {'value':search_text, 'editor_icon':["Variant", "EditorIcons"]}
-
-	if character != null:
-		for portrait in character.portraits:
-			suggestions[portrait] = {'value':portrait, 'icon':icon}
-
-	return suggestions
-
-
-static func get_portrait_position_suggestions(search_text := "") -> Dictionary:
-	var icon := load(DialogicUtil.get_module_path("Character").path_join('portrait_position.svg'))
-
-	var setting: String = ProjectSettings.get_setting('dialogic/portraits/position_suggestion_names', 'leftmost, left, center, right, rightmost')
-
-	var suggestions := {}
-
-	if not search_text.is_empty():
-		suggestions[search_text] = {'value':search_text.strip_edges(), 'editor_icon':["GuiScrollArrowRight", "EditorIcons"]}
-
-	for position_id in setting.split(','):
-		suggestions[position_id.strip_edges()] = {'value':position_id.strip_edges(), 'icon':icon}
-		if not search_text.is_empty() and position_id.strip_edges().begins_with(search_text):
-			suggestions.erase(search_text)
-
-	return suggestions
-

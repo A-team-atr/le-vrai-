@@ -4,7 +4,7 @@ extends DialogicVisualEditorField
 ## Event block field for a single line of text.
 
 
-var placeholder := "":
+var placeholder :String= "":
 	set(value):
 		placeholder = value
 		self.placeholder_text = placeholder
@@ -25,7 +25,7 @@ func _set_value(value:Variant) -> void:
 	self.text = str(value)
 
 
-func _autofocus() -> void:
+func _autofocus():
 	grab_focus()
 
 #endregion

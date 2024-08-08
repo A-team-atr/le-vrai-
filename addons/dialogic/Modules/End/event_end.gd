@@ -38,7 +38,7 @@ func get_shortcode() -> String:
 #region EDITOR REPRESENTATION
 ################################################################################
 
-func build_event_editor() -> void:
+func build_event_editor():
 	add_header_label('End Timeline')
 
 #endregion

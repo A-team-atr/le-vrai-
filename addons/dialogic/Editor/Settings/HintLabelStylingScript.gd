@@ -2,7 +2,7 @@
 extends Label
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	# don't load the label settings when opening as a scene
 	# prevents HUGE diffs
 	if owner.get_parent() is SubViewport:

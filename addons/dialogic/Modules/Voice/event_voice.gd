@@ -8,11 +8,11 @@ extends DialogicEvent
 ### Settings
 
 ## The path to the sound file.
-var file_path := ""
+var file_path: String = ""
 ## The volume the sound will be played at.
 var volume: float = 0
 ## The audio bus to play the sound on.
-var audio_bus := "Master"
+var audio_bus: String = "Master"
 
 
 ################################################################################
@@ -66,7 +66,7 @@ func get_shortcode_parameters() -> Dictionary:
 ## 						EDITOR REPRESENTATION
 ################################################################################
 
-func build_event_editor() -> void:
+func build_event_editor():
 	add_header_edit('file_path', ValueType.FILE, {
 			'left_text'		: 'Set',
 			'right_text'	: 'as the next voice audio',

@@ -23,12 +23,12 @@ func _open(argument:Variant = null):
 	%Tree.load_info(ProjectSettings.get_setting('dialogic/variables', {}))
 
 
-func _save() -> void:
+func _save():
 	ProjectSettings.set_setting('dialogic/variables', %Tree.get_info())
 	ProjectSettings.save()
 
 
-func _close() -> void:
+func _close():
 	_save()
 
 
@@ -47,7 +47,7 @@ func variable_renamed(old_name:String, new_name:String):
 	%ReferenceInfo.show()
 
 
-func _on_reference_manager_pressed() -> void:
+func _on_reference_manager_pressed():
 	editors_manager.reference_manager.open()
 	%ReferenceInfo.hide()
 

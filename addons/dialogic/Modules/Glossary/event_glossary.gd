@@ -38,5 +38,5 @@ func get_shortcode_parameters() -> Dictionary:
 ## 						EDITOR REPRESENTATION
 ################################################################################
 
-func build_event_editor() -> void:
+func build_event_editor():
 	pass

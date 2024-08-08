@@ -10,7 +10,7 @@ extends Resource
 ## a string, representing the actual key for the key used.
 ## The string key-value pairs are the alias keys, they allow to redirect
 ## the actual glossary entry.
-@export var entries := {}
+@export var entries: Dictionary = {}
 
 ## If false, no entries from this glossary will be shown
 @export var enabled: bool = true
@@ -39,13 +39,13 @@ const PRIVATE_PROPERTY_PREFIX := "_"
 
 
 ## Private ID assigned when this glossary is translated.
-@export var _translation_id := ""
+@export var _translation_id: String = ""
 
 ## Private lookup table used to find the translation ID of a glossary entry.
 ## The keys (String) are all translated words that may trigger a glossary entry to
 ## be shown.
 ## The values (String) are the translation ID.
-@export var _translation_keys := {}
+@export var _translation_keys: Dictionary = {}
 
 
 

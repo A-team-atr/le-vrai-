@@ -2,13 +2,13 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	if body.name == "CharacterBody2D":
-		get_node("/root/world/CharacterBody2D").lit = true 
+	if body.name == "playercote":
+		get_node("/root/world/playercote").lit = true 
 
 
 
 
 
 func _on_body_exited(body):
-	if body.name == "CharacterBody2D":
-		get_node("/root/world/CharacterBody2D").lit = false 
+	if body.name == "playercote":
+		get_node("/root/world/playercote").lit = false 

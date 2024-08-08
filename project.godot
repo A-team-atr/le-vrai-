@@ -20,21 +20,28 @@ config/icon="res://icon.svg"
 TransitionScene="*res://transition_scene.tscn"
 GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Transition2="*res://Transition2.tscn"
 
 [dialogic]
 
 directories/dch_directory={
-"Resources/unit_test_character": "res://dialogic-main/Tests/Resources/unit_test_character.dch",
-"joudcharacter": "res://joudcharacter.dch",
-"unit_test_character": "res://addons/dialogic-main/Tests/Resources/unit_test_character.dch"
+"character1": "res://character1.dch",
+"sansnom": "res://sansnom.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline1": "res://timeline1.dtl"
+}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"Folder": {
+"nomjoueur": ""
+}
+}
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
+text/letter_speed=0.017
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1

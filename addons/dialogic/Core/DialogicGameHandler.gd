@@ -1,6 +1,6 @@
-
-extends Node
 class_name DialogicGameHandler
+extends Node
+
 ## Class that is used as the Dialogic autoload.
 
 ## Autoload script that allows you to interact with all of Dialogic's systems:[br]
@@ -104,9 +104,6 @@ var Backgrounds := preload("res://addons/dialogic/Modules/Background/subsystem_b
 var Portraits := preload("res://addons/dialogic/Modules/Character/subsystem_portraits.gd").new():
 	get: return get_subsystem("Portraits")
 
-var PortraitContainers := preload("res://addons/dialogic/Modules/Character/subsystem_containers.gd").new():
-	get: return get_subsystem("PortraitContainers")
-
 var Choices := preload("res://addons/dialogic/Modules/Choice/subsystem_choices.gd").new():
 	get: return get_subsystem("Choices")
 
@@ -169,7 +166,7 @@ func _ready() -> void:
 ## -> returns the layout node
 func start(timeline:Variant, label:Variant="") -> Node:
 	# If we don't have a style subsystem, default to just start_timeline()
-	if not has_subsystem('Styles'):
+	if !has_subsystem('Styles'):
 		printerr("[Dialogic] You called Dialogic.start() but the Styles subsystem is missing!")
 		clear(ClearFlags.KEEP_VARIABLES)
 		start_timeline(timeline, label)
@@ -187,6 +184,7 @@ func start(timeline:Variant, label:Variant="") -> Node:
 		scene.ready.connect(clear.bind(ClearFlags.KEEP_VARIABLES))
 		scene.ready.connect(start_timeline.bind(timeline, label))
 	else:
+		clear(ClearFlags.KEEP_VARIABLES)
 		start_timeline(timeline, label)
 
 	return scene
@@ -208,7 +206,7 @@ func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 		printerr("[Dialogic] There was an error loading this timeline. Check the filename, and the timeline for errors")
 		return
 
-	(timeline as DialogicTimeline).process()
+	await (timeline as DialogicTimeline).process()
 
 	current_timeline = timeline
 	current_timeline_events = current_timeline.events
@@ -236,7 +234,7 @@ func preload_timeline(timeline_resource:Variant) -> Variant:
 			printerr("[Dialogic] There was an error preloading this timeline. Check the filename, and the timeline for errors")
 			return null
 
-	(timeline_resource as DialogicTimeline).process()
+	await (timeline_resource as DialogicTimeline).process()
 
 	return timeline_resource
 
@@ -322,9 +320,6 @@ func get_full_state() -> Dictionary:
 	else:
 		current_state_info['current_event_idx'] = -1
 		current_state_info['current_timeline'] = null
-
-	for subsystem in get_children():
-		(subsystem as DialogicSubsystem).save_game_state()
 
 	return current_state_info.duplicate(true)
 

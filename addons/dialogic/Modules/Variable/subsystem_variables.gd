@@ -165,10 +165,10 @@ func has(variable:="") -> bool:
 ## Allows to set dialogic built-in variables
 func _set(property, value) -> bool:
 	property = str(property)
-	var vars: Dictionary = dialogic.current_state_info['variables']
-	if property in vars.keys():
-		if typeof(vars[property]) != TYPE_DICTIONARY:
-			vars[property] = value
+	var variables: Dictionary = dialogic.current_state_info['variables']
+	if property in variables.keys():
+		if typeof(variables[property]) != TYPE_DICTIONARY:
+			variables[property] = value
 			return true
 		if value is VariableFolder:
 			return true
@@ -193,7 +193,7 @@ func folders() -> Array:
 	return result
 
 
-func variables(_absolute:=false) -> Array:
+func variables(absolute:=false) -> Array:
 	var result := []
 	for i in dialogic.current_state_info['variables'].keys():
 		if not dialogic.current_state_info['variables'][i] is Dictionary:
@@ -229,7 +229,7 @@ func merge_folder(new:Dictionary, defs:Dictionary) -> Dictionary:
 class VariableFolder:
 	var data := {}
 	var path := ""
-	var outside: DialogicSubsystem
+	var outside : DialogicSubsystem
 
 	func _init(_data:Dictionary, _path:String, _outside:DialogicSubsystem):
 		data = _data
