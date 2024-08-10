@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://c6dknyfrcvqvv"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_r3bi6"]
+[ext_resource type="Texture2D" uid="uid://dmsq28vwt5xpm" path="res://PixelArtFaisMain/New Piskel (4).png" id="2_2coq1"]
+
+[resource]
+script = ExtResource("1_r3bi6")
+name = "fish"
+tecture = ExtResource("2_2coq1")

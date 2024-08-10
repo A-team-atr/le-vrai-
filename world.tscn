@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bptpgkacmyh5i"]
+[gd_scene load_steps=17 format=3 uid="uid://bptpgkacmyh5i"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_4bsyr"]
 [ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cra5mbn5wc8te" path="res://inventory/inv_ui.tscn" id="9_ns1ah"]
 [ext_resource type="PackedScene" uid="uid://bc8pkip08nx2n" path="res://zone_histoire_1.tscn" id="10_6emmf"]
 [ext_resource type="PackedScene" uid="uid://cm8aw2d3p348t" path="res://Skills.tscn" id="11_ff8uk"]
+[ext_resource type="PackedScene" uid="uid://b1e4d0mlxgqfb" path="res://collectpossible.tscn" id="13_qb5da"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qyj2n"]
 
@@ -568,7 +569,7 @@ position = Vector2(776, 912)
 position = Vector2(-57, 721)
 
 [node name="NewPiskel(12)" type="Sprite2D" parent="."]
-position = Vector2(542.4, 829.4)
+position = Vector2(461, 813)
 scale = Vector2(2.35, 3.08438)
 texture = ExtResource("8_8dabu")
 
@@ -591,3 +592,9 @@ position = Vector2(321, 320)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(108, 869)
+
+[node name="Collectpossible" parent="." instance=ExtResource("13_qb5da")]
+position = Vector2(1058, 968)
+
+[node name="Collectpossible2" parent="." instance=ExtResource("13_qb5da")]
+position = Vector2(974, 327)

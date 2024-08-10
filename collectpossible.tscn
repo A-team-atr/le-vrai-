@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1e4d0mlxgqfb"]
+
+[ext_resource type="Script" path="res://Collectpossible.gd" id="1_clvwn"]
+[ext_resource type="Resource" uid="uid://c6dknyfrcvqvv" path="res://inventory/items/fishcollect.tres" id="2_218d2"]
+[ext_resource type="Texture2D" uid="uid://dmsq28vwt5xpm" path="res://PixelArtFaisMain/New Piskel (4).png" id="2_vckrt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8oqqc"]
+radius = 56.0
+
+[node name="Collectpossible" type="StaticBody2D"]
+script = ExtResource("1_clvwn")
+item = ExtResource("2_218d2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vckrt")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_8oqqc")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

@@ -7,13 +7,14 @@ const SPEED_RUN = 650.0
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var healthbar = $HealthBar
 
-@export var inv: Inv
+
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var echelle_active = false 
 var lit = false 
+
 
 func _ready():
 	pass
@@ -42,7 +43,8 @@ func _physics_process(delta):
 		if Input.is_action_pressed("interagir"):
 			anim.play("dormir")
 	
-	
+
+
 	# Handle jump.
 	if Input.is_action_just_pressed("saut") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -74,5 +76,4 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-func collect(item):
-	inv.insert(item)
+
