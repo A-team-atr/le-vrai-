@@ -2,10 +2,9 @@ sansnom: Où suis-je...
 Ma vengeance ?
 Je l'aurai...
 label go back
-[text_input text="Quel est ton nom ?" var="Folder.nomjoueur" placeholder="Ecris ton nom" allow_empty="true"]
+[text_input text="Alors, comment t'appelles-tu ?" var="Folder.nomjoueur"]
 if {Folder.nomjoueur} == "":
 	[wait time="0.9"]
-	Alors, comment t'appelles-tu ?
 	- D'accord, si tu insistes...
 		jump go back
 	- Je n'ai pas envie de te le dire !
