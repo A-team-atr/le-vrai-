@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@onready var walk_speed = 1100.0
+@onready var walk_speed = 370
 @onready var anim = get_node("AnimatedSprite2D")
-@onready var run_speed = 1400.0
+@onready var run_speed = 500.0
 
 @export var inv: Inv
 
