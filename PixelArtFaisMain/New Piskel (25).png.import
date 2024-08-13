@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boskwdxtlxedr"
-path="res://.godot/imported/Layer_0008_3.png-6b9cc0f139f8c6eeb195af93d921828f.ctex"
+uid="uid://limpeek3pd6s"
+path="res://.godot/imported/New Piskel (25).png-ab32056f12bc05eea12aef1e42e47fb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png"
-dest_files=["res://.godot/imported/Layer_0008_3.png-6b9cc0f139f8c6eeb195af93d921828f.ctex"]
+source_file="res://PixelArtFaisMain/New Piskel (25).png"
+dest_files=["res://.godot/imported/New Piskel (25).png-ab32056f12bc05eea12aef1e42e47fb3.ctex"]
 
 [params]
 
