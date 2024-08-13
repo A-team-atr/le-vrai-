@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8nqped66gts"]
+
+[ext_resource type="Script" path="res://Control2.gd" id="1_wv14w"]
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 246.0
+offset_bottom = 191.0
+script = ExtResource("1_wv14w")
+
+[node name="SpriteLetter" type="Sprite2D" parent="."]
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1143.0
+offset_top = 46.0
+offset_right = 1640.0
+offset_bottom = 243.0
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1233.0
+offset_top = 457.0
+offset_right = 1828.0
+offset_bottom = 884.0
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
