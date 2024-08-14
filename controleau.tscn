@@ -45,10 +45,10 @@ offset_bottom = 428.0
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1298.0
-offset_top = 111.0
-offset_right = 1679.0
-offset_bottom = 449.0
+offset_left = 1315.0
+offset_top = 198.0
+offset_right = 1696.0
+offset_bottom = 536.0
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

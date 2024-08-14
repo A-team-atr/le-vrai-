@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://db8nqped66gts"]
+[gd_scene load_steps=3 format=3 uid="uid://db8nqped66gts"]
 
 [ext_resource type="Script" path="res://Control2.gd" id="1_wv14w"]
+[ext_resource type="Texture2D" uid="uid://tvochnl4bklw" path="res://CaractèreJap/jin2-removebg-preview.png" id="2_ut0ce"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -10,6 +11,9 @@ offset_bottom = 191.0
 script = ExtResource("1_wv14w")
 
 [node name="SpriteLetter" type="Sprite2D" parent="."]
+position = Vector2(946, 558)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("2_ut0ce")
 
 [node name="FeedbackLabel" type="Label" parent="."]
 layout_mode = 0
@@ -26,5 +30,12 @@ offset_left = 1233.0
 offset_top = 457.0
 offset_right = 1828.0
 offset_bottom = 884.0
+
+[node name="FeedbackLabel2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 415.0
+offset_right = 364.0
+offset_bottom = 606.0
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
