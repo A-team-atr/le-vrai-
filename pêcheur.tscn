@@ -1,0 +1,119 @@
+[gd_scene load_steps=18 format=3 uid="uid://dux6hh7rnhiib"]
+
+[ext_resource type="Script" path="res://pêcheur.gd" id="1_3mkng"]
+[ext_resource type="Texture2D" uid="uid://dbr1sgbt8w1mu" path="res://pêche/1 Fisherman/Fisherman_hook.png" id="1_6ms5n"]
+[ext_resource type="Texture2D" uid="uid://bgrat6fewsb2d" path="res://pêche/1 Fisherman/Fisherman_fish.png" id="2_wbkti"]
+[ext_resource type="Script" path="res://inter_pêcheur.gd" id="4_xabro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oov1w"]
+size = Vector2(10, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ev0"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27h3s"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2txgh"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3rsd"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vv3s"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8wuc"]
+atlas = ExtResource("1_6ms5n")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cou8c"]
+atlas = ExtResource("2_wbkti")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwyvg"]
+atlas = ExtResource("2_wbkti")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24gij"]
+atlas = ExtResource("2_wbkti")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n4wf"]
+atlas = ExtResource("2_wbkti")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ngwg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5ev0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27h3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2txgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3rsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vv3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8wuc")
+}],
+"loop": true,
+"name": &"attrappé",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cou8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwyvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24gij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n4wf")
+}],
+"loop": true,
+"name": &"pêcher",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2vwk"]
+size = Vector2(96, 40)
+
+[node name="pêcheur" type="CharacterBody2D"]
+script = ExtResource("1_3mkng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(8, -83.5)
+shape = SubResource("RectangleShape2D_oov1w")
+
+[node name="mouvement_pêcheur" type="AnimatedSprite2D" parent="."]
+z_index = 2
+position = Vector2(8, -8)
+sprite_frames = SubResource("SpriteFrames_5ngwg")
+animation = &"attrappé"
+
+[node name="inter_pêcheur" type="Area2D" parent="."]
+script = ExtResource("4_xabro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inter_pêcheur"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_r2vwk")
+
+[connection signal="body_entered" from="inter_pêcheur" to="inter_pêcheur" method="_on_body_entered"]
+[connection signal="body_exited" from="inter_pêcheur" to="inter_pêcheur" method="_on_body_exited"]

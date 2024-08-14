@@ -15,9 +15,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var echelle_active = false 
 var lit = false 
 
-
 func _ready():
-	pass
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+	
 	
 func _physics_process(delta):
 	var direction = Input.get_axis("gauche", "droite")
@@ -77,7 +77,13 @@ func _physics_process(delta):
 	
 	if position.y > 608 :
 		TransitionScene.change_scene_to_file("res://mort.tscn")
+	
+	
 		
+func _on_dialogic_signal(argument: String):
+	if argument == "retour":
+		TransitionScene.change_scene_to_file("res://monde_1.tscn")
+	
 	
 	move_and_slide()
 	

@@ -25,16 +25,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Tadao le pêcheur ": "res://Tadao le pêcheur .dch",
 "character1": "res://character1.dch",
 "sansnom": "res://sansnom.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"dialogue_pêcheur": "res://dialogue_pêcheur.dtl",
 "timeline1": "res://timeline1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://custome_style .tres"]
+layout/default_style="res://custome_style .tres"
 variables={
 "Folder": {
 "nomjoueur": ""
