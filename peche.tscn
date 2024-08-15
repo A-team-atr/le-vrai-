@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr24h2h76ycjh"]
+[gd_scene load_steps=13 format=3 uid="uid://cr24h2h76ycjh"]
 
 [ext_resource type="Texture2D" uid="uid://4iekqksfcxyl" path="res://pêche/3 Objects/Pier_Tiles.png" id="1_hpysk"]
+[ext_resource type="Script" path="res://peche.gd" id="1_idyqb"]
 [ext_resource type="Texture2D" uid="uid://qligmfuevb0t" path="res://pêche/3 Objects/Fishing_hut.png" id="2_jud6l"]
 [ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://pêche/mere.png" id="3_hliui"]
 [ext_resource type="PackedScene" uid="uid://bitygkxub6hf0" path="res://player_cote_pêche.tscn" id="4_gt5fa"]
@@ -337,7 +338,14 @@ texture_region_size = Vector2i(16, 18)
 physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_kmblp")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8ous"]
+size = Vector2(97, 93.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_de1vf"]
+size = Vector2(40, 104)
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_idyqb")
 
 [node name="pont" type="TileMap" parent="."]
 process_physics_priority = 1
@@ -366,3 +374,18 @@ scale = Vector2(0.2, 0.2)
 z_index = 2
 position = Vector2(784, 576)
 scale = Vector2(1.3, 1.3)
+
+[node name="retour" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="retour"]
+position = Vector2(48, 552)
+shape = SubResource("RectangleShape2D_b8ous")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-20, 548)
+shape = SubResource("RectangleShape2D_de1vf")
+
+[connection signal="body_entered" from="retour" to="." method="_on_retour_body_entered"]
+[connection signal="body_exited" from="retour" to="." method="_on_retour_body_exited"]

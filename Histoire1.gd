@@ -8,7 +8,9 @@ func _physics_process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://histoire_1.tscn")
-
+			Dialogic.start("BD")
+			
+			
 func _on_body_entered(body: PhysicsBody2D):
 	entered = true
 

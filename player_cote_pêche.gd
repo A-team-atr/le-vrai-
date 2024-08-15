@@ -13,10 +13,7 @@ const SPEED_RUN = 150.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var echelle_active = false 
-var lit = false 
 
-func _ready():
-		Dialogic.signal_event.connect(_on_dialogic_signal)
 	
 	
 func _physics_process(delta):
@@ -38,10 +35,7 @@ func _physics_process(delta):
 	else:
 		gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 		
-	
-	if lit == true:
-		if Input.is_action_pressed("interagir"):
-			anim.play("dormir")
+
 	
 
 
@@ -80,9 +74,7 @@ func _physics_process(delta):
 	
 	
 		
-func _on_dialogic_signal(argument: String):
-	if argument == "retour":
-		TransitionScene.change_scene_to_file("res://monde_1.tscn")
+
 	
 	
 	move_and_slide()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2cg1gqbhx0rc"]
+[gd_scene load_steps=10 format=3 uid="uid://b2cg1gqbhx0rc"]
 
 [ext_resource type="Texture2D" uid="uid://s0w3icuq2d8s" path="res://ferme/Capture_decran_2024-08-12_151238-removebg-preview.png" id="1_e5mlg"]
+[ext_resource type="Script" path="res://ferme.gd" id="1_gseq4"]
 [ext_resource type="Texture2D" uid="uid://d22qr2o0eklcx" path="res://Backgrounds/gentle forest (48x48 resize) v02.png" id="2_7w1df"]
 [ext_resource type="PackedScene" uid="uid://c2lb3rggnqnn1" path="res://player_ferme.tscn" id="3_eyyrh"]
 
@@ -4517,8 +4518,12 @@ texture = ExtResource("2_7w1df")
 [sub_resource type="TileSet" id="TileSet_72rh3"]
 sources/0 = SubResource("TileSetAtlasSource_c132x")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnldx"]
+size = Vector2(493.334, 146.667)
+
 [node name="ferme" type="Node2D"]
 scale = Vector2(6, 6)
+script = ExtResource("1_gseq4")
 
 [node name="maison ferme" type="TileMap" parent="."]
 light_mask = 0
@@ -4537,3 +4542,12 @@ layer_0/tile_data = PackedInt32Array(65538, 196608, 15, 131074, 262144, 16, 1966
 
 [node name="player_ferme" parent="." instance=ExtResource("3_eyyrh")]
 position = Vector2(4240, 1053.33)
+
+[node name="rertour_ferme" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rertour_ferme"]
+position = Vector2(4294.67, 1028)
+shape = SubResource("RectangleShape2D_nnldx")
+
+[connection signal="body_entered" from="rertour_ferme" to="." method="_on_rertour_ferme_body_entered"]
+[connection signal="body_exited" from="rertour_ferme" to="." method="_on_rertour_ferme_body_exited"]

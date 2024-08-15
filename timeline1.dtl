@@ -1,12 +1,6 @@
-sansnom: Où suis-je...
-Ma vengeance ?
-Je l'aurai...
+[text_input text="Mais comment je souhaite m'appeler?" var="joueur.nom"]
+player: Où suis-je...
+player: Ma vengeance ?
+player: Je l'aurai...
 label go back
-[text_input text="Alors, comment t'appelles-tu ?" var="Folder.nomjoueur"]
-if {Folder.nomjoueur} == "":
-	[wait time="0.9"]
-	- D'accord, si tu insistes...
-		jump go back
-	- Je n'ai pas envie de te le dire !
-join character1 1
-character1: Hey man !
+player: J'accepte avec honeur mon nouveau nom. J'aime beaucoup {joueur.nom} !
