@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6hyrclbe2yuh"]
 
-[ext_resource type="AudioStream" uid="uid://26w4lcrb16sq" path="res://PixelArtFaisMain/C418_ Aria Math.mp3" id="1_6byh2"]
+[ext_resource type="AudioStream" uid="uid://craeq5ok5agfl" path="res://PixelArtFaisMain/_Free Soft Japanese Music - _Yugen_ by Keys Of Moon 🇺🇸.mp3" id="1_y5fv7"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_6byh2")
+stream = ExtResource("1_y5fv7")
 volume_db = -23.021
 pitch_scale = 0.6
 autoplay = true

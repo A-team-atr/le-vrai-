@@ -1163,4 +1163,12 @@ text = "Cliquez pour continuer....
 "
 label_settings = SubResource("LabelSettings_f012w")
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 983.0
+offset_top = 30.0
+offset_right = 1758.0
+offset_bottom = 282.0
+theme_override_font_sizes/font_size = 32
+text = "agagagagagagag"
+
 [connection signal="pressed" from="PageSuivante" to="." method="_on_page_suivante_pressed"]

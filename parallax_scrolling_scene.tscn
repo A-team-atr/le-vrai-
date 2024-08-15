@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://js187adyneae"]
+[gd_scene load_steps=19 format=3 uid="uid://js187adyneae"]
 
 [ext_resource type="Script" path="res://parallax_scrolling_scene.gd" id="1_q8shy"]
 [ext_resource type="Texture2D" uid="uid://dm4w4684pri6n" path="res://parallax_mountain_pack/Clouds/1.png" id="2_nfvk2"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bndl05r8iogwv" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer6/2.png" id="6_biq1w"]
 [ext_resource type="Texture2D" uid="uid://uhe6xknln378" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_3/2.png" id="9_7x6v0"]
 [ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://images/New Piskel (2).png" id="10_2tblv"]
-[ext_resource type="Texture2D" uid="uid://daedw7ykbdblu" path="res://parallax_mountain_pack/Clouds/Clouds 5/5.png" id="10_svd4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8moj"]
 atlas = ExtResource("3_akch8")
@@ -56,56 +55,66 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="ParallaxScrollingScene" type="Node2D"]
+position = Vector2(76, -92)
 script = ExtResource("1_q8shy")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_vi7e5")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1152, 0)
+position = Vector2(-108, -88)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(576, 324)
-scale = Vector2(2, 2)
+position = Vector2(968, 637)
+scale = Vector2(3.4, 3.4)
 texture = ExtResource("2_nfvk2")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2048, 316)
 motion_scale = Vector2(0, 0)
 
 [node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 z_index = -7
-position = Vector2(288, 486)
+position = Vector2(-1472, 445)
+scale = Vector2(2, 2)
 texture = ExtResource("9_7x6v0")
 
 [node name="NewPiskel(1)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 z_index = -7
-position = Vector2(216, 95)
+position = Vector2(-1860, -218)
 texture = ExtResource("4_alifd")
 
 [node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 z_index = -7
-position = Vector2(864, 487)
+position = Vector2(-320, 445)
+scale = Vector2(2, 2)
 texture = ExtResource("9_7x6v0")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-1061, 1516)
+scale = Vector2(2, 2)
 motion_scale = Vector2(0.001, 0)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="GlacialMountains" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(192, 198)
+position = Vector2(1298, -608.5)
 texture = ExtResource("3_frfy8")
 
 [node name="GlacialMountains2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(576, 198)
+position = Vector2(1106, -608.5)
 texture = ExtResource("3_frfy8")
 
 [node name="GlacialMountains3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(960, 198)
+position = Vector2(722, -608.5)
 texture = ExtResource("3_frfy8")
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-195, -1)
+scale = Vector2(2, 2)
 motion_scale = Vector2(0.052, 0)
-motion_mirroring = Vector2(1500, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
 position = Vector2(771, 89)
@@ -114,7 +123,7 @@ texture = ExtResource("6_biq1w")
 flip_h = true
 
 [node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
-position = Vector2(509, 26)
+position = Vector2(423.5, 40.5)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("6_biq1w")
 
@@ -124,8 +133,10 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_biq1w")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -226)
+scale = Vector2(2, 2)
 motion_scale = Vector2(0, 0.3)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 z_index = 1
@@ -153,7 +164,7 @@ sprite_frames = SubResource("SpriteFrames_bq10i")
 flip_h = true
 
 [node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(32, 593)
+position = Vector2(32, 598.5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_bq10i")
 flip_h = true
@@ -310,37 +321,21 @@ sprite_frames = SubResource("SpriteFrames_bq10i")
 flip_h = true
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.17, 0)
-motion_mirroring = Vector2(1152, 0)
+position = Vector2(-368, -50)
+scale = Vector2(1.7, 1.7)
+motion_scale = Vector2(-0.13, 0)
+motion_mirroring = Vector2(1151, 0)
 
 [node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2(288, 142)
+position = Vector2(504.118, 187.647)
 texture = ExtResource("4_2t8gt")
 
 [node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2(864, 142)
+position = Vector2(1080, 187.647)
 texture = ExtResource("4_2t8gt")
 
-[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.051, 0)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
-position = Vector2(192, 233)
-scale = Vector2(0.667, 0.667)
-texture = ExtResource("10_svd4a")
-
-[node name="6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
-position = Vector2(960, 233)
-scale = Vector2(0.667, 0.667)
-texture = ExtResource("10_svd4a")
-
-[node name="7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
-position = Vector2(576, 233)
-scale = Vector2(0.667, 0.667)
-texture = ExtResource("10_svd4a")
-
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-69, 95)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1360, 0)
 
@@ -349,6 +344,7 @@ position = Vector2(45, 194)
 texture = ExtResource("5_4bpy8")
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(375, 319)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1360, 0)
 
@@ -360,8 +356,9 @@ texture = ExtResource("5_4bpy8")
 flip_h = true
 
 [node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2364, 256)
 motion_scale = Vector2(-0.2, 0)
-motion_mirroring = Vector2(1500, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="NewPiskel(2)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
 position = Vector2(115, 375)
@@ -369,10 +366,10 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_2tblv")
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 357.0
-offset_top = 344.0
-offset_right = 851.0
-offset_bottom = 483.0
+offset_left = 576.0
+offset_top = 609.0
+offset_right = 1070.0
+offset_bottom = 748.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
@@ -389,14 +386,13 @@ theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
 text = "Quitter le jeu"
-metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_2cyg6")
-offset_left = 341.0
-offset_top = 112.0
-offset_right = 859.0
-offset_bottom = 267.0
+offset_left = 561.0
+offset_top = 364.0
+offset_right = 1079.0
+offset_bottom = 519.0
 mouse_default_cursor_shape = 4
 theme = SubResource("Theme_83dq3")
 theme_override_colors/font_color = Color(0.00784314, 0.0156863, 0.00392157, 1)
@@ -411,10 +407,10 @@ text = "Jouer"
 metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Button" parent="."]
-offset_left = 881.0
-offset_top = 533.0
-offset_right = 1117.0
-offset_bottom = 620.0
+offset_left = 1249.0
+offset_top = 867.0
+offset_right = 1485.0
+offset_bottom = 954.0
 text = "Options & Controls"
 metadata/_edit_use_anchors_ = true
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://craeq5ok5agfl"
+path="res://.godot/imported/_Free Soft Japanese Music - _Yugen_ by Keys Of Moon 🇺🇸.mp3-bb6d7c32aa8be73866ece55ef244874f.mp3str"
+
+[deps]
+
+source_file="res://PixelArtFaisMain/_Free Soft Japanese Music - _Yugen_ by Keys Of Moon 🇺🇸.mp3"
+dest_files=["res://.godot/imported/_Free Soft Japanese Music - _Yugen_ by Keys Of Moon 🇺🇸.mp3-bb6d7c32aa8be73866ece55ef244874f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

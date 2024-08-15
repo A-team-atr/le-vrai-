@@ -16,6 +16,14 @@ var task_starting	:= false
 @onready var verre1 := $verre1
 @onready var verre2 := $verre2
 @onready var verre3 := $verre3
+@onready var verre1_1 := $verre1_1
+@onready var verre2_2 := $verre2_2
+@onready var verre3_3 := $verre3_3
+@onready var theiere := $theiere
+@onready var theiere2 := $theiere2
+
+
+
 
 func _ready():
 	water_gauge.value = 0
@@ -24,6 +32,10 @@ func _ready():
 	verre1.visible = true
 	verre2.visible = false
 	verre3.visible = false
+	verre1_1.visible = false
+	verre2_2.visible = true
+	verre3_3.visible = true
+	
 	
 func _process(delta):
 	if task_starting:
@@ -64,6 +76,8 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			start_button.visible = true 
 			verre1.visible = false
 			verre2.visible = true
+			verre1_1.visible = true
+			verre2_2.visible = false
 			print("Clic réussi, total de succès: %d" % success_clicks)
 		elif water_gauge.value >= click_zone_start and water_gauge.value <= click_zone_end and success_clicks == 1:
 			success_clicks += 1
@@ -72,12 +86,15 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			start_button.visible = true 
 			verre3.visible = true
 			verre2.visible = false
+			verre3_3.visible = false
+			verre2_2.visible = true
 			print("Clic réussi, total de succès: %d" % success_clicks)
 		elif water_gauge.value >= click_zone_start and water_gauge.value <= click_zone_end and success_clicks == 2:
 			success_clicks += 1
 			task_starting = false
 			start_button.visible = false
 			verre3.visible = false
+			verre3_3.visible = true
 		elif water_gauge.value >= click_zone_start and water_gauge.value <= click_zone_end:
 			success_clicks += 1
 			feedback_label.text = "Bon clic! Total : %d" % success_clicks

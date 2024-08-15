@@ -69,10 +69,35 @@ position = Vector2(612, 817)
 scale = Vector2(4, 4)
 texture = ExtResource("6_d6xly")
 
-[node name="NewPiskel(30)" type="Sprite2D" parent="."]
+[node name="theiere" type="Sprite2D" parent="."]
 position = Vector2(724, 283)
 scale = Vector2(9, 9)
 texture = ExtResource("7_tv2ye")
+
+[node name="verre1_1" type="Sprite2D" parent="."]
+modulate = Color(1, 0.945098, 0.921569, 1)
+position = Vector2(1065, 837)
+scale = Vector2(1.5, 2)
+texture = ExtResource("4_jprc5")
+
+[node name="verre2_2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.933333, 0.886275, 1)
+position = Vector2(1168, 850)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_r0u7g")
+
+[node name="verre3_3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.94902, 0.952941, 1)
+position = Vector2(1268, 874)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_d6xly")
+
+[node name="theiere2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.941176, 0.909804, 1)
+position = Vector2(1417, 919)
+scale = Vector2(3, 3)
+texture = ExtResource("7_tv2ye")
+flip_h = true
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
