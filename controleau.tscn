@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cp0r0w7huoq2"]
+[gd_scene load_steps=9 format=3 uid="uid://cp0r0w7huoq2"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_8oy4x"]
 [ext_resource type="Texture2D" uid="uid://divbpyve3pm4v" path="res://PixelArtFaisMain/New Piskel (24).png" id="2_qqqes"]
 [ext_resource type="Texture2D" uid="uid://c657nappuh7a7" path="res://PixelArtFaisMain/New Piskel (23).png" id="3_g7fp4"]
+[ext_resource type="Texture2D" uid="uid://drkaqnx2qolgr" path="res://PixelArtFaisMain/New Piskel (27).png" id="4_jprc5"]
+[ext_resource type="Texture2D" uid="uid://bmekguqkmhyrw" path="res://PixelArtFaisMain/New Piskel (28).png" id="5_r0u7g"]
+[ext_resource type="Texture2D" uid="uid://h3c1cyxi72e2" path="res://PixelArtFaisMain/New Piskel (29).png" id="6_d6xly"]
+[ext_resource type="Texture2D" uid="uid://hd73ra1j8p0l" path="res://PixelArtFaisMain/New Piskel (30).png" id="7_tv2ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8thy"]
 size = Vector2(2087, 1198)
@@ -16,11 +20,11 @@ script = ExtResource("1_8oy4x")
 
 [node name="WaterGauge" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 156.0
-offset_right = 243.0
-offset_bottom = 188.0
-scale = Vector2(10, 10)
+offset_left = 478.0
+offset_top = 276.0
+offset_right = 510.0
+offset_bottom = 308.0
+scale = Vector2(5, 8)
 max_value = 1000.0
 fill_mode = 3
 texture_under = ExtResource("2_qqqes")
@@ -49,6 +53,26 @@ offset_left = 1315.0
 offset_top = 198.0
 offset_right = 1696.0
 offset_bottom = 536.0
+
+[node name="verre1" type="Sprite2D" parent="."]
+position = Vector2(379, 426)
+scale = Vector2(4.5, 6.5)
+texture = ExtResource("4_jprc5")
+
+[node name="verre2" type="Sprite2D" parent="."]
+position = Vector2(490, 812)
+scale = Vector2(4, 4)
+texture = ExtResource("5_r0u7g")
+
+[node name="verre3" type="Sprite2D" parent="."]
+position = Vector2(612, 817)
+scale = Vector2(4, 4)
+texture = ExtResource("6_d6xly")
+
+[node name="NewPiskel(30)" type="Sprite2D" parent="."]
+position = Vector2(724, 283)
+scale = Vector2(9, 9)
+texture = ExtResource("7_tv2ye")
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

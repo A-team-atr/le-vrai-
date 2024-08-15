@@ -301,8 +301,8 @@ scale = Vector2(0.66, 0.7)
 shape = SubResource("CapsuleShape2D_m01k8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.53674e-07, -34.2857)
-scale = Vector2(5.979, 4)
+position = Vector2(-1.13687e-13, -34.2857)
+scale = Vector2(5.15, 4.35)
 sprite_frames = SubResource("SpriteFrames_8rxh4")
 animation = &"idle"
 autoplay = "idle"
