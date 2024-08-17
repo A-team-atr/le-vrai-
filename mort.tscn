@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dblod3pw847r8" path="res://mort/fond noir.png" id="1_1nk65"]
 [ext_resource type="Script" path="res://Button.gd" id="2_5agcs"]
 
-[sub_resource type="SystemFont" id="SystemFont_n36j3"]
+[sub_resource type="SystemFont" id="SystemFont_8ouh7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o3h11"]
-font = SubResource("SystemFont_n36j3")
+font = SubResource("SystemFont_8ouh7")
 font_size = 121
 font_color = Color(0.701353, 0, 0.138056, 1)
 

@@ -1,9 +1,12 @@
 extends Node2D
 
+
 var zone_retour_peche = false 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+
 
 func _physics_process(delta):
 	if zone_retour_peche == true:

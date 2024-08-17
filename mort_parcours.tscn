@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckeeuhwd4lvy3"]
+
+[ext_resource type="Script" path="res://mort_parcours.gd" id="1_ky1mc"]
+[ext_resource type="Texture2D" uid="uid://dblod3pw847r8" path="res://mort/fond noir.png" id="1_mjncx"]
+
+[sub_resource type="SystemFont" id="SystemFont_n36j3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sisiy"]
+font = SubResource("SystemFont_n36j3")
+font_size = 121
+font_color = Color(0.701353, 0, 0.138056, 1)
+
+[node name="mort_pracours" type="Node2D"]
+script = ExtResource("1_ky1mc")
+
+[node name="FondNoir" type="Sprite2D" parent="."]
+position = Vector2(968, 544)
+scale = Vector2(4.47113, 4.26459)
+texture = ExtResource("1_mjncx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 296.0
+offset_right = 1913.0
+offset_bottom = 728.0
+text = "Vous avez subit
+ une chute fatal "
+label_settings = SubResource("LabelSettings_sisiy")
+horizontal_alignment = 1
+vertical_alignment = 1
