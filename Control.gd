@@ -9,7 +9,7 @@ var click_zone_end := 800.0 # Fin de la zone de clic valide
 var task_completed := false # Variable de contrôle pour savoir si la tâche est réussie
 var task_starting	:= false
 
-# Références aux nodes
+
 @onready var water_gauge := $WaterGauge
 @onready var feedback_label := $FeedbackLabel
 @onready var start_button := $StartButton 
@@ -19,10 +19,11 @@ var task_starting	:= false
 @onready var verre1_1 := $verre1_1
 @onready var verre2_2 := $verre2_2
 @onready var verre3_3 := $verre3_3
-@onready var theiere := $theiere
 @onready var theiere2 := $theiere2
-
-
+@export var speed := 50.0  
+@onready var path_follow := $Path2D/PathFollow2D
+@onready var teapot_sprite := $Path2D/PathFollow2D/AnimatedSprite2D
+var previous_position : Vector2 = Vector2()
 
 
 func _ready():
@@ -39,13 +40,11 @@ func _ready():
 	
 func _process(delta):
 	if task_starting:
-		# Remplir la jauge continuellement si la tâche n'est pas terminée
 		if not task_completed:
-			var growth_rate = 1.05  # Ajustez ce taux pour accélérer ou ralentir la croissance
+			var growth_rate = 1.05 
 			water_gauge.value += 30 * delta
 			print(water_gauge.value)
 	
-		# Si la jauge atteint la valeur cible, elle recommence au début
 			if water_gauge.value >= target_value and success_clicks == 0:
 				water_gauge.value = 0
 				feedback_label.text = "Eau débordée, recommencez."
@@ -65,10 +64,19 @@ func _process(delta):
 				task_starting = false
 				start_button.visible = true
 				
+	path_follow.h_offset += speed * delta
+	path_follow.v_offset += speed * delta
+	var path_length = path_follow.get_curve().get_baked_length()
+	if path_follow.offset >= path_length:
+		path_follow.offset = 0
+	var current_position = path_follow.position
+	var direction = current_position - previous_position
+	if direction.length() > 0:
+		teapot_sprite.rotation = direction.angle()
+	previous_position = current_position
 
 func _on_click_area_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("clickgauche") and not task_completed:
-		# Vérifier si le clic est dans la zone correcte
 		if water_gauge.value >= click_zone_start and water_gauge.value <= click_zone_end and success_clicks == 0:
 			success_clicks += 1
 			feedback_label.text = "Bon clic! Total : %d" % success_clicks
@@ -111,14 +119,12 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			start_button.visible = true
 			print("Clic raté")
 		
-		# Réinitialiser la jauge après un clic, qu'il soit réussi ou non
 		water_gauge.value = 0
 
-		# Vérifier si le joueur a réussi 3 clics
 		if success_clicks >= 3:
 			feedback_label.text = "Tâche réussie!"
-			task_completed = true  # Marque la tâche comme réussie
-			success_clicks = 0  # Réinitialiser le compteur après succès
+			task_completed = true  
+			success_clicks = 0  
 
 
 

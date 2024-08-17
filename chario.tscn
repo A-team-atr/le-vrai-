@@ -5,15 +5,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asqna"]
 size = Vector2(108.451, 90)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5epmw"]
-size = Vector2(24.7155, 53.2066)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_adcoy"]
+radius = 16.468
+height = 63.74
 
-[node name="NewPiskel(21)" type="Sprite2D"]
+[node name="chario" type="Sprite2D"]
 position = Vector2(148, 80)
 scale = Vector2(5.68, 4.8)
 texture = ExtResource("1_0fgmi")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(5.63379, 6.66666)
@@ -22,6 +24,6 @@ shape = SubResource("RectangleShape2D_asqna")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(7.12708, 3.40642)
+position = Vector2(6.8662, 4.58333)
 rotation = -0.785398
-shape = SubResource("RectangleShape2D_5epmw")
+shape = SubResource("CapsuleShape2D_adcoy")
