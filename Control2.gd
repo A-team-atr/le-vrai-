@@ -47,6 +47,29 @@ func show_letter():
 	drawing_points.clear()
 	line_draw.clear_points()
 
+#func show_letter():
+	# Charger la texture de la lettre et l'afficher
+#	var letter_texture = load(letters[current_letter])
+#	if letter_texture:
+#		sprite_letter.texture = letter_texture
+#		sprite_letter.visible = true
+#		feedback_label2.text = "Mémorisez la lettre."
+#		print("Lettre affichée: ", letters[current_letter])
+#	else:
+#		print("Erreur: Impossible de charger la lettre", letters[current_letter])
+
+	# Attendre 3 secondes
+#	await get_tree().create_timer(3.0).timeout
+
+	# Cacher la lettre et permettre le dessin
+#	sprite_letter.visible = false
+#	feedback_label2.text = "Dessinez la lettre."
+#	print("Temps écoulé, dessinez maintenant.")
+
+#	is_drawing = true
+#	drawing_points.clear()
+#	line_draw.clear_points()
+
 func _input(event):
 	if is_drawing and event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		var mouse_pos = event.position

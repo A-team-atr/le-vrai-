@@ -2195,7 +2195,7 @@ z_index = 1
 position = Vector2(5264, 3392)
 
 [node name="playercote_parcours" parent="." instance=ExtResource("5_8bb80")]
-position = Vector2(2473, 39)
+position = Vector2(1952, -2740)
 
 [node name="echelle2" parent="." instance=ExtResource("4_6s342")]
 z_index = 1

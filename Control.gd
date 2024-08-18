@@ -125,7 +125,7 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			feedback_label.text = "Tâche réussie!"
 			task_completed = true  
 			success_clicks = 0  
-
+			theiere2.visible = true
 
 
 func _on_start_button_pressed():
