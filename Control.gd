@@ -20,10 +20,13 @@ var task_starting	:= false
 @onready var verre2_2 := $verre2_2
 @onready var verre3_3 := $verre3_3
 @onready var theiere2 := $theiere2
-@export var speed := 50.0  
-@onready var path_follow := $Path2D/PathFollow2D
-@onready var teapot_sprite := $Path2D/PathFollow2D/AnimatedSprite2D
-var previous_position : Vector2 = Vector2()
+
+@onready var anim := $Path2D/PathFollow2D/AnimatedSprite2D
+@export var speed = 0.50
+@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
+@export var speed_stop = 0.0
+@export var speed_back = -0.50
+@onready var theactif = false
 
 
 func _ready():
@@ -39,6 +42,12 @@ func _ready():
 	
 	
 func _process(delta):
+	if theactif == true:
+		if path_follow.progress_ratio >= 0.9:
+			path_follow.progress_ratio += speed_stop * delta
+			anim.play("new_animation")
+		else:
+			path_follow.progress_ratio += speed * delta
 	if task_starting:
 		if not task_completed:
 			var growth_rate = 1.05 
@@ -64,16 +73,7 @@ func _process(delta):
 				task_starting = false
 				start_button.visible = true
 				
-	path_follow.h_offset += speed * delta
-	path_follow.v_offset += speed * delta
-	var path_length = path_follow.get_curve().get_baked_length()
-	if path_follow.offset >= path_length:
-		path_follow.offset = 0
-	var current_position = path_follow.position
-	var direction = current_position - previous_position
-	if direction.length() > 0:
-		teapot_sprite.rotation = direction.angle()
-	previous_position = current_position
+	
 
 func _on_click_area_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("clickgauche") and not task_completed:
@@ -131,6 +131,7 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 func _on_start_button_pressed():
 	start_button.visible = false
 	task_starting = true
+	theactif = true
 	
 
 

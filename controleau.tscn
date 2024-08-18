@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cp0r0w7huoq2"]
+[gd_scene load_steps=20 format=3 uid="uid://cp0r0w7huoq2"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_8oy4x"]
 [ext_resource type="Texture2D" uid="uid://divbpyve3pm4v" path="res://PixelArtFaisMain/New Piskel (24).png" id="2_qqqes"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bmekguqkmhyrw" path="res://PixelArtFaisMain/New Piskel (28).png" id="5_r0u7g"]
 [ext_resource type="Texture2D" uid="uid://h3c1cyxi72e2" path="res://PixelArtFaisMain/New Piskel (29).png" id="6_d6xly"]
 [ext_resource type="Texture2D" uid="uid://hd73ra1j8p0l" path="res://PixelArtFaisMain/New Piskel (30).png" id="7_tv2ye"]
+[ext_resource type="Texture2D" uid="uid://c4q5vequwviwi" path="res://PixelArtFaisMain/New Piskel (32).png" id="8_wokvf"]
 [ext_resource type="Texture2D" uid="uid://b8mr1qjil1jgu" path="res://PixelArtFaisMain/New Piskel (31).png" id="8_wr0hf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8thy"]
@@ -14,13 +15,13 @@ size = Vector2(2087, 1198)
 
 [sub_resource type="Curve2D" id="Curve2D_fuxre"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1196, 691, 0, 0, 0, 0, 1166, 623, 0, 0, 0, 0, 1166, 509, 0, 0, 0, 0, 1129, 422, 0, 0, 0, 0, 1048, 368, 0, 0, 0, 0, 951, 351, 0, 0, 0, 0, 880, 398, 0, 0, 0, 0, 840, 489)
+"points": PackedVector2Array(0, 0, 0, 0, 1196, 691, 0, 0, 0, 0, 1177, 642, 0, 0, 0, 0, 1160, 613, 0, 0, 0, 0, 1141, 587, 0, 0, 0, 0, 1118, 563, 0, 0, 0, 0, 1091, 539, 0, 0, 0, 0, 1063, 521, 0, 0, 0, 0, 1032, 506, 0, 0, 0, 0, 998, 493, 0, 0, 0, 0, 961, 486, 0, 0, 0, 0, 923, 486)
 }
-point_count = 8
+point_count = 11
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7y721"]
-atlas = ExtResource("7_tv2ye")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_704xr"]
+atlas = ExtResource("8_wokvf")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rr64g"]
 atlas = ExtResource("8_wr0hf")
@@ -46,11 +47,11 @@ region = Rect2(0, 256, 128, 128)
 atlas = ExtResource("8_wr0hf")
 region = Rect2(128, 256, 128, 128)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_oq3px"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocavy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7y721")
+"texture": SubResource("AtlasTexture_704xr")
 }],
 "loop": true,
 "name": &"default",
@@ -124,17 +125,17 @@ offset_right = 1696.0
 offset_bottom = 536.0
 
 [node name="verre1" type="Sprite2D" parent="."]
-position = Vector2(739, 838)
+position = Vector2(707, 713)
 scale = Vector2(4.5, 6.5)
 texture = ExtResource("4_jprc5")
 
 [node name="verre2" type="Sprite2D" parent="."]
-position = Vector2(736, 834)
+position = Vector2(711, 759)
 scale = Vector2(4, 4)
 texture = ExtResource("5_r0u7g")
 
 [node name="verre3" type="Sprite2D" parent="."]
-position = Vector2(738, 838)
+position = Vector2(707, 754)
 scale = Vector2(4, 4)
 texture = ExtResource("6_d6xly")
 
@@ -168,17 +169,14 @@ curve = SubResource("Curve2D_fuxre")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(1196, 691)
-rotation = -1.98629
+rotation = -1.9407
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
 position = Vector2(-4.57892, -2.00151e-07)
 rotation = 1.86576
 scale = Vector2(6, 6)
-sprite_frames = SubResource("SpriteFrames_oq3px")
-animation = &"new_animation"
+sprite_frames = SubResource("SpriteFrames_ocavy")
 autoplay = "default"
-frame_progress = 0.840697
-offset = Vector2(20, 0)
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

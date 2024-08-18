@@ -2195,7 +2195,7 @@ z_index = 1
 position = Vector2(5264, 3392)
 
 [node name="playercote_parcours" parent="." instance=ExtResource("5_8bb80")]
-position = Vector2(392, 3824)
+position = Vector2(2473, 39)
 
 [node name="echelle2" parent="." instance=ExtResource("4_6s342")]
 z_index = 1
@@ -2218,3 +2218,5 @@ position = Vector2(5624, -1064)
 [node name="arrivé_parcour" parent="." instance=ExtResource("6_nbdqh")]
 position = Vector2(2528, -2832)
 scale = Vector2(4, 4)
+
+[connection signal="body_exited" from="arrivé_parcour" to="arrivé_parcour" method="_on_body_exited"]
