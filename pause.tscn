@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dam4w13tk2o4x"]
+
+[ext_resource type="Shader" path="res://pause.gdshader" id="1_3qjdt"]
+[ext_resource type="Script" path="res://pause.gd" id="1_305b6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xno4"]
+shader = ExtResource("1_3qjdt")
+shader_parameter/amount = 3.0
+
+[node name="pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_305b6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8xno4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -50.5
+offset_right = 38.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="continué" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "continuer"
+
+[node name="option" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "option"
+
+[node name="quitté" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "quitter"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/continué" to="." method="_on_continué_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quitté" to="." method="_on_quitté_pressed"]

@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+@onready var pm := $Camera2D/pause
 @onready var walk_speed = 370
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var run_speed = 500.0
-
 @export var inv: Inv
+
+
 
 
 func _physics_process(delta):
@@ -13,6 +15,7 @@ func _physics_process(delta):
 	input_vector.y = Input.get_action_strength("descendre") - Input.get_action_strength("monter")
 	input_vector = input_vector.normalized()
 	print(input_vector)
+	
 	
 	
 	if input_vector.x > 0:

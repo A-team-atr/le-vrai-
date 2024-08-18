@@ -3,15 +3,29 @@ extends Node2D
 @onready var labelferme := $"zone label/Label"
 @onready var labelbateau := $"ZoneBateauLabel/LabelBateau"
 @onready var labelparcour := $"zone_parcour_label/Labelparcour"
-
-
+@onready var pause_menu = get_node("player/Camera2D/pause")
+ 
+var paused = false 
 var courage = ProjectSettings.get_setting("shader_global/courage")
 var zone_bateau = false
 var zone_ferme = false
 var zone_parcour = false
+
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		paused = true
+		print(paused)
+	if Input.is_action_just_pressed("pause") and paused == true:
+		paused = false 
+		
+ 
+
+	
+		
 func _ready():
 	labelferme.visible = false
 	labelbateau.visible = false
+
 
 func _physics_process(delta):
 	if zone_bateau == true:
@@ -28,6 +42,8 @@ func _physics_process(delta):
 				TransitionScene.change_scene_to_file("res://prier.tscn")
 			
 			TransitionScene.change_scene_to_file("res://parcour.tscn")
+		
+
 
 func _on_zone_label_body_entered(body):
 	if body.name == "player":
@@ -80,3 +96,5 @@ func _on_zone_parcour_label_body_entered(body):
 func _on_zone_parcour_label_body_exited(body):
 	if body.name == "player":
 		labelparcour.visible = false 
+		
+
