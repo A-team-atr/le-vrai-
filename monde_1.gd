@@ -9,7 +9,7 @@ var paused = false
 var courage = ProjectSettings.get_setting("shader_global/courage")
 var zone_bateau = false
 var zone_ferme = false
-var zone_parcour = false
+var z_parcour = false
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -36,13 +36,11 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://ferme.tscn")
 	
-	if zone_parcour == true:
-		if Input.is_action_just_pressed("interagir"):
-			if courage == true:
-				TransitionScene.change_scene_to_file("res://prier.tscn")
-			
+	if z_parcour == true:
+		if courage == true and Input.is_action_just_pressed("interagir"):
+			TransitionScene.change_scene_to_file("res://prier.tscn")
+		elif Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://parcour.tscn")
-		
 
 
 func _on_zone_label_body_entered(body):
@@ -72,20 +70,14 @@ func _on_allez_ferme_body_entered(body: PhysicsBody2D):
 	zone_ferme = true 
 
 
-func _on_allez_ferme_body_exited(body):
+func _on_allez_ferme_body_exited(body: PhysicsBody2D):
 	zone_ferme = false 
 	
 	
-func _on_bateau_body_exited(body):
+func _on_bateau_body_exited(body: PhysicsBody2D):
 	zone_bateau = false 
 	
 	
-func _on_allez_parcours_body_entered(body):
-	zone_parcour = true 
-	
-	
-func _on_allez_parcours_body_exited(body):
-	zone_parcour = false 
 	
 	
 func _on_zone_parcour_label_body_entered(body):
@@ -98,3 +90,11 @@ func _on_zone_parcour_label_body_exited(body):
 		labelparcour.visible = false 
 		
 
+
+
+func _on_allez_parcours_body_entered(body: PhysicsBody2D):
+	z_parcour = true
+
+
+func _on_allez_parcours_body_exited(body: PhysicsBody2D):
+	z_parcour = false

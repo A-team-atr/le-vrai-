@@ -25,3 +25,4 @@ position = Vector2(120, 48)
 shape = SubResource("RectangleShape2D_lilu0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

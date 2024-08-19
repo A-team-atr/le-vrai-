@@ -344,7 +344,7 @@ size = Vector2(97, 93.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_de1vf"]
 size = Vector2(40, 104)
 
-[node name="Node2D" type="Node2D"]
+[node name="peche" type="Node2D"]
 script = ExtResource("1_idyqb")
 
 [node name="pont" type="TileMap" parent="."]

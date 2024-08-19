@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2cg1gqbhx0rc"]
+[gd_scene load_steps=11 format=3 uid="uid://b2cg1gqbhx0rc"]
 
 [ext_resource type="Texture2D" uid="uid://s0w3icuq2d8s" path="res://ferme/Capture_decran_2024-08-12_151238-removebg-preview.png" id="1_e5mlg"]
 [ext_resource type="Script" path="res://ferme.gd" id="1_gseq4"]
@@ -4521,6 +4521,9 @@ sources/0 = SubResource("TileSetAtlasSource_c132x")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnldx"]
 size = Vector2(493.334, 146.667)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htifv"]
+size = Vector2(227.667, 245.667)
+
 [node name="ferme" type="Node2D"]
 scale = Vector2(6, 6)
 script = ExtResource("1_gseq4")
@@ -4549,5 +4552,13 @@ position = Vector2(4240, 1053.33)
 position = Vector2(4294.67, 1028)
 shape = SubResource("RectangleShape2D_nnldx")
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2850.67, 1680)
+shape = SubResource("RectangleShape2D_htifv")
+
 [connection signal="body_entered" from="rertour_ferme" to="." method="_on_rertour_ferme_body_entered"]
 [connection signal="body_exited" from="rertour_ferme" to="." method="_on_rertour_ferme_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
