@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwng2lynthc8t"
+path="res://.godot/imported/UGOVHB - WTF 2 ( PROD.EF ).mp3-265fef32848f8c207e6f0cee4826e49a.mp3str"
+
+[deps]
+
+source_file="res://PixelArtFaisMain/UGOVHB - WTF 2 ( PROD.EF ).mp3"
+dest_files=["res://.godot/imported/UGOVHB - WTF 2 ( PROD.EF ).mp3-265fef32848f8c207e6f0cee4826e49a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
