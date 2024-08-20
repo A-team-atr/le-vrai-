@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bitygkxub6hf0"]
+[gd_scene load_steps=50 format=3 uid="uid://bitygkxub6hf0"]
 
 [ext_resource type="Script" path="res://player_cote_pêche.gd" id="1_3awtx"]
 [ext_resource type="Texture2D" uid="uid://cr7uj1s7cqp2n" path="res://personnage/Samurai_Archer/Jump.png" id="2_lylef"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://images/dormir.png" id="4_hv028"]
 [ext_resource type="Texture2D" uid="uid://dehkn4n3mstas" path="res://personnage/Samurai_Archer/Run.png" id="5_862xr"]
 [ext_resource type="Texture2D" uid="uid://bf4x2pkvnsddj" path="res://personnage/Samurai_Archer/Walk.png" id="6_313kk"]
+[ext_resource type="PackedScene" uid="uid://dam4w13tk2o4x" path="res://pause.tscn" id="7_1svo3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t04ts"]
 atlas = ExtResource("2_lylef")
@@ -349,3 +350,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 rotation_smoothing_enabled = true
+
+[node name="pause" parent="Camera2D" instance=ExtResource("7_1svo3")]
+scale = Vector2(4, 4)

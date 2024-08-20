@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2cg1gqbhx0rc"]
+[gd_scene load_steps=13 format=3 uid="uid://b2cg1gqbhx0rc"]
 
 [ext_resource type="Texture2D" uid="uid://s0w3icuq2d8s" path="res://ferme/Capture_decran_2024-08-12_151238-removebg-preview.png" id="1_e5mlg"]
 [ext_resource type="Script" path="res://ferme.gd" id="1_gseq4"]
@@ -4524,6 +4524,12 @@ size = Vector2(493.334, 146.667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htifv"]
 size = Vector2(227.667, 245.667)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eyfx"]
+size = Vector2(1010, 498.333)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyq3h"]
+font_size = 41
+
 [node name="ferme" type="Node2D"]
 scale = Vector2(6, 6)
 script = ExtResource("1_gseq4")
@@ -4558,7 +4564,26 @@ shape = SubResource("RectangleShape2D_nnldx")
 position = Vector2(2850.67, 1680)
 shape = SubResource("RectangleShape2D_htifv")
 
+[node name="label_maison" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="label_maison"]
+position = Vector2(2933.67, 1836)
+shape = SubResource("RectangleShape2D_0eyfx")
+
+[node name="Label" type="Label" parent="label_maison"]
+z_index = 2
+offset_left = 2674.67
+offset_top = 1385.33
+offset_right = 3041.67
+offset_bottom = 1596.33
+text = "Maison du fermier"
+label_settings = SubResource("LabelSettings_gyq3h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="body_entered" from="rertour_ferme" to="." method="_on_rertour_ferme_body_entered"]
 [connection signal="body_exited" from="rertour_ferme" to="." method="_on_rertour_ferme_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="label_maison" to="." method="_on_label_maison_body_entered"]
+[connection signal="body_exited" from="label_maison" to="." method="_on_label_maison_body_exited"]

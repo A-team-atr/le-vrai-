@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var pm := $Camera2D/pause
+
 @onready var walk_speed = 370
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var run_speed = 500.0

@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://b728q35yran7h"]
+[gd_scene load_steps=12 format=3 uid="uid://b728q35yran7h"]
 
+[ext_resource type="Script" path="res://parcour.gd" id="1_3hjys"]
 [ext_resource type="Texture2D" uid="uid://bjcklfgrnm3hk" path="res://Backgrounds/Backgrounds/montagne_rouge-transformed (1).jpeg" id="1_whosb"]
 [ext_resource type="Texture2D" uid="uid://40wrsway6jl7" path="res://parcour/parcour tilmap/Terrain_and_Props.png" id="2_f4p0q"]
 [ext_resource type="Texture2D" uid="uid://uyijdq2ak81h" path="res://parcour/parcour tilmap/Terrain-and-Props-OLD.png" id="2_g0j2a"]
@@ -2171,6 +2172,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b871w")
 
 [node name="parcour" type="Node2D"]
+script = ExtResource("1_3hjys")
 
 [node name="MontagneRouge-transformed(1)" type="Sprite2D" parent="."]
 position = Vector2(2904, 584.001)
@@ -2195,7 +2197,7 @@ z_index = 1
 position = Vector2(5264, 3392)
 
 [node name="playercote_parcours" parent="." instance=ExtResource("5_8bb80")]
-position = Vector2(2424, 48)
+position = Vector2(432, 3768)
 
 [node name="echelle2" parent="." instance=ExtResource("4_6s342")]
 z_index = 1

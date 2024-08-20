@@ -1,6 +1,5 @@
 extends Control
 
-@onready var main = $"monde_1"
 
 var is_open = false
 

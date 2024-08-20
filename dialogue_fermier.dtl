@@ -1,0 +1,17 @@
+"Kenshin le fermier": Bonjour Jeune homme, cela fait bien longtemps que je n'ai plus vu de samourai dans cette région. De voir un homme de votre calibre m'es un grand honneur.
+"Kenshin le fermier": Si ce n'est pas trop indiscret comme question\:
+"Kenshin le fermier": Qu'est se que vous a amené par ici?
+player: Je suis venu découvrir les allants tours et votre maison m'as intrigué c'est pour cela que je suis entré.
+if :
+	- Mais le devoir m'appel je reviendrai un autre jour.
+		[signal arg="retour_ferme"]
+		[end_timeline]
+	- Si je peut vous donner un coup de amtin n'hesiter pas a me le demander.
+		"Kenshin le fermier": Si vous le dites de cette façon il y'a en effet une affaire dans la quelle y'aurai besoin de capacités semblable aux votres.
+player: Dites moi tout, je vais faire tout mon possible pour être a la hauteur de vos attendes en moi. Je ne vous déssevrai pas je vous en donne ma parol. 
+"Kenshin le fermier": Il y'a quelque jour en arrier une grande partie de mes récoles ont disparue j'ai cherché dans tout le village mais sans résultat. Tu pense que tu peux grader les yeux ouvert pour moi.
+if :
+	- Oui biensur je vais remplir cette tache au plus vite possible rien ne pourra m'arrêter
+	- Je reviens bientôt mais je ne suis pas encore près pour une tache de cette taille.
+		[signal arg="retour_ferme"]
+		[end_timeline]

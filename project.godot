@@ -25,8 +25,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Kenshin le fermier": "res://Kenshin le fermier.dch",
 "Tadao le pêcheur ": "res://Tadao le pêcheur .dch",
+"character": "res://character.dch",
 "character1": "res://character1.dch",
+"fermier": "res://fermier.dch",
 "joueur ": "res://joueur .dch",
 "narrateur": "res://narrateur.dch",
 "player": "res://player.dch",
@@ -35,11 +38,12 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "BD": "res://BD.dtl",
+"dialogue_fermier": "res://dialogue_fermier.dtl",
 "dialogue_pêcheur": "res://dialogue_pêcheur.dtl",
 "timeline1": "res://timeline1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://custome_style .tres", "res://custome_style_joueur.tres"]
+layout/style_list=["res://custome_style .tres", "res://custome_style_joueur.tres", "res://costume_style_fermier .tres"]
 layout/default_style="res://custome_style .tres"
 variables={
 "joueur": {

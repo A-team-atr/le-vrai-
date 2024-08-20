@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://dxa222bo8x5jn"]
+
+[ext_resource type="Script" path="res://fermier.gd" id="1_fpmj0"]
+[ext_resource type="Texture2D" uid="uid://cbrwrehkxwa51" path="res://ferme/fermier/City_men_1/Idle.png" id="2_foc3l"]
+[ext_resource type="Script" path="res://interagir fermier.gd" id="3_6vhw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3art"]
+size = Vector2(78, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phwwv"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q78h5"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqr8f"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmxgr"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrk46"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7ht3"]
+atlas = ExtResource("2_foc3l")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eoq6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phwwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q78h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqr8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmxgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrk46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7ht3")
+}],
+"loop": true,
+"name": &"repos",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4ry4"]
+size = Vector2(217, 130)
+
+[node name="fermier" type="CharacterBody2D"]
+script = ExtResource("1_fpmj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -152)
+shape = SubResource("RectangleShape2D_r3art")
+
+[node name="mouvement_fermier" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-8, -24)
+sprite_frames = SubResource("SpriteFrames_eoq6p")
+animation = &"repos"
+frame_progress = 0.192006
+flip_h = true
+
+[node name="interagir fermier" type="Area2D" parent="."]
+script = ExtResource("3_6vhw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interagir fermier"]
+position = Vector2(-43.5, -16)
+shape = SubResource("RectangleShape2D_b4ry4")
+
+[connection signal="body_entered" from="interagir fermier" to="interagir fermier" method="_on_body_entered"]
+[connection signal="body_exited" from="interagir fermier" to="interagir fermier" method="_on_body_exited"]

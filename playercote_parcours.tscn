@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cm3lnv524vs41"]
+[gd_scene load_steps=50 format=3 uid="uid://cm3lnv524vs41"]
 
 [ext_resource type="Script" path="res://playercote_parcours.gd" id="1_r2cl2"]
 [ext_resource type="Texture2D" uid="uid://cr7uj1s7cqp2n" path="res://personnage/Samurai_Archer/Jump.png" id="2_3vl7f"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bbqfm5swk08jm" path="res://images/dormir.png" id="4_7mkq4"]
 [ext_resource type="Texture2D" uid="uid://dehkn4n3mstas" path="res://personnage/Samurai_Archer/Run.png" id="5_yc1ii"]
 [ext_resource type="Texture2D" uid="uid://bf4x2pkvnsddj" path="res://personnage/Samurai_Archer/Walk.png" id="6_qu3as"]
+[ext_resource type="PackedScene" uid="uid://dam4w13tk2o4x" path="res://pause.tscn" id="7_fev8w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t04ts"]
 atlas = ExtResource("2_3vl7f")
@@ -345,3 +346,6 @@ limit_right = 5760
 limit_bottom = 4272
 position_smoothing_enabled = true
 position_smoothing_speed = 15.0
+
+[node name="pause" parent="Camera2D" instance=ExtResource("7_fev8w")]
+scale = Vector2(3.5, 3.5)

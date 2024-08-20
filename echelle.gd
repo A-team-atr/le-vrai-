@@ -5,7 +5,7 @@ var vitesseY = false
 
 func _on_body_entered(body):
 	if body.name == "playercote":
-		get_node("/root/world/playercote").echelle_active = true 
+		get_node("/root/maisonferme/playercote").echelle_active = true 
 		SoundEchelle.play()
 	
 	if body.name == "playercote_parcours":
@@ -16,7 +16,7 @@ func _on_body_entered(body):
 			
 func _on_body_exited(body):
 	if body.name == "playercote":
-		get_node("/root/world/playercote").echelle_active = false 
+		get_node("/root/maisonferme/playercote").echelle_active = false 
 		SoundEchelle.stop()
 
 	if body.name == "playercote_parcours":

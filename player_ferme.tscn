@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://c2lb3rggnqnn1"]
+[gd_scene load_steps=42 format=3 uid="uid://c2lb3rggnqnn1"]
 
 [ext_resource type="Script" path="res://player_ferme.gd" id="1_k1gnv"]
 [ext_resource type="Texture2D" uid="uid://c12ckn7c5ka7e" path="res://PixelArtFaisMain/george (1).png" id="2_cjjp8"]
 [ext_resource type="Texture2D" uid="uid://dv2e7qgihgmm0" path="res://personnage/george.png" id="3_b5rh0"]
+[ext_resource type="PackedScene" uid="uid://dam4w13tk2o4x" path="res://pause.tscn" id="4_d8kss"]
 [ext_resource type="PackedScene" uid="uid://cra5mbn5wc8te" path="res://inventory/inv_ui.tscn" id="4_oxa1p"]
 [ext_resource type="PackedScene" uid="uid://cm8aw2d3p348t" path="res://Skills.tscn" id="5_4ytxp"]
 
@@ -320,6 +321,16 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 9.0
 rotation_smoothing_enabled = true
+
+[node name="pause" parent="Camera2D" instance=ExtResource("4_d8kss")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = -52.0408
+offset_bottom = -52.0408
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(4, 4)
 
 [node name="Inv_UI" parent="." instance=ExtResource("4_oxa1p")]
 offset_left = 251.429

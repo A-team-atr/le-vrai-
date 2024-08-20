@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var paused = false 
 var zone_retour_peche = false 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,7 +19,10 @@ func _on_dialogic_signal(argument: String):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("pause"):
+		paused = true
+	if Input.is_action_just_pressed("pause") and paused == true:
+		paused = false 
 
 
 

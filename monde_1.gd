@@ -3,7 +3,7 @@ extends Node2D
 @onready var labelferme := $"zone label/Label"
 @onready var labelbateau := $"ZoneBateauLabel/LabelBateau"
 @onready var labelparcour := $"zone_parcour_label/Labelparcour"
-@onready var pause_menu = get_node("player/Camera2D/pause")
+
  
 var paused = false 
 var courage = ProjectSettings.get_setting("shader_global/courage")
@@ -14,7 +14,6 @@ var z_parcour = false
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		paused = true
-		print(paused)
 	if Input.is_action_just_pressed("pause") and paused == true:
 		paused = false 
 		

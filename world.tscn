@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bptpgkacmyh5i"]
+[gd_scene load_steps=18 format=3 uid="uid://bptpgkacmyh5i"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_4bsyr"]
 [ext_resource type="Texture2D" uid="uid://d0baio32hd1mb" path="res://images/istockphoto-509782643-612x612.jpg" id="1_ajjfk"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cra5mbn5wc8te" path="res://inventory/inv_ui.tscn" id="9_ns1ah"]
 [ext_resource type="PackedScene" uid="uid://bc8pkip08nx2n" path="res://zone_histoire_1.tscn" id="10_6emmf"]
 [ext_resource type="PackedScene" uid="uid://cm8aw2d3p348t" path="res://Skills.tscn" id="11_ff8uk"]
+[ext_resource type="PackedScene" uid="uid://dam4w13tk2o4x" path="res://pause.tscn" id="13_3xhcp"]
 [ext_resource type="PackedScene" uid="uid://b1e4d0mlxgqfb" path="res://collectpossible.tscn" id="13_qb5da"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qyj2n"]
@@ -603,6 +604,13 @@ position = Vector2(974, 327)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sortie"]
 position = Vector2(-70.5, 710.5)
 shape = SubResource("RectangleShape2D_u65xd")
+
+[node name="pause" parent="." instance=ExtResource("13_3xhcp")]
+offset_left = 1024.0
+offset_top = 512.0
+offset_right = 1024.0
+offset_bottom = 512.0
+scale = Vector2(6, 6)
 
 [connection signal="body_entered" from="sortie" to="." method="_on_sortie_body_entered"]
 [connection signal="body_exited" from="sortie" to="." method="_on_sortie_body_exited"]

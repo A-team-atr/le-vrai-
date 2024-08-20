@@ -3,9 +3,9 @@
 [ext_resource type="Shader" path="res://pause.gdshader" id="1_3qjdt"]
 [ext_resource type="Script" path="res://pause.gd" id="1_305b6"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xno4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5ibk"]
 shader = ExtResource("1_3qjdt")
-shader_parameter/amount = 3.0
+shader_parameter/amount = 2.036
 
 [node name="pause" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_305b6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_8xno4")
+material = SubResource("ShaderMaterial_x5ibk")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,14 +45,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="continué" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "continuer"
 
 [node name="option" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "option"
 
 [node name="quitté" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "quitter"
 
