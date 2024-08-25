@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://images/Japanese Wall Set.png" id="1_xx55w"]
 [ext_resource type="PackedScene" uid="uid://8qp2u0li8peq" path="res://echelle.tscn" id="2_cqfuu"]
 [ext_resource type="Texture2D" uid="uid://bpyfpucc6wwid" path="res://ferme/intérieur ferme.png" id="3_ey8w6"]
-[ext_resource type="PackedScene" uid="uid://csj5y6yc6be5m" path="res://playercote.tscn" id="5_0rho3"]
+[ext_resource type="PackedScene" uid="uid://tascjx14hvye" path="res://playercote_ferme.tscn" id="5_md05s"]
 [ext_resource type="PackedScene" uid="uid://dxa222bo8x5jn" path="res://fermier.tscn" id="6_jqkgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6m80"]
@@ -436,9 +436,8 @@ scale = Vector2(2.76411, 2.645)
 texture = ExtResource("3_ey8w6")
 metadata/_edit_lock_ = true
 
-[node name="playercote" parent="." instance=ExtResource("5_0rho3")]
-z_index = 3
-position = Vector2(159, 925)
+[node name="playercote_ferme" parent="." instance=ExtResource("5_md05s")]
+position = Vector2(224, 907)
 
 [node name="sortir" type="Area2D" parent="."]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6hyrclbe2yuh"]
 
-[ext_resource type="AudioStream" uid="uid://cwng2lynthc8t" path="res://PixelArtFaisMain/UGOVHB - WTF 2 ( PROD.EF ).mp3" id="1_sgce0"]
+[ext_resource type="AudioStream" uid="uid://craeq5ok5agfl" path="res://PixelArtFaisMain/_Free Soft Japanese Music - _Yugen_ by Keys Of Moon 🇺🇸.mp3" id="1_wba1i"]
 [ext_resource type="Script" path="res://audio_stream_player.gd" id="2_nwj4u"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_sgce0")
+stream = ExtResource("1_wba1i")
 volume_db = -22.245
 pitch_scale = 1.03
 autoplay = true

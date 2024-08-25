@@ -1138,10 +1138,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0e5ym")
 
 [node name="PageSuivante" type="Button" parent="."]
 material = SubResource("CanvasItemMaterial_gyr6u")
-offset_left = -1.0
-offset_top = 3.0
-offset_right = 1915.0
-offset_bottom = 1079.0
+offset_left = -24.0
+offset_right = 1892.0
+offset_bottom = 1076.0
 mouse_default_cursor_shape = 7
 theme = SubResource("Theme_gjtny")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1164,11 +1163,30 @@ text = "Cliquez pour continuer....
 label_settings = SubResource("LabelSettings_f012w")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 983.0
-offset_top = 30.0
-offset_right = 1758.0
-offset_bottom = 282.0
+offset_left = 943.0
+offset_top = 93.0
+offset_right = 2308.0
+offset_bottom = 345.0
 theme_override_font_sizes/font_size = 32
-text = "agagagagagagag"
+text = "Dans une époque lointaine, un samouraï loyal
+ servait son clan avec honneur et bravoure"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1220.0
+offset_top = 376.0
+offset_right = 2461.0
+offset_bottom = 729.0
+theme_override_font_sizes/font_size = 32
+text = "Accusé à tort de trahison, il fut renié
+ par ceux qu'il considérait comme sa famille"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 956.0
+offset_top = 625.0
+offset_right = 1513.0
+offset_bottom = 943.0
+theme_override_font_sizes/font_size = 32
+text = "Sans procès ni défense, il fut banni
+ de son clan et privé de son honneur"
 
 [connection signal="pressed" from="PageSuivante" to="." method="_on_page_suivante_pressed"]

@@ -1,8 +1,8 @@
-"Tadao le pêcheur ": Bonjour, je m'appel Tadao. Qu'est se qu'a mené votre chemin par ici?
-player: Je m'appel {joueur.nom}.Je suis venu pour me procurer du poisson afin de pouvoir me nourrire.
-"Tadao le pêcheur ": Tu as de la chance mon ami. Je suis très doué pour la pêche. J'ai appris il y a plus de 27 ans l'art de la pêche.
+Bonjour, je m'appelle Tadao. Qu'est ce qu'a mené votre chemin par ici?
+player: Je m'appelle {joueur.nom}.Je suis venu pour me procurer du poisson afin de pouvoir me nourrire.
+Tu as de la chance mon ami. Je suis très doué pour la pêche. J'ai appris cet art il y plus de 27 and maintenant...
 if :
-	- Pouriez vous m'enseigner cet art?
-		"Tadao le pêcheur ": Oui bien sur s sera avec grand plaisir.
-	- Je reveindrais plus tard.
+	- Pourriez-vous m'enseigner cet art?
+		Evidemment! Ce sera avec plaisir.
+	- Très intéressant. Je reviendrai plus tard.
 		[signal arg="retour"]

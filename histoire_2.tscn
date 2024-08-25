@@ -1140,4 +1140,32 @@ text = "Cliquez pour continuer....
 "
 label_settings = SubResource("LabelSettings_pa8hh")
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 51.0
+offset_right = 728.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 32
+text = "Seul et désespéré, il erra à travers les terres,
+ cherchant un nouveau but"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 345.0
+offset_right = 997.0
+offset_bottom = 665.0
+theme_override_font_sizes/font_size = 32
+text = "Au fond d'une forêt dense, il trouva une maison isolée
+ où il pourrait se reconstruire"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 622.0
+offset_right = 791.0
+offset_bottom = 847.0
+theme_override_font_sizes/font_size = 32
+text = "Dans la solitude de la forêt,
+ il jura de retrouver son honneur perdu
+ et de prouver son innocence"
+
 [connection signal="pressed" from="SortirHistoire" to="." method="_on_sortir_histoire_pressed"]
