@@ -360,8 +360,8 @@ format = 2
 
 [node name="Mere" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(960, 539)
-scale = Vector2(1.33333, 1.66358)
+position = Vector2(648, 584)
+scale = Vector2(0.899998, 1.17284)
 texture = ExtResource("3_hliui")
 flip_h = true
 

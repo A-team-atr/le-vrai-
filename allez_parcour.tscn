@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bydh86vjeqq58"]
+
+[ext_resource type="Script" path="res://allez_parcour.gd" id="1_6eufm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6cmx"]
+size = Vector2(77, 98)
+
+[node name="allez_parcour" type="Area2D"]
+script = ExtResource("1_6eufm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b6cmx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
