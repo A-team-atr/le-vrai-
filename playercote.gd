@@ -43,7 +43,8 @@ func _physics_process(delta):
 		if Input.is_action_pressed("interagir"):
 			anim.play("dormir")
 	
-
+	if Input.is_action_just_pressed("MBL"):
+		anim.play("attack1")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("saut") and is_on_floor():

@@ -4,8 +4,8 @@ extends Control
 @export var fill_speed := 40.0 # Vitesse de remplissage de la jauge
 var success_clicks := 0 # Nombre de clics réussis
 var target_value := 1000.0 # Valeur maximale de la jauge
-var click_zone_start := 500.0 # Début de la zone de clic valide
-var click_zone_end := 800.0 # Fin de la zone de clic valide
+var click_zone_start := 610.0 # Début de la zone de clic valide
+var click_zone_end := 890.0 # Fin de la zone de clic valide
 var task_completed := false # Variable de contrôle pour savoir si la tâche est réussie
 var task_starting	:= false
 

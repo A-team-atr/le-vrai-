@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cp0r0w7huoq2"]
+[gd_scene load_steps=21 format=3 uid="uid://cp0r0w7huoq2"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_8oy4x"]
 [ext_resource type="Texture2D" uid="uid://divbpyve3pm4v" path="res://PixelArtFaisMain/New Piskel (24).png" id="2_qqqes"]
 [ext_resource type="Texture2D" uid="uid://c657nappuh7a7" path="res://PixelArtFaisMain/New Piskel (23).png" id="3_g7fp4"]
+[ext_resource type="Texture2D" uid="uid://crir3mlgj5h42" path="res://PixelArtFaisMain/New Piskel-1.png (7).png" id="4_j46ik"]
 [ext_resource type="Texture2D" uid="uid://drkaqnx2qolgr" path="res://PixelArtFaisMain/New Piskel (27).png" id="4_jprc5"]
 [ext_resource type="Texture2D" uid="uid://bmekguqkmhyrw" path="res://PixelArtFaisMain/New Piskel (28).png" id="5_r0u7g"]
 [ext_resource type="Texture2D" uid="uid://h3c1cyxi72e2" path="res://PixelArtFaisMain/New Piskel (29).png" id="6_d6xly"]
@@ -98,10 +99,10 @@ script = ExtResource("1_8oy4x")
 
 [node name="WaterGauge" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 478.0
-offset_top = 276.0
-offset_right = 510.0
-offset_bottom = 308.0
+offset_left = 391.0
+offset_top = 614.0
+offset_right = 423.0
+offset_bottom = 646.0
 scale = Vector2(5, 8)
 max_value = 1000.0
 fill_mode = 3
@@ -111,9 +112,15 @@ tint_under = Color(1, 1, 1, 0)
 tint_over = Color(0.00392157, 0.105882, 1, 1)
 tint_progress = Color(0.254902, 0.188235, 1, 1)
 
+[node name="NewPiskel-1_png(6)" type="Sprite2D" parent="."]
+position = Vector2(470.5, 740.125)
+scale = Vector2(2.75781, 2.76367)
+texture = ExtResource("4_j46ik")
+
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+visible = false
 position = Vector2(990.5, 556)
 shape = SubResource("RectangleShape2D_w8thy")
 debug_color = Color(0, 0.721569, 0.843137, 0.419608)
@@ -133,7 +140,7 @@ offset_right = 1696.0
 offset_bottom = 536.0
 
 [node name="verre1" type="Sprite2D" parent="."]
-position = Vector2(707, 713)
+position = Vector2(707, 724)
 scale = Vector2(4.5, 6.5)
 texture = ExtResource("4_jprc5")
 
