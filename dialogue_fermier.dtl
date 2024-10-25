@@ -12,6 +12,10 @@ player: Dites moi tout, je vais faire tout mon possible pour être à la hauteur
 "Kenshin le fermier": Il y'a quelque jour en arrière une grande partie de mes récoles ont disparues. J'ai cherché dans tout le village mais sans résultat. Penses-tu que tu pourras garder les yeux ouverts ?
 if :
 	- Oui bien sur,  je vais remplir cette tâche le plus vite possible. Rien ne pourra m'arrêter.
+		"Kenshin le fermier": Mille merci monsieur.
+		"Kenshin le fermier": Ah oui, avant que je l'oublie l'autre jour en passant au marché un des passant a vu des traces de chario anormal au long de la route.
+		"Kenshin le fermier": Bonne chance!
+		[signal arg="afficher_chario"]
 	- Je reviens bientôt car je ne suis pas encore prêt pour une tâche de cette ampleur.
 		[signal arg="retour_ferme"]
 		[end_timeline]

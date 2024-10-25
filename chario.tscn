@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0y64w8dott6u"]
+[gd_scene load_steps=6 format=3 uid="uid://c0y64w8dott6u"]
 
 [ext_resource type="Texture2D" uid="uid://b0mhkny522ust" path="res://PixelArtFaisMain/New Piskel (21).png" id="1_0fgmi"]
+[ext_resource type="Script" path="res://Area2D.gd" id="2_uxhin"]
+[ext_resource type="Texture2D" uid="uid://e1fjcok6qdo3" path="res://ferme/fermier/foin.png" id="3_2ch82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asqna"]
 size = Vector2(108.451, 90)
@@ -15,7 +17,7 @@ scale = Vector2(5.68, 4.8)
 texture = ExtResource("1_0fgmi")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
+script = ExtResource("2_uxhin")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(5.63379, 6.66666)
@@ -27,3 +29,21 @@ shape = SubResource("RectangleShape2D_asqna")
 position = Vector2(6.8662, 4.58333)
 rotation = -0.785398
 shape = SubResource("CapsuleShape2D_adcoy")
+
+[node name="Foin" type="Sprite2D" parent="."]
+position = Vector2(-3.83099, -11.8542)
+scale = Vector2(0.0253631, 0.0256755)
+texture = ExtResource("3_2ch82")
+
+[node name="Foin2" type="Sprite2D" parent="Foin"]
+position = Vector2(345.406, 266.955)
+scale = Vector2(0.719088, 0.79873)
+texture = ExtResource("3_2ch82")
+
+[node name="Foin2" type="Sprite2D" parent="Foin/Foin2"]
+position = Vector2(656.411, 732.802)
+scale = Vector2(1.28205, 1.74871)
+texture = ExtResource("3_2ch82")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -3,29 +3,32 @@ extends Node2D
 @onready var labelferme := $"zone label/Label"
 @onready var labelbateau := $"ZoneBateauLabel/LabelBateau"
 @onready var labelparcour := $"zone_parcour_label/Labelparcour"
+@onready var presencechario := $"chario"
 
- 
+var recolte = ProjectSettings.get_setting("shader_global/recolte")
 var paused = false 
 var courage = ProjectSettings.get_setting("shader_global/courage")
+var serviabilite = ProjectSettings.get_setting("shader_global/serviabilite")
 var zone_bateau = false
 var zone_ferme = false
-var z_parcour = false
+var z_parcour = false 
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		paused = true
 	if Input.is_action_just_pressed("pause") and paused == true:
 		paused = false 
-		
- 
+	 
+	
 
 	
 		
 func _ready():
 	labelferme.visible = false
 	labelbateau.visible = false
-
-
+	presencechario.visible = false 
+		
 func _physics_process(delta):
 	if zone_bateau == true:
 		if Input.is_action_just_pressed("interagir"):
@@ -41,6 +44,8 @@ func _physics_process(delta):
 		elif Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://parcour.tscn")
 
+	
+	 
 
 func _on_zone_label_body_entered(body):
 	if body.name == "player":
@@ -97,3 +102,15 @@ func _on_allez_parcours_body_entered(body: PhysicsBody2D):
 
 func _on_allez_parcours_body_exited(body: PhysicsBody2D):
 	z_parcour = false
+
+
+		
+
+
+func _on_zone_afficher_chario_body_entered(body: PhysicsBody2D):
+	print(recolte)
+	if recolte == true:
+		print("fheruvaibia")
+		presencechario.visible = true  
+	else:
+		presencechario.visible = false 

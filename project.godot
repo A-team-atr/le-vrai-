@@ -152,9 +152,21 @@ MBL={
 
 textures/canvas_textures/default_texture_filter=0
 
+[shader_global]
+
+recolte=true
+
 [shader_globals]
 
 courage={
+"type": "bool",
+"value": false
+}
+recolte={
+"type": "bool",
+"value": false
+}
+serviabilite={
 "type": "bool",
 "value": false
 }
