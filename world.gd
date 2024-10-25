@@ -3,6 +3,7 @@ extends Node2D
 var zone_sortie_maison = false 
 var paused = false 
 
+
 func _physics_process(delta):
 	if zone_sortie_maison == true:
 		if Input.is_action_just_pressed("interagir"):
@@ -18,7 +19,7 @@ func _process(delta):
 		paused = true
 	if Input.is_action_just_pressed("pause") and paused == true:
 		paused = false 
-
+	
 
 func _on_sortie_body_entered(body):
 	zone_sortie_maison = true 

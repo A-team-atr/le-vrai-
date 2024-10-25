@@ -1,3 +1,4 @@
+Comment je m'appel? 
 [text_input text="Mais comment je souhaite m'appeler?" var="joueur.nom"]
 player: Où suis-je...
 player: Ma vengeance ?

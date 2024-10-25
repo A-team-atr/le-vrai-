@@ -9,7 +9,6 @@ var zone_retour_ferme = false
 func _ready():
 	labelmaison.visible = false 
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if maison_entrer == true and Input.is_action_just_pressed("interagir"):

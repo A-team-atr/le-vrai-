@@ -1,0 +1,9 @@
+"Kenshin le fermier": Bonjour {joueur.nom}, vous étes déjà de retour. Comment c'est passée la cherche de mes récoltes?
+player: Bonjour Kenshin, j'ai pu retrouver tes récoltes. Je les ai ramené ici elle sont dans ta ferme.
+player: Malheureusement il n'y avait aucune trace des bandits qui sont a l'origine de tout ce calvert.
+"Kenshin le fermier": Ne vous faites pas de soucis pour ça le plus important est que vous avez réccuperé les récoltes. Grâce a vous tout le villages va pouvoir manger cet hiver. C'est déjà plus assez. Je ne sais comment exprimer ma gratitude.
+player: Ne t'en fait pas pour cela. Savoir que toi et le reste du village ira bien cette hiver m'est assez comme récompense.
+"Kenshin le fermier": Vous étes trop généreur. Je nous remerci tu plus profond de mon coeur et de ceux des autres habitants du village.\
+Si un jour vous avez besoin de quoi qu'il soit on sera tous a votre service.
+player: J'en prend note merci. Porte toi bien Kenshin. À bien tôt mon ami.
+[signal arg="fin_foin"]

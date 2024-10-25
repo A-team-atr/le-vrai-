@@ -39,6 +39,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "BD": "res://BD.dtl",
 "dialogue_fermier": "res://dialogue_fermier.dtl",
+"dialogue_fermier_final": "res://dialogue_fermier_final.dtl",
 "dialogue_pêcheur": "res://dialogue_pêcheur.dtl",
 "timeline1": "res://timeline1.dtl"
 }
@@ -154,7 +155,9 @@ textures/canvas_textures/default_texture_filter=0
 
 [shader_global]
 
-recolte=true
+recolte=false
+foin_prie=true
+serviabilite=true
 
 [shader_globals]
 
@@ -167,6 +170,10 @@ recolte={
 "value": false
 }
 serviabilite={
+"type": "bool",
+"value": false
+}
+foin_ok={
 "type": "bool",
 "value": false
 }
