@@ -13,7 +13,7 @@ func _physics_process(delta):
 		Dialogic.start("dialogue_fermier_final")
 	elif _in == true and Input.is_action_just_pressed("interagir"):
 		Dialogic.start("dialogue_fermier")
-	print(foin_ok)
+	
 
 
 func _on_body_entered(body: PhysicsBody2D):
