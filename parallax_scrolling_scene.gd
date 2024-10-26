@@ -1,12 +1,9 @@
 extends Node2D
 
-var foin_ok = ProjectSettings.get_setting("shader_global/foin_ok")
+
 
 func _ready():
-	foin_ok = false 
-	ProjectSettings.set_setting("shader_global/foin_prie", foin_ok)
-	ProjectSettings.save
-	set_process(false)
+	pass
 	
 	
 func _on_options_pressed():

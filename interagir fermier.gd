@@ -1,6 +1,7 @@
 extends Area2D
 
-var foin_ok = ProjectSettings.get_setting("shader_global/foin_ok")
+
+
 var _in = false  
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,10 +10,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if _in == true and Input.is_action_just_pressed("interagir") and foin_ok == true:
-		Dialogic.start("dialogue_fermier_final")
-	elif _in == true and Input.is_action_just_pressed("interagir"):
-		Dialogic.start("dialogue_fermier")
+	if _in == true:
+		if  Input.is_action_just_pressed("interagir") and Global.foin_ok == true:
+			Dialogic.start("dialogue_fermier_final")
+			Global.recolte = false 
+		elif  Input.is_action_just_pressed("interagir"):
+			Dialogic.start("dialogue_fermier")
 	
 
 

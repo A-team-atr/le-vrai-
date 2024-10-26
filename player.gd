@@ -14,7 +14,7 @@ func _physics_process(delta):
 	input_vector.x = Input.get_action_strength("droite") - Input.get_action_strength("gauche")
 	input_vector.y = Input.get_action_strength("descendre") - Input.get_action_strength("monter")
 	input_vector = input_vector.normalized()
-	print(input_vector)
+	
 	
 	
 	

@@ -8,6 +8,7 @@ var zone_retour_ferme = false
 
 func _ready():
 	labelmaison.visible = false 
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,6 +1,6 @@
 extends Area2D
 
-var courage = ProjectSettings.get_setting("shader_globals/courage")
+
 @onready var entrer = false
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	courage = true 
+	Global.courage = true 
 	entrer = true
 
 

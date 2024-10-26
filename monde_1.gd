@@ -4,13 +4,10 @@ extends Node2D
 @onready var labelbateau := $"ZoneBateauLabel/LabelBateau"
 @onready var labelparcour := $"zone_parcour_label/Labelparcour"
 @onready var presencechario := $"chario"
-@onready var label_retour_fermier := $"monde_1/label_retour_fermier"
+@onready var label_retour_fermier := $"label_retour_fermier"
 
-var recolte = ProjectSettings.get_setting("shader_global/recolte")
+
 var paused = false 
-var courage = ProjectSettings.get_setting("shader_global/courage")
-var serviabilite = ProjectSettings.get_setting("shader_global/serviabilite")
-var foin_ok = ProjectSettings.get_setting("shader_global/foin_ok")
 var zone_bateau = false
 var zone_ferme = false
 var z_parcour = false 
@@ -40,23 +37,17 @@ func _physics_process(delta):
 			TransitionScene.change_scene_to_file("res://ferme.tscn")
 	
 	if z_parcour == true:
-		if courage == true and Input.is_action_just_pressed("interagir"):
+		if Global.courage == true and Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://prier.tscn")
 		elif Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://parcour.tscn")
 
 	if pres_chario == true:
-		print(recolte)
-		if recolte == true and Input.is_action_just_pressed("interagir"):
-			foin_ok = true 
-			recolte = false 
+		
+		if Global.recolte == true and Input.is_action_just_pressed("interagir"):
 			label_retour_fermier.visible = true
-			print("gbvdagvakgbba")
-			print(foin_ok)
-			ProjectSettings.set_setting("shader_global/recolte", recolte)
-			ProjectSettings.save()
-			ProjectSettings.set_setting("shader_global/foin_prie", foin_ok)
-			ProjectSettings.save()
+			Global.foin_ok = true
+			
 			
 	 
 
@@ -119,11 +110,11 @@ func _on_allez_parcours_body_exited(body: PhysicsBody2D):
 
 
 func _on_zone_afficher_chario_body_entered(body):
-	if recolte == true:
+	if Global.recolte == true:
 		presencechario.visible = true  
 	else:
 		presencechario.visible = false 
-		
+		label_retour_fermier.visible = false
 
 
 
