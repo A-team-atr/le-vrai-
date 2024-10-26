@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://csj5y6yc6be5m"]
+[gd_scene load_steps=68 format=3 uid="uid://csj5y6yc6be5m"]
 
 [ext_resource type="Script" path="res://playercote.gd" id="1_egnhq"]
 [ext_resource type="Texture2D" uid="uid://cr7uj1s7cqp2n" path="res://personnage/Samurai_Archer/Jump.png" id="3_janib"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dehkn4n3mstas" path="res://personnage/Samurai_Archer/Run.png" id="6_6sn4m"]
 [ext_resource type="Texture2D" uid="uid://bsc3oj4nn4tmk" path="res://personnage/Samurai_Archer/Attack_3.png" id="6_ia8x5"]
 [ext_resource type="Texture2D" uid="uid://bf4x2pkvnsddj" path="res://personnage/Samurai_Archer/Walk.png" id="7_7qudy"]
-[ext_resource type="PackedScene" uid="uid://dq8djuu6s4auu" path="res://health_bar.tscn" id="8_0w31t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t04ts"]
 atlas = ExtResource("3_janib")
@@ -469,10 +468,3 @@ offset = Vector2(14.3685, -21.7055)
 visible = false
 position = Vector2(9, 5)
 shape = SubResource("RectangleShape2D_yikg6")
-
-[node name="HealthBar" parent="." instance=ExtResource("8_0w31t")]
-offset_left = -104.0
-offset_top = -160.0
-offset_right = 97.0
-offset_bottom = -133.0
-metadata/_edit_use_anchors_ = true
