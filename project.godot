@@ -20,8 +20,8 @@ config/icon="res://icon.svg"
 TransitionScene="*res://transition_scene.tscn"
 GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
 Transition2="*res://Transition2.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://global.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

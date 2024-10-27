@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("interagir"):
+	if Input.is_action_just_pressed("interagir") and entrer == true:
 		Transition2.change_scene_to_file("res://prier.tscn")
 
 

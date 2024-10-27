@@ -1,15 +1,12 @@
-extends Node
+extends AnimatedSprite2D
 
-var foin_ok = false 
-var recolte = false 
-var serviabilite = false
-var courage = false 
+@onready var anim = get_node("samourai")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	anim.play("repos")
+	anim.flip_h = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4iekqksfcxyl" path="res://pêche/3 Objects/Pier_Tiles.png" id="1_hpysk"]
 [ext_resource type="Script" path="res://peche.gd" id="1_idyqb"]
 [ext_resource type="Texture2D" uid="uid://qligmfuevb0t" path="res://pêche/3 Objects/Fishing_hut.png" id="2_jud6l"]
-[ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://pêche/mere.png" id="3_hliui"]
+[ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://mere.png" id="3_hliui"]
 [ext_resource type="PackedScene" uid="uid://bitygkxub6hf0" path="res://player_cote_pêche.tscn" id="4_gt5fa"]
 [ext_resource type="PackedScene" uid="uid://dux6hh7rnhiib" path="res://pêcheur.tscn" id="5_u8pe2"]
 

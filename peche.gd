@@ -16,7 +16,8 @@ func _physics_process(delta):
 func _on_dialogic_signal(argument: String):
 	if argument == "retour":
 		TransitionScene.change_scene_to_file("res://monde_1.tscn")
-
+	if argument == "apprendre":
+		TransitionScene.change_scene_to_file("res://a_la_peche.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):

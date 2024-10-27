@@ -4,5 +4,7 @@ player: Je m'appelle {joueur.nom}.Je suis venu pour me procurer du poisson afin 
 if :
 	- Pourriez-vous m'enseigner cet art?
 		"Tadao le pêcheur ": Evidemment! Ce sera avec plaisir.
+		"Tadao le pêcheur ": Alors prenons la meer je vais t'apprendre tout mon savoir!
+		[signal arg="apprendre"]
 	- Très intéressant. Je reviendrai plus tard.
 		[signal arg="retour"]

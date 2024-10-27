@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=3 uid="uid://ck4lchbi8762l"]
+
+[ext_resource type="Texture2D" uid="uid://15i25eym4omi" path="res://pêche/3 Objects/Water.png" id="1_5jhd7"]
+[ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://mere.png" id="2_do2b4"]
+[ext_resource type="Texture2D" uid="uid://ca2x4ugqanugi" path="res://pêche/3 Objects/Boat.png" id="3_f3a2b"]
+[ext_resource type="PackedScene" uid="uid://6q8jcrfl7asr" path="res://pecheur_jouer.tscn" id="4_ey1d4"]
+[ext_resource type="PackedScene" uid="uid://bkveajk1db362" path="res://samourai_bateau.tscn" id="5_qqcr8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kb5cp"]
+texture = ExtResource("1_5jhd7")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_4avb5"]
+physics_layer_0/collision_layer = 3
+sources/0 = SubResource("TileSetAtlasSource_kb5cp")
+
+[node name="a_la_peche" type="Node2D"]
+
+[node name="eau" type="TileMap" parent="."]
+z_index = 1
+scale = Vector2(10, 10)
+tile_set = SubResource("TileSet_4avb5")
+format = 2
+layer_0/tile_data = PackedInt32Array(393215, 0, 268435456, 393214, 65536, 268435456, 393213, 131072, 268435456, 393212, 196608, 268435456, 393211, 262144, 268435456, 393210, 327680, 268435456, 458751, 0, 268435457, 458750, 65536, 268435457, 458749, 131072, 268435457, 458748, 196608, 268435457, 458747, 262144, 268435457, 458746, 327680, 268435457, 393209, 0, 268435456, 393208, 65536, 268435456, 393207, 131072, 268435456, 393206, 196608, 268435456, 393205, 262144, 268435456, 393204, 327680, 268435456, 458745, 0, 268435457, 458744, 65536, 268435457, 458743, 131072, 268435457, 458742, 196608, 268435457, 458741, 262144, 268435457, 458740, 327680, 268435457)
+
+[node name="fond" type="Sprite2D" parent="."]
+position = Vector2(-912, 672)
+scale = Vector2(1.93333, 2.94136)
+texture = ExtResource("2_do2b4")
+metadata/_edit_lock_ = true
+
+[node name="bateau" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-1084, 778.25)
+scale = Vector2(4.43243, 4.69445)
+texture = ExtResource("3_f3a2b")
+
+[node name="pecheur_joueur" parent="." instance=ExtResource("4_ey1d4")]
+position = Vector2(-1224, 760)
+scale = Vector2(4, 4)
+
+[node name="samourai_bateau" parent="." instance=ExtResource("5_qqcr8")]
+position = Vector2(-1032, 688)
+scale = Vector2(2.3, 2.3)

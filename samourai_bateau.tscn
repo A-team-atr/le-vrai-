@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkveajk1db362"]
+
+[ext_resource type="Script" path="res://samourai_bateau.gd" id="1_ng6jx"]
+[ext_resource type="Texture2D" uid="uid://bc54dnhl505k7" path="res://personnage/Samurai_Archer/Idle.png" id="2_swni1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkjh5"]
+atlas = ExtResource("2_swni1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewh2o"]
+atlas = ExtResource("2_swni1")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7s3u"]
+atlas = ExtResource("2_swni1")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp8ki"]
+atlas = ExtResource("2_swni1")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67sdx"]
+atlas = ExtResource("2_swni1")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4v3k"]
+atlas = ExtResource("2_swni1")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oaji"]
+atlas = ExtResource("2_swni1")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xya0a"]
+atlas = ExtResource("2_swni1")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brews"]
+atlas = ExtResource("2_swni1")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wppkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkjh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewh2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7s3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp8ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67sdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4v3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oaji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xya0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brews")
+}],
+"loop": true,
+"name": &"repos",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyg2g"]
+size = Vector2(20, 74)
+
+[node name="samourai_bateau" type="CharacterBody2D"]
+script = ExtResource("1_ng6jx")
+
+[node name="anim_samourai" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wppkk")
+animation = &"repos"
+frame_progress = 0.577872
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 27)
+shape = SubResource("RectangleShape2D_fyg2g")

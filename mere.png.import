@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cci20wk8sklag"
-path="res://.godot/imported/mere.png-eb776c7c113f354bdd8a5c45f97a2642.ctex"
+path="res://.godot/imported/mere.png-a6b6c31c83d9e2c6db7a75aa0e502e20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pêche/mere.png"
-dest_files=["res://.godot/imported/mere.png-eb776c7c113f354bdd8a5c45f97a2642.ctex"]
+source_file="res://mere.png"
+dest_files=["res://.godot/imported/mere.png-a6b6c31c83d9e2c6db7a75aa0e502e20.ctex"]
 
 [params]
 
