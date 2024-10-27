@@ -41,8 +41,8 @@ scale = Vector2(0.719088, 0.79873)
 texture = ExtResource("3_2ch82")
 
 [node name="Foin2" type="Sprite2D" parent="Foin/Foin2"]
-position = Vector2(656.411, 732.802)
-scale = Vector2(1.28205, 1.74871)
+position = Vector2(777.074, 640.001)
+scale = Vector2(1.27262, 1.74871)
 texture = ExtResource("3_2ch82")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

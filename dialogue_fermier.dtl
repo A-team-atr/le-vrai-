@@ -1,19 +1,19 @@
-"Kenshin le fermier": Bonjour Jeune homme, cela fait bien longtemps que je n'ai plus vu de samouraï dans cette région. De voir un homme de votre calibre m'est un grand honneur.
+"Kenshin le fermier": Bonjour jeune homme, cela fait bien longtemps que je n'ai plus vu de samouraï dans cette région. De voir un homme de votre carrure m'est un grand honneur.
 "Kenshin le fermier": Si ce n'est pas trop indiscret comme question\:
 "Kenshin le fermier": Qu'est ce qui vous a amené par ici?
 player: Je suis venu découvrir les alentours et votre maison m'as intrigué. C'est donc pour cela que je suis entré.
 if :
-	- Mais le devoir m'appelle je reviendrai un autre jour.
+	- Mais le devoir m'appelle, je reviendrai un autre jour.
 		[signal arg="retour_ferme"]
 		[end_timeline]
 	- Si je peux vous donner un coup de main, n'hesitez pas à me le demander.
 		"Kenshin le fermier": Si vous le dites de cette façon, il y'a en effet une affaire pour laquelle j'aurais besoin de capacités semblables aux votres.
 player: Dites moi tout, je vais faire tout mon possible pour être à la hauteur de vos attendes. Je ne vous déçevrai pas, je vous en donne ma parole.
-"Kenshin le fermier": Il y'a quelque jour en arrière une grande partie de mes récoles ont disparues. J'ai cherché dans tout le village mais sans résultat. Penses-tu que tu pourras garder les yeux ouverts ?
+"Kenshin le fermier": Il y'a quelque jour en arrière une grande partie de mes récoles ont disparues. J'ai cherché dans tout le village mais sans résultat. Penses-tu que tu pourrais garder les yeux ouverts ?
 if :
 	- Oui bien sur,  je vais remplir cette tâche le plus vite possible. Rien ne pourra m'arrêter.
-		"Kenshin le fermier": Mille merci monsieur.
-		"Kenshin le fermier": Ah oui, avant que je l'oublie l'autre jour en passant au marché un des passant a vu des traces de chario anormal au long de la route.
+		"Kenshin le fermier": Mille merci jeune homme.
+		"Kenshin le fermier": Ah oui, avant que j'oublie, l'autre jour, en passant au marché, un des passant a vu des traces de chariot le long de la route.
 		"Kenshin le fermier": Bonne chance!
 		[signal arg="afficher_chario"]
 	- Je reviens bientôt car je ne suis pas encore prêt pour une tâche de cette ampleur.

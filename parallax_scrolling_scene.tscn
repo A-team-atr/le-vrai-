@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://js187adyneae"]
+[gd_scene load_steps=16 format=3 uid="uid://js187adyneae"]
 
 [ext_resource type="Script" path="res://parallax_scrolling_scene.gd" id="1_q8shy"]
 [ext_resource type="Texture2D" uid="uid://dm4w4684pri6n" path="res://parallax_mountain_pack/Clouds/1.png" id="2_nfvk2"]
@@ -12,11 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://uhe6xknln378" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_3/2.png" id="9_7x6v0"]
 [ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://images/New Piskel (2).png" id="10_2tblv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8moj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbu87"]
 atlas = ExtResource("3_akch8")
 region = Rect2(61, 183, 61, 61)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6t16w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5y87"]
 atlas = ExtResource("3_akch8")
 region = Rect2(0, 183, 61, 61)
 
@@ -24,7 +24,7 @@ region = Rect2(0, 183, 61, 61)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a8moj")
+"texture": SubResource("AtlasTexture_hbu87")
 }],
 "loop": true,
 "name": &"default",
@@ -32,7 +32,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6t16w")
+"texture": SubResource("AtlasTexture_f5y87")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -40,19 +40,6 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6aana"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2cyg6"]
-
-[sub_resource type="Theme" id="Theme_83dq3"]
-default_base_scale = 1.4
-
-[sub_resource type="FontFile" id="FontFile_x8s0d"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="ParallaxScrollingScene" type="Node2D"]
 position = Vector2(76, -92)
@@ -366,10 +353,10 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_2tblv")
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 576.0
-offset_top = 609.0
-offset_right = 1070.0
-offset_bottom = 748.0
+offset_left = 632.0
+offset_top = 827.0
+offset_right = 1126.0
+offset_bottom = 966.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
@@ -387,33 +374,45 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
 text = "Quitter le jeu"
 
-[node name="Play" type="Button" parent="."]
-material = SubResource("CanvasItemMaterial_2cyg6")
-offset_left = 561.0
-offset_top = 364.0
-offset_right = 1079.0
-offset_bottom = 519.0
-mouse_default_cursor_shape = 4
-theme = SubResource("Theme_83dq3")
-theme_override_colors/font_color = Color(0.00784314, 0.0156863, 0.00392157, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.254902, 0.137255, 0.207843, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.34902, 0.603922, 0.282353, 1)
-theme_override_colors/font_disabled_color = Color(0.227451, 0.34902, 0.305882, 1)
-theme_override_colors/font_outline_color = Color(0.541176, 0.145098, 0.14902, 1)
-theme_override_colors/icon_normal_color = Color(0.913725, 0.913725, 0.913725, 1)
-theme_override_fonts/font = SubResource("FontFile_x8s0d")
-text = "Jouer"
-metadata/_edit_use_anchors_ = true
-
 [node name="Options" type="Button" parent="."]
-offset_left = 1249.0
-offset_top = 867.0
-offset_right = 1485.0
-offset_bottom = 954.0
+offset_left = 1386.0
+offset_top = 968.0
+offset_right = 1622.0
+offset_bottom = 1055.0
 text = "Options & Controls"
 metadata/_edit_use_anchors_ = true
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 387.0
+offset_top = 387.0
+offset_right = 1641.0
+offset_bottom = 609.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 84
+text = "Le Chemin vers l'Honneur"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 521.0
+offset_top = 581.0
+offset_right = 1225.0
+offset_bottom = 777.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.00392157)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
+text = "Play"
+
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

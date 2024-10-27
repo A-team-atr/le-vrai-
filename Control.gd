@@ -20,6 +20,7 @@ var task_starting	:= false
 @onready var verre2_2 := $verre2_2
 @onready var verre3_3 := $verre3_3
 @onready var theiere2 := $theiere2
+@onready var quit_button := $"quitbutton"
 
 @onready var anim := $Path2D/PathFollow2D/AnimatedSprite2D
 @export var speed = 0.50
@@ -39,7 +40,7 @@ func _ready():
 	verre1_1.visible = false
 	verre2_2.visible = true
 	verre3_3.visible = true
-	
+	quit_button.visible = false
 	
 func _process(delta):
 	if theactif == true:
@@ -126,7 +127,9 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			task_completed = true  
 			success_clicks = 0  
 			theiere2.visible = true
-
+			quit_button.visible = true
+			anim.play("vide")
+			Global.sérénité = true 
 
 func _on_start_button_pressed():
 	start_button.visible = false
@@ -135,3 +138,7 @@ func _on_start_button_pressed():
 	
 
 
+
+
+func _on_quit_button_pressed():
+	TransitionScene.change_scene_to_file("res://monde_1.tscn")

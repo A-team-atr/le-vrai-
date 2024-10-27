@@ -183,3 +183,4 @@ offset_right = 96.0
 offset_bottom = 83.0
 
 [node name="Control2" parent="." instance=ExtResource("4_3smdk")]
+visible = false

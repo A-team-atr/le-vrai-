@@ -1,5 +1,6 @@
 extends Node
 
+var sérénité = false
 var foin_ok = false 
 var recolte = false 
 var serviabilite = false

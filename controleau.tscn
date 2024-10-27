@@ -173,6 +173,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_d6xly")
 
 [node name="theiere2" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 0.941176, 0.909804, 1)
 position = Vector2(1417, 919)
 scale = Vector2(3, 3)
@@ -194,5 +195,14 @@ sprite_frames = SubResource("SpriteFrames_ocavy")
 animation = &"vide"
 autoplay = "default"
 
+[node name="quitbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 165.0
+offset_right = 831.0
+offset_bottom = 364.0
+text = "Partir"
+
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quitbutton" to="." method="_on_quit_button_pressed"]
