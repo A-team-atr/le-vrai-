@@ -1,173 +1,146 @@
-[gd_scene load_steps=26 format=3 uid="uid://6q8jcrfl7asr"]
+[gd_scene load_steps=13 format=3 uid="uid://6q8jcrfl7asr"]
 
 [ext_resource type="Texture2D" uid="uid://dbr1sgbt8w1mu" path="res://pêche/1 Fisherman/Fisherman_hook.png" id="1_h87de"]
 [ext_resource type="Script" path="res://pecheur_jouer.gd" id="1_rj17p"]
 [ext_resource type="Texture2D" uid="uid://bgrat6fewsb2d" path="res://pêche/1 Fisherman/Fisherman_fish.png" id="2_mybsb"]
-[ext_resource type="Texture2D" uid="uid://b4sbplj0oq3iu" path="res://pêche/1 Fisherman/Fisherman_hurt.png" id="3_q6gmk"]
 [ext_resource type="Texture2D" uid="uid://bon7wxipiebb0" path="res://pêche/1 Fisherman/Fisherman_idle.png" id="4_r7xa6"]
 [ext_resource type="PackedScene" uid="uid://dam4w13tk2o4x" path="res://pause.tscn" id="6_q54h7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lelrp"]
-atlas = ExtResource("1_h87de")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3hm8"]
-atlas = ExtResource("1_h87de")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_754p2"]
-atlas = ExtResource("1_h87de")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqoa6"]
-atlas = ExtResource("1_h87de")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1k7ur"]
-atlas = ExtResource("1_h87de")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x64ig"]
-atlas = ExtResource("2_mybsb")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4jm8r"]
-atlas = ExtResource("2_mybsb")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yutyo"]
-atlas = ExtResource("2_mybsb")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b4dnh"]
-atlas = ExtResource("2_mybsb")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i2s2b"]
-atlas = ExtResource("3_q6gmk")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbci2"]
-atlas = ExtResource("1_h87de")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5h4j"]
-atlas = ExtResource("1_h87de")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mj1xu"]
-atlas = ExtResource("1_h87de")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4gwxo"]
-atlas = ExtResource("4_r7xa6")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k7ryg"]
-atlas = ExtResource("4_r7xa6")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ec0sh"]
-atlas = ExtResource("4_r7xa6")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yuq63"]
-atlas = ExtResource("4_r7xa6")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_n14bv"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lelrp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v3hm8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_754p2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqoa6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1k7ur")
-}],
-"loop": true,
-"name": &"attraper",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x64ig")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4jm8r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yutyo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b4dnh")
-}],
-"loop": true,
-"name": &"entrain_de_pêcher",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i2s2b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tbci2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q5h4j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mj1xu")
-}],
-"loop": true,
-"name": &"lancer",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4gwxo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k7ryg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ec0sh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yuq63")
-}],
-"loop": true,
-"name": &"repos",
-"speed": 3.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jhsi"]
-size = Vector2(20, 36)
+size = Vector2(18, 32)
+
+[sub_resource type="Animation" id="Animation_m8dhd"]
+resource_name = "repos"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("repos:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jv2dd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lancer:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pecher:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("attraper:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("repos:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mobxj"]
+resource_name = "lancer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lancer:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 3, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_8307m"]
+resource_name = "pecher"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pecher:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_p0ns1"]
+resource_name = "attraper"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("attraper:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f44xd"]
+_data = {
+"RESET": SubResource("Animation_jv2dd"),
+"attraper": SubResource("Animation_p0ns1"),
+"lancer": SubResource("Animation_mobxj"),
+"pecher": SubResource("Animation_8307m"),
+"repos": SubResource("Animation_m8dhd")
+}
 
 [node name="pecheur_joueur" type="CharacterBody2D"]
 script = ExtResource("1_rj17p")
 
-[node name="anim_joueur_peche" type="AnimatedSprite2D" parent="."]
-z_index = 2
-texture_filter = 1
-position = Vector2(8, -8)
-sprite_frames = SubResource("SpriteFrames_n14bv")
-animation = &"lancer"
-frame_progress = 0.453984
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1jhsi")
 
 [node name="pause" parent="." instance=ExtResource("6_q54h7")]
+visible = false
 z_index = 5
 metadata/_edit_use_anchors_ = true
 
@@ -178,3 +151,30 @@ limit_right = 0
 limit_bottom = 0
 limit_smoothed = true
 editor_draw_limits = true
+
+[node name="lancer" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+texture = ExtResource("1_h87de")
+hframes = 6
+
+[node name="pecher" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+texture = ExtResource("2_mybsb")
+hframes = 4
+
+[node name="attraper" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+texture = ExtResource("1_h87de")
+hframes = 6
+frame = 1
+
+[node name="repos" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+texture = ExtResource("4_r7xa6")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f44xd")
+}
+speed_scale = 0.716
