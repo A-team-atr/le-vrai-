@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cr24h2h76ycjh"]
+[gd_scene load_steps=15 format=3 uid="uid://cr24h2h76ycjh"]
 
 [ext_resource type="Texture2D" uid="uid://4iekqksfcxyl" path="res://pêche/3 Objects/Pier_Tiles.png" id="1_hpysk"]
 [ext_resource type="Script" path="res://peche.gd" id="1_idyqb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://mere.png" id="3_hliui"]
 [ext_resource type="PackedScene" uid="uid://bitygkxub6hf0" path="res://player_cote_pêche.tscn" id="4_gt5fa"]
 [ext_resource type="PackedScene" uid="uid://dux6hh7rnhiib" path="res://pêcheur.tscn" id="5_u8pe2"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="7_0xx05"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vggv"]
 texture = ExtResource("1_hpysk")
@@ -344,6 +345,11 @@ size = Vector2(97, 93.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_de1vf"]
 size = Vector2(40, 104)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ikek7"]
+font = ExtResource("7_0xx05")
+font_size = 13
+font_color = Color(0.227451, 0.466667, 0.615686, 1)
+
 [node name="peche" type="Node2D"]
 script = ExtResource("1_idyqb")
 
@@ -386,6 +392,15 @@ shape = SubResource("RectangleShape2D_b8ous")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-20, 548)
 shape = SubResource("RectangleShape2D_de1vf")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 728.0
+offset_top = 528.0
+offset_right = 856.0
+offset_bottom = 546.0
+text = "Tadao le pêcheur "
+label_settings = SubResource("LabelSettings_ikek7")
 
 [connection signal="body_entered" from="retour" to="." method="_on_retour_body_entered"]
 [connection signal="body_exited" from="retour" to="." method="_on_retour_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://js187adyneae"]
+[gd_scene load_steps=18 format=3 uid="uid://js187adyneae"]
 
 [ext_resource type="Script" path="res://parallax_scrolling_scene.gd" id="1_q8shy"]
 [ext_resource type="Texture2D" uid="uid://dm4w4684pri6n" path="res://parallax_mountain_pack/Clouds/1.png" id="2_nfvk2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bndl05r8iogwv" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer6/2.png" id="6_biq1w"]
 [ext_resource type="Texture2D" uid="uid://uhe6xknln378" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_3/2.png" id="9_7x6v0"]
 [ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://images/New Piskel (2).png" id="10_2tblv"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="12_sosma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbu87"]
 atlas = ExtResource("3_akch8")
@@ -40,6 +41,11 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6aana"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_blsnj"]
+font = ExtResource("12_sosma")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
 
 [node name="ParallaxScrollingScene" type="Node2D"]
 position = Vector2(76, -92)
@@ -370,6 +376,7 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("12_sosma")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
 text = "Quitter le jeu"
@@ -379,17 +386,9 @@ offset_left = 1386.0
 offset_top = 968.0
 offset_right = 1622.0
 offset_bottom = 1055.0
+theme_override_fonts/font = ExtResource("12_sosma")
 text = "Options & Controls"
 metadata/_edit_use_anchors_ = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 387.0
-offset_top = 387.0
-offset_right = 1641.0
-offset_bottom = 609.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 84
-text = "Le Chemin vers l'Honneur"
 
 [node name="Play" type="Button" parent="."]
 offset_left = 521.0
@@ -409,9 +408,18 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("12_sosma")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6aana")
 text = "Play"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 276.0
+offset_top = 444.0
+offset_right = 1624.0
+offset_bottom = 592.0
+text = "Le Chemain vers l'Honneur"
+label_settings = SubResource("LabelSettings_blsnj")
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

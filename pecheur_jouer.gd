@@ -6,7 +6,7 @@ var paused = false
 
 func _ready():
 	anim.play("repos")
-	$repos.flip_h = true
+	$AnimatedSprite2D.flip_h = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -17,9 +17,9 @@ func _process(delta):
 func _physics_process(delta):
 	if Input.is_action_pressed("interagir"):
 		anim.play("lancer")
-		$lancer.flip_h = true
+		_on_animation_player_animation_finished("lancer")
 
 
-func _on_anim_joueur_peche_animation_finished():
-	if anim == "lancer":
-		anim.play("entrain_de_pêcher")
+
+func _on_animation_player_animation_finished(anim_name):
+	anim.play("pecher")

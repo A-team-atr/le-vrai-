@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dam4w13tk2o4x"]
+[gd_scene load_steps=5 format=3 uid="uid://dam4w13tk2o4x"]
 
 [ext_resource type="Shader" path="res://pause.gdshader" id="1_3qjdt"]
 [ext_resource type="Script" path="res://pause.gd" id="1_305b6"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="3_esp6q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x5ibk"]
 shader = ExtResource("1_3qjdt")
@@ -47,16 +48,19 @@ size_flags_vertical = 4
 [node name="continué" type="Button" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_esp6q")
 text = "continuer"
 
 [node name="option" type="Button" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_esp6q")
 text = "option"
 
 [node name="quitté" type="Button" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_esp6q")
 text = "quitter"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continué" to="." method="_on_continué_pressed"]

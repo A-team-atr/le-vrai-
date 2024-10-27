@@ -21,10 +21,10 @@ func _process(delta):
 		paused = false 
 	
 
-func _on_sortie_body_entered(body):
+func _on_sortie_body_entered(body: PhysicsBody2D):
 	zone_sortie_maison = true 
 	
 
 
-func _on_sortie_body_exited(body):
+func _on_sortie_body_exited(body: PhysicsBody2D):
 	zone_sortie_maison = false 
