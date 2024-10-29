@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=2 format=3 uid="uid://c0k3h6greab05"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="1_wyjgr"]
+
+[resource]
+script = ExtResource("1_wyjgr")
+name = "shinobi_femme"
+base_overrides = {
+"global_bg_color": "Color(0.701961, 0.490196, 0.952941, 0.901961)",
+"global_font": "\"res://tipographie/Cinzel-Black.ttf\""
+}
+layers = Array[Resource("res://addons/dialogic/Resources/dialogic_style_layer.gd")]([])
+metadata/_latest_layer = -1

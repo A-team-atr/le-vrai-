@@ -35,6 +35,7 @@ directories/dch_directory={
 "narrateur": "res://narrateur.dch",
 "player": "res://player.dch",
 "sansnom": "res://sansnom.dch",
+"shinobi_femme": "res://shinobi_femme.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -42,10 +43,11 @@ directories/dtl_directory={
 "dialogue_fermier": "res://dialogue_fermier.dtl",
 "dialogue_fermier_final": "res://dialogue_fermier_final.dtl",
 "dialogue_pêcheur": "res://dialogue_pêcheur.dtl",
+"dialoque_shinobi": "res://dialoque_shinobi.dtl",
 "timeline1": "res://timeline1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://custome_style .tres", "res://custome_style_joueur.tres", "res://costume_style_fermier .tres"]
+layout/style_list=["res://custome_style .tres", "res://custome_style_joueur.tres", "res://costume_style_fermier .tres", "res://shinobi_femme.tres"]
 layout/default_style="res://custome_style .tres"
 variables={
 "joueur": {

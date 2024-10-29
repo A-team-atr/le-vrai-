@@ -66,4 +66,4 @@ script = ExtResource("10_isfco")
 name = "custome_style "
 base_overrides = {}
 layers = Array[ExtResource("2_1bkc3")]([SubResource("Resource_0p0hj"), SubResource("Resource_gwhas"), SubResource("Resource_u0don"), SubResource("Resource_6dhul"), SubResource("Resource_vrdoi"), SubResource("Resource_robye"), SubResource("Resource_jhvkj"), SubResource("Resource_g63y5")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = -1
