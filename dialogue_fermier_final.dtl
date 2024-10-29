@@ -1,9 +1,9 @@
-"Kenshin le fermier": Bonjour {joueur.nom}, vous étes déjà de retour. Comment c'est passée la cherche de mes récoltes?
-player: Bonjour Kenshin, j'ai pu retrouver tes récoltes. Je les ai ramené ici elle sont dans ta ferme.
-player: Malheureusement il n'y avait aucune trace des bandits qui sont a l'origine de tout ce calvert.
-"Kenshin le fermier": Ne vous faites pas de soucis pour ça le plus important est que vous avez réccuperé les récoltes. Grâce a vous tout le villages va pouvoir manger cet hiver. C'est déjà plus assez. Je ne sais comment exprimer ma gratitude.
-player: Ne t'en fait pas pour cela. Savoir que toi et le reste du village ira bien cette hiver m'est assez comme récompense.
-"Kenshin le fermier": Vous étes trop généreux. Je nous remerci tu plus profond de mon coeur et de ceux des autres habitants du village.\
-Si un jour vous avez besoin de quoi qu'il soit on sera tous a votre service.
-player: J'en prend note merci. Porte toi bien Kenshin. À bien tôt mon ami.
+"Kenshin le fermier": Bonjour {joueur.nom}, vous étes déjà de retour. Comment s'est passé la cherche de mes récoltes?
+player: Bonjour Kenshin, j'ai pu retrouver tes récoltes. Je les ai ramené, ici, elles sont dans ta ferme.
+player: Malheureusement il n'y avait aucune trace des bandits qui sont à l'origine de tout ce rafus.
+"Kenshin le fermier": Ne vous faites pas de soucis pour ça, le plus important est que vous avez réccuperé les récoltes. Grâce à vous tout le villages va pouvoir manger cet hiver. C'est déjà plus qu'assez. Je ne saurais comment vous exprimer ma gratitude.
+player: Ne t'en fais pas pour cela. Savoir que que l'ensemble du village du village peut manger à sa faim me suffit amplement.
+"Kenshin le fermier": Vous étes trop généreux. Je vous remercie du plus profond de mon coeur et de ceux des autres habitants du village.\
+Si un jour vous avez besoin de quoi que soit, nous serons tous à votre service.
+player: Je prends note de votre gentilesse. Porte toi bien, Kenshin. À bientôt mon ami !
 [signal arg="fin_foin"]
