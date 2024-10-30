@@ -205,21 +205,21 @@ scale = Vector2(5, 5)
 texture = ExtResource("1_3ettn")
 
 [node name="cuisiner" type="Button" parent="."]
-offset_left = 1359.0
-offset_top = 603.0
-offset_right = 2146.0
-offset_bottom = 965.0
+offset_left = 1540.0
+offset_top = 461.0
+offset_right = 2041.0
+offset_bottom = 861.0
 text = "cuisiner"
 
 [node name="revenir" type="Button" parent="."]
-offset_left = 346.0
-offset_top = 616.0
-offset_right = 760.0
-offset_bottom = 1008.0
+offset_left = 476.0
+offset_top = 464.0
+offset_right = 890.0
+offset_bottom = 856.0
 text = "revenir"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1144, 587)
+position = Vector2(1246, 609)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_oc3cm")
 animation = &"cooking"

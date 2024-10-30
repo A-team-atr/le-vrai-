@@ -2402,7 +2402,7 @@ offset_bottom = 300.0
 grow_horizontal = 0
 
 [node name="ZoneHistoire1" parent="." instance=ExtResource("10_6emmf")]
-position = Vector2(780, 334)
+position = Vector2(760, 316)
 
 [node name="Skills" parent="." instance=ExtResource("11_ff8uk")]
 position = Vector2(208, 344)
@@ -2417,6 +2417,7 @@ position = Vector2(-32, 710.5)
 shape = SubResource("RectangleShape2D_u65xd")
 
 [node name="pause" parent="." instance=ExtResource("13_3xhcp")]
+visible = false
 offset_left = 1024.0
 offset_top = 512.0
 offset_right = 1024.0

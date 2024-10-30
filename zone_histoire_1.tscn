@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bc8pkip08nx2n"]
 
 [ext_resource type="Script" path="res://Histoire1.gd" id="1_gij0s"]
-[ext_resource type="Texture2D" uid="uid://blimdomdrbkbq" path="res://PixelArtFaisMain/New Piskel (16).png" id="2_5s6ib"]
+[ext_resource type="Texture2D" uid="uid://sfjl3jt2hvo1" path="res://PixelArtFaisMain/New Piskel-1.png (8).png" id="2_sr8og"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7ox8"]
 
@@ -12,8 +12,8 @@ script = ExtResource("1_gij0s")
 shape = SubResource("RectangleShape2D_g7ox8")
 
 [node name="NewPiskel(16)" type="Sprite2D" parent="."]
-scale = Vector2(2.1, 2.1)
-texture = ExtResource("2_5s6ib")
+scale = Vector2(4, 4)
+texture = ExtResource("2_sr8og")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
