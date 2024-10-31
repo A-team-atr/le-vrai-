@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce8tmepivjeg4"]
+
+[ext_resource type="Script" path="res://zone_histoire_3.gd" id="1_yccr7"]
+[ext_resource type="Texture2D" uid="uid://sfjl3jt2hvo1" path="res://PixelArtFaisMain/New Piskel-1.png (8).png" id="2_ffp7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7ox8"]
+
+[node name="ZoneHistoire3" type="Area2D"]
+script = ExtResource("1_yccr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g7ox8")
+
+[node name="NewPiskel(16)" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_ffp7v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

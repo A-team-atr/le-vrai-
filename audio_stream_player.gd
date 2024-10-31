@@ -10,3 +10,4 @@ func _ready():
 func _process(delta):
 	if $"/root/GlobalAudioStreamPlayer".playing == false:
 		$"/root/GlobalAudioStreamPlayer".play()
+	

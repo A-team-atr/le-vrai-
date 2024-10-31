@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsn88khooj7e5"
+path="res://.godot/imported/MY HAUS.mp3-3d705c05967ee265a1b88bc545de7de1.mp3str"
+
+[deps]
+
+source_file="res://music_joud/MY HAUS.mp3"
+dest_files=["res://.godot/imported/MY HAUS.mp3-3d705c05967ee265a1b88bc545de7de1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

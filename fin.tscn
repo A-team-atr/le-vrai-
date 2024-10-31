@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2xxwasiulov5"]
+
+[ext_resource type="Texture2D" uid="uid://dhqq77jrm87sy" path="res://Backgrounds/Backgrounds/japan_temple.png" id="1_3qppt"]
+[ext_resource type="Script" path="res://fin.gd" id="1_m4yjl"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="2_a2v01"]
+[ext_resource type="Texture2D" uid="uid://bc54dnhl505k7" path="res://personnage/Samurai_Archer/Idle.png" id="3_lw52m"]
+[ext_resource type="Texture2D" uid="uid://d20hi7x6cgtmn" path="res://personnage/shinobi/Samurai/Idle.png" id="4_klhtm"]
+[ext_resource type="Texture2D" uid="uid://m2pxcfryxpcy" path="res://personnage/shinobi/Shinobi/Idle.png" id="5_500cg"]
+[ext_resource type="Texture2D" uid="uid://bon7wxipiebb0" path="res://pêche/1 Fisherman/Fisherman_idle.png" id="6_52rmd"]
+[ext_resource type="Texture2D" uid="uid://cbrwrehkxwa51" path="res://ferme/fermier/City_men_1/Idle.png" id="7_6osos"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvaob"]
+font = ExtResource("2_a2v01")
+font_size = 56
+font_color = Color(0.337255, 0.270588, 0.607843, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_m4yjl")
+
+[node name="JapanTemple" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(4.44444, 5.26829)
+texture = ExtResource("1_3qppt")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 48.0
+offset_right = 1866.0
+offset_bottom = 124.0
+text = "            Vous êtes parvenu a retrouver votre Honneur !
+
+       Les 5 vertus suivantes sont maintenant les votres:
+			                                                	  Patience
+                                              Serviabilité
+                                                  Courage
+                                                  Sérénité
+                                                  Loyauté
+
+
+                                    Merci d'avoir jouer 
+                                 Raphael      &      Yannaël"
+label_settings = SubResource("LabelSettings_jvaob")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(1632, 488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_lw52m")
+flip_h = true
+hframes = 8
+
+[node name="Idle2" type="Sprite2D" parent="."]
+position = Vector2(144, 392)
+scale = Vector2(2, 2)
+texture = ExtResource("4_klhtm")
+hframes = 6
+
+[node name="Idle3" type="Sprite2D" parent="."]
+position = Vector2(1560, 888)
+scale = Vector2(2, 2)
+texture = ExtResource("5_500cg")
+flip_h = true
+hframes = 6
+
+[node name="FishermanIdle" type="Sprite2D" parent="."]
+position = Vector2(184, 960)
+scale = Vector2(3, 3)
+texture = ExtResource("6_52rmd")
+hframes = 4
+
+[node name="Idle4" type="Sprite2D" parent="."]
+position = Vector2(384, 696)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_6osos")
+hframes = 7
+
+[node name="quit" type="Button" parent="."]
+offset_left = 1616.0
+offset_top = 944.0
+offset_right = 1888.0
+offset_bottom = 1064.0
+theme_override_colors/font_color = Color(0.239216, 0.27451, 1, 1)
+theme_override_fonts/font = ExtResource("2_a2v01")
+theme_override_font_sizes/font_size = 28
+text = "Revenir au menu"
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

@@ -44,7 +44,7 @@ directories/dtl_directory={
 "dialogue_fermier_final": "res://dialogue_fermier_final.dtl",
 "dialogue_pêcheur": "res://dialogue_pêcheur.dtl",
 "dialoque_shinobi": "res://dialoque_shinobi.dtl",
-"timeline1": "res://timeline1.dtl"
+"timeline1": "res://prenom.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://custome_style .tres", "res://custome_style_joueur.tres", "res://costume_style_fermier .tres", "res://shinobi_femme.tres"]

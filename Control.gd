@@ -51,8 +51,7 @@ func _process(delta):
 			path_follow.progress_ratio += speed * delta
 	if task_starting:
 		if not task_completed:
-			var growth_rate = 1.05 
-			water_gauge.value += 30 * delta
+			water_gauge.value += 25 * 0.05
 			print(water_gauge.value)
 	
 			if water_gauge.value >= target_value and success_clicks == 0:

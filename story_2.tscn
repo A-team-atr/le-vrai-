@@ -1,0 +1,131 @@
+[gd_scene load_steps=15 format=3 uid="uid://c5kfyvpouohf4"]
+
+[ext_resource type="Script" path="res://story_2.gd" id="1_nedyw"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="2_xqntt"]
+[ext_resource type="Texture2D" uid="uid://c7ggwmavs6f51" path="res://PixelArtFaisMain/comic (1).jpg" id="3_4wl0m"]
+
+[sub_resource type="Theme" id="Theme_kxero"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fo44"]
+bg_color = Color(0.0313726, 0.0313726, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfnqu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd3uu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnnnd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3paoc"]
+font = ExtResource("2_xqntt")
+font_size = 60
+font_color = Color(0.984314, 0.941176, 0.921569, 1)
+outline_size = 2
+outline_color = Color(0.631373, 0.968627, 0.964706, 1)
+shadow_size = 11
+shadow_color = Color(1, 1, 1, 0.321569)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdjej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kigrw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iaksi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqqsc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dcb8"]
+
+[node name="story2" type="Node2D"]
+script = ExtResource("1_nedyw")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -3
+offset_left = -112.0
+offset_top = -96.0
+offset_right = 2088.0
+offset_bottom = 1219.0
+theme = SubResource("Theme_kxero")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4fo44")
+metadata/_edit_lock_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 1928.0
+offset_top = 48.0
+offset_right = 1980.0
+offset_bottom = 1216.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gfnqu")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 1032.0
+offset_top = -32.0
+offset_right = 2032.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dd3uu")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 1032.0
+offset_top = 1064.0
+offset_right = 2096.0
+offset_bottom = 1133.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lnnnd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 960.0
+offset_right = 725.0
+offset_bottom = 1041.0
+text = "Cliquez pour continuer....
+"
+label_settings = SubResource("LabelSettings_3paoc")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 51.0
+offset_right = 728.0
+offset_bottom = 212.0
+theme_override_fonts/font = ExtResource("2_xqntt")
+theme_override_font_sizes/font_size = 32
+text = "Parchemin Perdu no.2"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 344.0
+offset_right = 1006.0
+offset_bottom = 664.0
+theme_override_fonts/font = ExtResource("2_xqntt")
+theme_override_font_sizes/font_size = 32
+text = "Aide toutes les âmes sur ta route,
+N'espère rien en retour
+Et tu ne seras jamais déçu."
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 622.0
+offset_right = 791.0
+offset_bottom = 847.0
+theme_override_fonts/font = ExtResource("2_xqntt")
+theme_override_font_sizes/font_size = 32
+text = "La serviabilité est la clé du lien humain"
+
+[node name="Button" type="Button" parent="."]
+offset_left = -32.0
+offset_top = -88.0
+offset_right = 2032.0
+offset_bottom = 1184.0
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xdjej")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kigrw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_iaksi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_uqqsc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1dcb8")
+
+[node name="Bd3-1" type="Sprite2D" parent="."]
+position = Vector2(1472, 544)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_4wl0m")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

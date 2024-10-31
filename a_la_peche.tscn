@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck4lchbi8762l"]
+[gd_scene load_steps=15 format=3 uid="uid://ck4lchbi8762l"]
 
 [ext_resource type="Texture2D" uid="uid://15i25eym4omi" path="res://pêche/3 Objects/Water.png" id="1_5jhd7"]
+[ext_resource type="Script" path="res://a_la_peche.gd" id="1_hbeuv"]
 [ext_resource type="Texture2D" uid="uid://cci20wk8sklag" path="res://mere.png" id="2_do2b4"]
 [ext_resource type="Texture2D" uid="uid://ca2x4ugqanugi" path="res://pêche/3 Objects/Boat.png" id="3_f3a2b"]
 [ext_resource type="PackedScene" uid="uid://6q8jcrfl7asr" path="res://pecheur_jouer.tscn" id="4_ey1d4"]
 [ext_resource type="PackedScene" uid="uid://bkveajk1db362" path="res://samourai_bateau.tscn" id="5_qqcr8"]
+[ext_resource type="Texture2D" uid="uid://divbpyve3pm4v" path="res://PixelArtFaisMain/New Piskel (24).png" id="7_cqo2y"]
+[ext_resource type="Texture2D" uid="uid://c657nappuh7a7" path="res://PixelArtFaisMain/New Piskel (23).png" id="8_beaap"]
+[ext_resource type="Texture2D" uid="uid://deytyvxrwf0v6" path="res://PixelArtFaisMain/New Piskel-1.png (6).png" id="9_i71ne"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="9_pc2yk"]
+[ext_resource type="Texture2D" uid="uid://cped05v57q4jb" path="res://PixelArtFaisMain/New Piskel-1.png.png" id="10_26ef1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kb5cp"]
 texture = ExtResource("1_5jhd7")
@@ -109,7 +115,11 @@ texture = ExtResource("1_5jhd7")
 physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_kb5cp")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr2mn"]
+size = Vector2(2723.5, 1671)
+
 [node name="a_la_peche" type="Node2D"]
+script = ExtResource("1_hbeuv")
 
 [node name="eau" type="TileMap" parent="."]
 z_index = 1
@@ -137,3 +147,63 @@ scale = Vector2(4, 4)
 [node name="samourai_bateau" parent="." instance=ExtResource("5_qqcr8")]
 position = Vector2(-1032, 688)
 scale = Vector2(2.3, 2.3)
+
+[node name="WaterGauge" type="TextureProgressBar" parent="."]
+z_index = 6
+offset_left = -648.0
+offset_top = 240.0
+offset_right = -609.0
+offset_bottom = 294.0
+rotation = 1.5708
+scale = Vector2(7, 20)
+max_value = 1000.0
+value = 900.0
+fill_mode = 3
+texture_under = ExtResource("7_cqo2y")
+texture_progress = ExtResource("8_beaap")
+tint_over = Color(0, 0.643137, 0.643137, 1)
+tint_progress = Color(0.92549, 0.231373, 0.65098, 1)
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+visible = false
+position = Vector2(-985.75, 492.5)
+shape = SubResource("RectangleShape2D_fr2mn")
+debug_color = Color(0, 0.721569, 0.843137, 0.419608)
+
+[node name="FeedbackLabel" type="Label" parent="."]
+offset_left = -536.0
+offset_top = 104.0
+offset_right = -142.0
+offset_bottom = 287.0
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = -504.0
+offset_top = 408.0
+offset_right = -208.0
+offset_bottom = 656.0
+
+[node name="quitbutton" type="Button" parent="."]
+offset_left = -1872.0
+offset_top = 576.0
+offset_right = -1472.0
+offset_bottom = 775.0
+theme_override_fonts/font = ExtResource("9_pc2yk")
+text = "Partir"
+
+[node name="NewPiskel-1_png(6)" type="Sprite2D" parent="."]
+position = Vector2(-968, 352)
+rotation = 1.5708
+scale = Vector2(3.95739, 6.80304)
+texture = ExtResource("9_i71ne")
+
+[node name="NewPiskel-1_png" type="Sprite2D" parent="."]
+z_index = 7
+position = Vector2(-704, 336)
+scale = Vector2(5, 11)
+texture = ExtResource("10_26ef1")
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quitbutton" to="." method="_on_quitbutton_pressed"]

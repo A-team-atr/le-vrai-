@@ -1,0 +1,380 @@
+[gd_scene load_steps=16 format=3 uid="uid://bkirb4vpi25vy"]
+
+[ext_resource type="Script" path="res://preambule.gd" id="1_v0yjg"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="3_h1jnq"]
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="3_n8mn5"]
+[ext_resource type="Texture2D" uid="uid://dm4w4684pri6n" path="res://parallax_mountain_pack/Clouds/1.png" id="4_fd54k"]
+[ext_resource type="Texture2D" uid="uid://uhe6xknln378" path="res://ocean-and-clouds-free-pixel-art-backgrounds/Ocean_3/2.png" id="5_mjox3"]
+[ext_resource type="Texture2D" uid="uid://hujm6bl4i55r" path="res://images/New Piskel (1).png" id="6_4i271"]
+[ext_resource type="Texture2D" uid="uid://cosb454qn55uk" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" id="7_lny54"]
+[ext_resource type="Texture2D" uid="uid://bndl05r8iogwv" path="res://parallax_mountain_pack/layers/Free-Summer-Pixel-Art-Backgrounds/PNG/summer6/2.png" id="8_4mjna"]
+[ext_resource type="Texture2D" uid="uid://5lp067rbkb37" path="res://parallax_mountain_pack/layers/tree asset/tree asset/trees-Sheet.png" id="9_frphs"]
+[ext_resource type="Texture2D" uid="uid://ce8551ptlm0af" path="res://parallax_mountain_pack/Clouds/Clouds 1/4.png" id="10_jfm40"]
+[ext_resource type="Texture2D" uid="uid://dhlk4dii3eray" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" id="11_l8obt"]
+[ext_resource type="Texture2D" uid="uid://b3cxy7ghfm7cd" path="res://images/New Piskel (2).png" id="12_y0pwf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbu87"]
+atlas = ExtResource("9_frphs")
+region = Rect2(61, 183, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5y87"]
+atlas = ExtResource("9_frphs")
+region = Rect2(0, 183, 61, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kim6f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbu87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5y87")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="preambule" type="Node2D"]
+script = ExtResource("1_v0yjg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 120.0
+offset_top = 128.0
+offset_right = 1840.0
+offset_bottom = 1448.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_h1jnq")
+theme_override_font_sizes/normal_font_size = 67
+text = "Pour profiter au maximum de l'experience du jeu, il est conseillé de ne pas cliquer 2 fois d'affiler sur la touche \"E\" de votre clavier lorsque vous parlez à un PNJ. 
+De plus, il est parfois nécessaire d'utiliser le menu en pressant la touche \"escape\" si vous vous retrouvez bloqué à cause de certains bugs."
+
+[node name="Button" type="Button" parent="."]
+offset_left = 768.0
+offset_top = 920.0
+offset_right = 1239.0
+offset_bottom = 1033.0
+theme_override_fonts/font = ExtResource("3_h1jnq")
+theme_override_font_sizes/font_size = 35
+text = "Revenir au menu"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_n8mn5")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-108, -88)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(968, 637)
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("4_fd54k")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2048, 316)
+motion_scale = Vector2(0, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+z_index = -7
+position = Vector2(-1472, 445)
+scale = Vector2(2, 2)
+texture = ExtResource("5_mjox3")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+z_index = -7
+position = Vector2(-1860, -218)
+texture = ExtResource("6_4i271")
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+z_index = -7
+position = Vector2(-320, 445)
+scale = Vector2(2, 2)
+texture = ExtResource("5_mjox3")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-1061, 1516)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.001, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="GlacialMountains" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(1298, -608.5)
+texture = ExtResource("7_lny54")
+
+[node name="GlacialMountains2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(1106, -608.5)
+texture = ExtResource("7_lny54")
+
+[node name="GlacialMountains3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(722, -608.5)
+texture = ExtResource("7_lny54")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-195, -1)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0.052, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(771, 89)
+scale = Vector2(0.081, 0.081)
+texture = ExtResource("8_4mjna")
+flip_h = true
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(423.5, 40.5)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("8_4mjna")
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(41, 189)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_4mjna")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -226)
+scale = Vector2(2, 2)
+motion_scale = Vector2(0, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+z_index = 1
+position = Vector2(137, 623)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+z_index = 1
+position = Vector2(35, 630)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+z_index = -1
+position = Vector2(12, 614)
+scale = Vector2(0.24, 0.24)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(107, 622)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(32, 598.5)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D31" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(229, 631)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(73, 625)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(85, 643)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(124, 616)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(142, 640)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+
+[node name="AnimatedSprite2D29" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(178, 636)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+
+[node name="AnimatedSprite2D30" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(201, 618)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(15, 601)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D20" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(162, 640)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D25" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(186, 623)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D26" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(174, 637)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D21" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(100, 639)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D22" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(55, 642)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D23" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(29, 633)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D24" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(7, 622)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(151, 620)
+scale = Vector2(0.24, 0.24)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(121, 631)
+scale = Vector2(0.24, 0.24)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+animation = &"new_animation"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(58, 629)
+scale = Vector2(0.31, 0.31)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(77, 622)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(9, 637)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(91, 624)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D27" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(202, 637)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D28" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(166, 617)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(114, 639)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(45, 636)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="AnimatedSprite2D16" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(11, 609)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kim6f")
+flip_h = true
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-368, -50)
+scale = Vector2(1.7, 1.7)
+motion_scale = Vector2(-0.13, 0)
+motion_mirroring = Vector2(1151, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(504.118, 187.647)
+texture = ExtResource("10_jfm40")
+
+[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(1080, 187.647)
+texture = ExtResource("10_jfm40")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-69, 95)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1360, 0)
+
+[node name="CloudLonely" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(45, 194)
+texture = ExtResource("11_l8obt")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(375, 319)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1360, 0)
+
+[node name="CloudLonely" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+z_index = -2
+position = Vector2(429, 118)
+scale = Vector2(1.34, 1.34)
+texture = ExtResource("11_l8obt")
+flip_h = true
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2364, 256)
+motion_scale = Vector2(-0.2, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2(115, 375)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_y0pwf")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

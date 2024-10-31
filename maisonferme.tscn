@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cc811qd15l3qi"]
+[gd_scene load_steps=17 format=3 uid="uid://cc811qd15l3qi"]
 
 [ext_resource type="Script" path="res://maisonferme.gd" id="1_aol0f"]
 [ext_resource type="Texture2D" uid="uid://1iiyrccd60is" path="res://images/Japanese Wall Set.png" id="1_xx55w"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dxa222bo8x5jn" path="res://fermier.tscn" id="6_jqkgs"]
 [ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="7_4vh2u"]
 [ext_resource type="Texture2D" uid="uid://dstgp7xg71fhd" path="res://clavier/Tilemap/tilemap_white.png" id="8_qipwe"]
+[ext_resource type="PackedScene" uid="uid://bjcgkilu78p3e" path="res://hist_5.tscn" id="9_g0gj2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6m80"]
 texture = ExtResource("1_xx55w")
@@ -1384,7 +1385,10 @@ label_settings = SubResource("LabelSettings_p885c")
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_dkjar")
 format = 2
-layer_0/tile_data = PackedInt32Array(196633, 1245184, 2, 1114113, 1245184, 2, 917514, 1179648, 2)
+layer_0/tile_data = PackedInt32Array(196633, 1245184, 2, 1114113, 1245184, 2, 917514, 1179648, 2, 1310735, 1245184, 2)
+
+[node name="hist5" parent="." instance=ExtResource("9_g0gj2")]
+position = Vector2(668, 971)
 
 [connection signal="body_entered" from="sortir" to="." method="_on_sortir_body_entered"]
 [connection signal="body_exited" from="sortir" to="." method="_on_sortir_body_exited"]

@@ -48,7 +48,8 @@ func _physics_process(delta):
 			label_retour_fermier.visible = true
 			Global.foin_ok = true
 			
-			
+	if Global.courage == true and Global.sérénité == true and Global.serviabilite == true and Global.pateince == true :
+		TransitionScene.change_scene_to_file("res://final.tscn")
 	 
 
 func _on_zone_label_body_entered(body):

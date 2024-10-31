@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@onready var entrer = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,14 +10,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("interagir") and entrer == true:
-		Transition2.change_scene_to_file("res://prier.tscn")
+	pass
 
 
-func _on_body_entered(body):
-	Global.courage = true 
-	entrer = true
+func _on_body_entered(body: PhysicsBody2D):
+	if body.name == "playercote_parcours":
+		Global.courage = true 
+		
 
 
-func _on_body_exited(body):
-	entrer = false
+

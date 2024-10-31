@@ -9,7 +9,7 @@ if :
 	- Si je peux vous donner un coup de main, n'hesitez pas à me le demander.
 		"Kenshin le fermier": Si vous le dites de cette façon, il y'a en effet une affaire pour laquelle j'aurais besoin de capacités semblables aux votres.
 player: Dites moi tout, je vais faire tout mon possible pour être à la hauteur de vos attendes. Je ne vous déçevrai pas, je vous en donne ma parole.
-"Kenshin le fermier": Il y'a quelques jours en arrière une grande partie de mes récoles ont disparues. J'ai cherché dans tout le village mais sans résultat. Penses-tu que tu pourrais garder les yeux ouverts ?
+"Kenshin le fermier": Il y'a quelques jours en arrière une grande partie de mes récoles ont disparues. Sans elles le village n'aura pas assez à manger cette hiver. J'ai cherché dans tout le village mais sans résultat. Penses-tu que tu pourrais garder les yeux ouverts ?
 if :
 	- Oui bien sur,  je vais remplir cette tâche le plus vite possible. Rien ne pourra m'arrêter.
 		"Kenshin le fermier": Mille merci jeune homme.

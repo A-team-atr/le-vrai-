@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b728q35yran7h"]
+[gd_scene load_steps=14 format=3 uid="uid://b728q35yran7h"]
 
 [ext_resource type="Script" path="res://parcour.gd" id="1_3hjys"]
 [ext_resource type="Texture2D" uid="uid://bjcklfgrnm3hk" path="res://Backgrounds/Backgrounds/montagne_rouge-transformed (1).jpeg" id="1_whosb"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://8qp2u0li8peq" path="res://echelle.tscn" id="4_6s342"]
 [ext_resource type="PackedScene" uid="uid://cm3lnv524vs41" path="res://playercote_parcours.tscn" id="5_8bb80"]
 [ext_resource type="PackedScene" uid="uid://cyngycy64omvw" path="res://arrivé_parcour.tscn" id="6_nbdqh"]
+[ext_resource type="PackedScene" uid="uid://duwrw1ergl8gg" path="res://hist_7.tscn" id="8_kbsvv"]
+[ext_resource type="PackedScene" uid="uid://cvp8ocwfqfqoy" path="res://hist_8.tscn" id="9_ga186"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7w2d"]
 texture = ExtResource("2_f4p0q")
@@ -2197,7 +2199,7 @@ z_index = 1
 position = Vector2(5264, 3392)
 
 [node name="playercote_parcours" parent="." instance=ExtResource("5_8bb80")]
-position = Vector2(440, 3776)
+position = Vector2(456, 3792)
 
 [node name="echelle2" parent="." instance=ExtResource("4_6s342")]
 z_index = 1
@@ -2220,5 +2222,11 @@ z_index = 1
 position = Vector2(5624, -1064)
 
 [node name="arrivé_parcour" parent="." instance=ExtResource("6_nbdqh")]
-position = Vector2(2576, -2880)
+position = Vector2(2568, -2864)
 scale = Vector2(4, 4)
+
+[node name="hist7" parent="." instance=ExtResource("8_kbsvv")]
+position = Vector2(272, 3896)
+
+[node name="hist8" parent="." instance=ExtResource("9_ga186")]
+position = Vector2(2832, -2568)

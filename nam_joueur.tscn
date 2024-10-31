@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5vgeg61a84xf"]
+
+[ext_resource type="Texture2D" uid="uid://boua6hsh5jwx7" path="res://Backgrounds/Backgrounds/pine_tree_forest_.png" id="1_a4vmm"]
+[ext_resource type="Script" path="res://PineTreeForest.gd" id="2_8sple"]
+
+[node name="Node" type="Node"]
+
+[node name="PineTreeForest" type="Sprite2D" parent="."]
+position = Vector2(964.5, 543)
+scale = Vector2(1.82827, 1.47297)
+texture = ExtResource("1_a4vmm")
+script = ExtResource("2_8sple")

@@ -1,0 +1,8 @@
+Comment je m'appelle?
+[text_input text="Mais comment je souhaite m'appeler?" var="joueur.nom"]
+player: Où suis-je...
+player: Ma vengeance ?
+player: Je l'aurai...
+label go back
+player: J'accepte avec honeur mon nouveau nom. J'aime beaucoup {joueur.nom} !
+[signal arg="lance_jeu"]

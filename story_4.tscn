@@ -1,0 +1,130 @@
+[gd_scene load_steps=15 format=3 uid="uid://cn0rww51niwwt"]
+
+[ext_resource type="Script" path="res://story_4.gd" id="1_w63k7"]
+[ext_resource type="FontFile" uid="uid://bh3bdg1fqpu35" path="res://tipographie/Cinzel-Black.ttf" id="2_ykkwj"]
+[ext_resource type="Texture2D" uid="uid://cbsaa75wlfmiu" path="res://PixelArtFaisMain/comic (2).jpg" id="3_ynqcl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enqnk"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v37u"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fqhl"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dpbra"]
+font = ExtResource("2_ykkwj")
+font_size = 60
+font_color = Color(0.984314, 0.941176, 0.921569, 1)
+outline_size = 2
+outline_color = Color(0.631373, 0.968627, 0.964706, 1)
+shadow_size = 11
+shadow_color = Color(1, 1, 1, 0.321569)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="Theme" id="Theme_6xthw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqxr2"]
+bg_color = Color(0.0313726, 0.0313726, 0.0313726, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8w6nh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlvy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phv81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7eqc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmoam"]
+
+[node name="story4" type="Node2D"]
+script = ExtResource("1_w63k7")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 1928.0
+offset_top = 48.0
+offset_right = 1980.0
+offset_bottom = 1216.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_enqnk")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 1032.0
+offset_top = -32.0
+offset_right = 2032.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4v37u")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 1032.0
+offset_top = 1064.0
+offset_right = 2096.0
+offset_bottom = 1133.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5fqhl")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 960.0
+offset_right = 725.0
+offset_bottom = 1041.0
+text = "Cliquez pour continuer....
+"
+label_settings = SubResource("LabelSettings_dpbra")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 51.0
+offset_right = 728.0
+offset_bottom = 212.0
+theme_override_fonts/font = ExtResource("2_ykkwj")
+theme_override_font_sizes/font_size = 32
+text = "Parchemin Perdu no.4"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 344.0
+offset_right = 1006.0
+offset_bottom = 664.0
+theme_override_fonts/font = ExtResource("2_ykkwj")
+theme_override_font_sizes/font_size = 32
+text = "Personne ne peut ajouter de jours à sa vie
+Alors ajoute de la vie à tes jours."
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 622.0
+offset_right = 791.0
+offset_bottom = 847.0
+theme_override_fonts/font = ExtResource("2_ykkwj")
+theme_override_font_sizes/font_size = 32
+text = "Prends le temps nécessaire et tu 
+apprendras la sérénité"
+
+[node name="Bd3-1" type="Sprite2D" parent="."]
+position = Vector2(1472, 544)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_ynqcl")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -3
+offset_left = -112.0
+offset_top = -96.0
+offset_right = 2088.0
+offset_bottom = 1219.0
+theme = SubResource("Theme_6xthw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqxr2")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 2160.0
+offset_bottom = 1232.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8w6nh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hlvy4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_phv81")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r7eqc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bmoam")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

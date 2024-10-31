@@ -2353,7 +2353,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_6e3cs")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yj6lw"]
-size = Vector2(170, 96)
+size = Vector2(126.333, 96)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_4bsyr")
@@ -2430,7 +2430,7 @@ z_index = 2
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_5g8w5")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114127, 1245184, 2, 327697, 1245184, 2, 786468, 1179648, 2, 1048576, 1245184, 2)
+layer_0/tile_data = PackedInt32Array(1114127, 1245184, 2, 327697, 1245184, 2, 786468, 1179648, 2, 1048576, 1245184, 2, 1048612, 1245184, 2)
 
 [node name="exp_touche_W" type="TileMap" parent="."]
 self_modulate = Color(0, 0, 0, 1)
@@ -2476,6 +2476,7 @@ position = Vector2(1639, 872)
 scale = Vector2(3, 3)
 
 [node name="zone_shinobi" type="CollisionShape2D" parent="Zone_Shinobi"]
+position = Vector2(36.8333, 0)
 shape = SubResource("RectangleShape2D_yj6lw")
 
 [connection signal="body_entered" from="sortie" to="." method="_on_sortie_body_entered"]

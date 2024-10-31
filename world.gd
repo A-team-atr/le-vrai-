@@ -3,6 +3,7 @@ extends Node2D
 var zone_sortie_maison = false 
 var paused = false 
 var Z_shinobi = false 
+
 @onready var W := $"exp_touche_W"
 @onready var A := $"exp_touche_A"
 @onready var S := $"exp_touche_S"
@@ -14,9 +15,13 @@ func _physics_process(delta):
 	if zone_sortie_maison == true:
 		if Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://monde_1.tscn")
+			
+	if Z_shinobi == true:
+		if Input.is_action_just_pressed("interagir") :
+			Dialogic.start("dialoque_shinobi")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,8 +41,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("shift"):
 		Sprint.visible = false
 	
-	if Input.is_action_just_pressed("interagir") and Z_shinobi == true:
-		Dialogic.start("dialoque_shinobi")
+	if Z_shinobi == true:
+		if Input.is_action_just_pressed("interagir") :
+			Dialogic.start("dialoque_shinobi")
 
 
 func _on_sortie_body_entered(body: PhysicsBody2D):
@@ -49,8 +55,10 @@ func _on_sortie_body_exited(body: PhysicsBody2D):
 	zone_sortie_maison = false 
 
 
-func _on_zone_shinobi_body_entered(body: PhysicsBody2D):
-	Z_shinobi = true 
+func _on_zone_shinobi_body_entered(body):
+	if body.name == "playcote":
+		Z_shinobi = true 
 
-func _on_zone_shinobi_body_exited(body: PhysicsBody2D):
-	Z_shinobi = false 
+func _on_zone_shinobi_body_exited(body):
+	if body.name == "playcote":
+		Z_shinobi = false  
