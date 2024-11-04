@@ -5,13 +5,18 @@ extends Node2D
 @onready var labelparcour := $"zone_parcour_label/Labelparcour"
 @onready var presencechario := $"chario"
 @onready var label_retour_fermier := $"label_retour_fermier"
-
+@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
+@onready var anim := $Path2D/PathFollow2D/AnimatedSprite2D
+@onready var animtourne = get_node("Path2D/PathFollow2D/AnimatedSprite2D")
+@onready var pp = get_node("player")
 
 var paused = false 
 var zone_bateau = false
 var zone_ferme = false
 var z_parcour = false 
 var pres_chario = false
+var speed = 0.30
+var bateau_mouvement = false
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -26,12 +31,21 @@ func _ready():
 	labelbateau.visible = false
 	presencechario.visible = false 
 	label_retour_fermier.visible = false
-	
+
 func _physics_process(delta):
 	if zone_bateau == true:
 		if Input.is_action_just_pressed("interagir"):
-			TransitionScene.change_scene_to_file("res://peche.tscn")
+			Tr2.change_scene_to_file("res://peche.tscn")
+			anim.play("btm")
+			bateau_mouvement = true
+			animtourne.flip_h = true
+			pp.visible = false
 			
+	if bateau_mouvement == true:
+		path_follow.progress_ratio += speed * delta
+		if path_follow.progress_ratio > 20:
+			animtourne.flip_h = true
+
 	if zone_ferme == true:
 		if Input.is_action_just_pressed("interagir"):
 			TransitionScene.change_scene_to_file("res://ferme.tscn")

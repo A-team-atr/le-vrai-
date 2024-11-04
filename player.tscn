@@ -288,6 +288,14 @@ animations = [{
 "loop": true,
 "name": &"up_run",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"vide",
+"speed": 5.0
 }]
 
 [node name="player" type="CharacterBody2D"]
@@ -303,9 +311,8 @@ shape = SubResource("CapsuleShape2D_m01k8")
 position = Vector2(-0.607138, -38.0565)
 scale = Vector2(6.16, 4.96)
 sprite_frames = SubResource("SpriteFrames_8rxh4")
-animation = &"idle"
+animation = &"vide"
 autoplay = "idle"
-frame_progress = 0.756405
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.7, 0.7)

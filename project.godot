@@ -21,6 +21,7 @@ TransitionScene="*res://transition_scene.tscn"
 GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
 Transition2="*res://Transition2.tscn"
 Global="*res://global.gd"
+Tr2="*res://tr_2.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
