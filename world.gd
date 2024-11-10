@@ -4,6 +4,7 @@ var zone_sortie_maison = false
 var paused = false 
 var Z_shinobi = false 
 
+
 @onready var W := $"exp_touche_W"
 @onready var A := $"exp_touche_A"
 @onready var S := $"exp_touche_S"
@@ -18,11 +19,10 @@ func _physics_process(delta):
 			
 	if Z_shinobi == true:
 		if Input.is_action_just_pressed("interagir") :
-			Dialogic.start("dialoque_shinobi")
+			TransitionScene.change_scene_to_file("res://dialogue_avec_shinobi.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass 
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -32,33 +32,36 @@ func _process(delta):
 		paused = false 
 	if Input.is_action_just_pressed("monter"):
 		W.visible = false 
+		Global.compte_touche += 1 
 	if Input.is_action_just_pressed("gauche"):
 		A.visible = false 
+		Global.compte_touche += 1 
 	if Input.is_action_just_pressed("droite"):
 		D.visible = false
+		Global.compte_touche+= 1 
 	if Input.is_action_just_pressed("saut"):
 		S.visible = false
+		Global.compte_touche += 1 
 	if Input.is_action_just_pressed("shift"):
 		Sprint.visible = false
+		Global.compte_touche += 1 
+
 	
-	if Z_shinobi == true:
-		if Input.is_action_just_pressed("interagir") :
-			Dialogic.start("dialoque_shinobi")
-
-
+	if Global.compte_touche >= 5:
+		W.visible = false 
+		A.visible = false
+		D.visible = false
+		S.visible = false
+		Sprint.visible = false
+		
 func _on_sortie_body_entered(body: PhysicsBody2D):
 	zone_sortie_maison = true 
 	
-
-
 func _on_sortie_body_exited(body: PhysicsBody2D):
 	zone_sortie_maison = false 
 
+func _on_zone_shinobi_body_entered(body: PhysicsBody2D):
+	Z_shinobi = true 
 
-func _on_zone_shinobi_body_entered(body):
-	if body.name == "playcote":
-		Z_shinobi = true 
-
-func _on_zone_shinobi_body_exited(body):
-	if body.name == "playcote":
-		Z_shinobi = false  
+func _on_zone_shinobi_body_exited(body: PhysicsBody2D):
+	Z_shinobi = false  

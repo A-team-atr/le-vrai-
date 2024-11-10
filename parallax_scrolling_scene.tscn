@@ -394,7 +394,7 @@ offset_left = 125.0
 offset_top = 333.0
 offset_right = 1720.0
 offset_bottom = 541.0
-text = "Le Chemain vers l'Honneur"
+text = "Le Chemin vers l'Honneur"
 label_settings = SubResource("LabelSettings_blsnj")
 
 [node name="Button" type="Button" parent="."]

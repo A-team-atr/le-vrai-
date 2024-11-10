@@ -9,6 +9,7 @@ extends Node2D
 @onready var anim := $Path2D/PathFollow2D/AnimatedSprite2D
 @onready var animtourne = get_node("Path2D/PathFollow2D/AnimatedSprite2D")
 @onready var pp = get_node("player")
+@onready var attendre_ferme := $"attendre_ferme"
 
 var paused = false 
 var zone_bateau = false
@@ -61,7 +62,10 @@ func _physics_process(delta):
 		if Global.recolte == true and Input.is_action_just_pressed("interagir"):
 			label_retour_fermier.visible = true
 			Global.foin_ok = true
-			
+		else: 
+			attendre_ferme.visible = true 
+		
+		
 	if Global.courage == true and Global.sérénité == true and Global.serviabilite == true and Global.pateince == true :
 		TransitionScene.change_scene_to_file("res://final.tscn")
 	 

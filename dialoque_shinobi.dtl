@@ -1,3 +1,4 @@
 shinobi_femme: Bonjour, je suis très heureuse de de te voir ici.
 shinobi_femme: Après tout ce qui c'est passé j'ai eu peur qu'on ne te revoit jamais.
 player: Ne te fais pas de soucis pour le passé, je suis ici pour tout remettre à sa place.
+[signal arg="fin_shinobi"]

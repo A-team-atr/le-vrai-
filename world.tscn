@@ -2353,7 +2353,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_6e3cs")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yj6lw"]
-size = Vector2(126.333, 96)
+size = Vector2(80.9998, 96)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_4bsyr")
@@ -2476,7 +2476,7 @@ position = Vector2(1639, 872)
 scale = Vector2(3, 3)
 
 [node name="zone_shinobi" type="CollisionShape2D" parent="Zone_Shinobi"]
-position = Vector2(36.8333, 0)
+position = Vector2(59.4999, 0)
 shape = SubResource("RectangleShape2D_yj6lw")
 
 [connection signal="body_entered" from="sortie" to="." method="_on_sortie_body_entered"]
