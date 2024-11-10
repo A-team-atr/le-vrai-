@@ -183,6 +183,8 @@ offset_left = -504.0
 offset_top = 408.0
 offset_right = -208.0
 offset_bottom = 656.0
+theme_override_font_sizes/font_size = 40
+text = "Pêcher"
 
 [node name="quitbutton" type="Button" parent="."]
 offset_left = -1872.0
@@ -190,6 +192,7 @@ offset_top = 576.0
 offset_right = -1472.0
 offset_bottom = 775.0
 theme_override_fonts/font = ExtResource("9_pc2yk")
+theme_override_font_sizes/font_size = 40
 text = "Partir"
 
 [node name="NewPiskel-1_png(6)" type="Sprite2D" parent="."]

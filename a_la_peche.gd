@@ -22,7 +22,8 @@ var task_starting	:= false
 
 func _ready():
 	water_gauge.value = 0
-	feedback_label.text = "Cliquez au bon moment pour remplir l'eau"
+	feedback_label.text = "Cliquez au bon moment, lorsque la gauge arrive 
+	dans le rectangle à droite"
 	start_button.connect("pressed", Callable(self, "_on_StartButton_pressed"))
 	quit_button.visible = false
 	
@@ -72,7 +73,8 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 			task_starting = false
 			start_button.visible = true
 			print("Clic raté")
-		
+			fill_speed = 0.05
+			
 		water_gauge.value = 0
 
 		if success_clicks >= 3:
