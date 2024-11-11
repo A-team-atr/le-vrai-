@@ -62,8 +62,6 @@ func _physics_process(delta):
 		if Global.recolte == true and Input.is_action_just_pressed("interagir"):
 			label_retour_fermier.visible = true
 			Global.foin_ok = true
-		else: 
-			attendre_ferme.visible = true 
 		
 		
 	if Global.courage == true and Global.sérénité == true and Global.serviabilite == true and Global.pateince == true :
@@ -130,11 +128,12 @@ func _on_allez_parcours_body_exited(body: PhysicsBody2D):
 
 func _on_zone_afficher_chario_body_entered(body):
 	if Global.recolte == true:
+		attendre_ferme.visible = false
 		presencechario.visible = true  
 	else:
 		presencechario.visible = false 
 		label_retour_fermier.visible = false
-
+		attendre_ferme.visible = true 
 
 
 

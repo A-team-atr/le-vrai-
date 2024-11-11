@@ -104,9 +104,9 @@ button_mask = 7
 icon = SubResource("ViewportTexture_j660x")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1048.0
+offset_left = 1032.0
 offset_top = 960.0
-offset_right = 1927.0
+offset_right = 1911.0
 offset_bottom = 1042.0
 theme_override_fonts/font = ExtResource("3_kiah0")
 text = "Cliquez pour continuer....
@@ -124,10 +124,10 @@ text = "Dans une époque lointaine, un samouraï loyal
  servait son clan avec honneur et bravoure"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 1220.0
-offset_top = 376.0
-offset_right = 2461.0
-offset_bottom = 729.0
+offset_left = 1120.0
+offset_top = 368.0
+offset_right = 2361.0
+offset_bottom = 721.0
 theme_override_fonts/font = ExtResource("3_kiah0")
 theme_override_font_sizes/font_size = 32
 text = "Accusé à tort de trahison, il fut renié

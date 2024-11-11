@@ -538,7 +538,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_qyj2n")
 sources/0 = SubResource("TileSetAtlasSource_damfa")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u65xd"]
-size = Vector2(224, 589)
+size = Vector2(280, 589)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_neuup"]
 texture = ExtResource("13_rlc0c")
@@ -2413,7 +2413,7 @@ position = Vector2(108, 869)
 [node name="sortie" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sortie"]
-position = Vector2(-32, 710.5)
+position = Vector2(-4, 710.5)
 shape = SubResource("RectangleShape2D_u65xd")
 
 [node name="pause" parent="." instance=ExtResource("13_3xhcp")]
@@ -2472,7 +2472,7 @@ position = Vector2(1864, 816)
 scale = Vector2(3, 3)
 
 [node name="Zone_Shinobi" type="Area2D" parent="."]
-position = Vector2(1639, 872)
+position = Vector2(1640, 864)
 scale = Vector2(3, 3)
 
 [node name="zone_shinobi" type="CollisionShape2D" parent="Zone_Shinobi"]
