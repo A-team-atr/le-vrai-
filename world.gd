@@ -61,7 +61,9 @@ func _on_sortie_body_exited(body: PhysicsBody2D):
 
 
 func _on_zone_shinobi_body_entered(body: PhysicsBody2D):
-	Z_shinobi = true
+	if body.name == "playercote":
+		Z_shinobi = true
 
 func _on_zone_shinobi_body_exited(body: PhysicsBody2D):
-	Z_shinobi = false
+	if body.name == "playercote":
+		Z_shinobi = false

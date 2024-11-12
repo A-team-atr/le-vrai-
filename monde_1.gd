@@ -10,6 +10,8 @@ extends Node2D
 @onready var animtourne = get_node("Path2D/PathFollow2D/AnimatedSprite2D")
 @onready var pp = get_node("player")
 @onready var attendre_ferme := $"attendre_ferme"
+@onready var label_ferme_fini := $"label_ferme_fini"
+
 
 var paused = false 
 var zone_bateau = false
@@ -133,7 +135,10 @@ func _on_zone_afficher_chario_body_entered(body):
 	else:
 		presencechario.visible = false 
 		label_retour_fermier.visible = false
-		attendre_ferme.visible = true 
+		if Global.serviabilite == true :
+			label_ferme_fini.visible = true 
+		else:
+			attendre_ferme.visible = true 
 
 
 
